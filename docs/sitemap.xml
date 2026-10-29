@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/getting-started/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/roadmap/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/team/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/blob/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/common/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/docstore/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/iam/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/pubsub/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/api/sts/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/design/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/design/errors/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/design/layers/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/guides/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/guides/blobstore-guide/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/guides/iam-guide/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/guides/pubsub-guide/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/guides/sts-guide/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/maintainers/releasing/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
     <url>
          <loc>https://opensource.salesforce.com/multicloud-py/maintainers/website/</loc>
-         <lastmod>2026-10-23</lastmod>
+         <lastmod>2026-10-29</lastmod>
     </url>
 </urlset>
