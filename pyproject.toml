@@ -76,7 +76,9 @@ dev = [
     "pytest-asyncio>=0.21.0",
     "pytest-cov>=4.0.0",
     "pytest-recording>=0.13.0,<1",
-    "vcrpy>=8.0.0,<9",
+    # vcrpy 9 needs Python 3.11, so Python 3.10 stays on vcrpy 8.
+    "vcrpy>=8.5.0,<9 ; python_full_version < '3.11'",
+    "vcrpy>=9.1.0,<10 ; python_full_version >= '3.11'",
     "black>=26.5.1",
     "isort>=8.0.1",
     "mypy>=1.0.0",
