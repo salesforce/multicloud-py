@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs/inside.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs/inside.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs.txt
   response:
     body:
       string: ''
@@ -115,7 +115,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt
   response:
     body:
       string: ''
@@ -163,7 +163,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/other.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/delete-dir/verbatim/other.txt
   response:
     body:
       string: ''
@@ -199,12 +199,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/delete-dir/verbatim/logs</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/delete-dir/verbatim/logs.txt</Key><LastModified>2026-08-20T05:41:16.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/delete-dir/verbatim/logs/inside.txt</Key><LastModified>2026-08-20T05:41:16.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/delete-dir/verbatim/logs</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/delete-dir/verbatim/logs.txt</Key><LastModified>2026-08-20T05:41:16.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/delete-dir/verbatim/logs/inside.txt</Key><LastModified>2026-08-20T05:41:16.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -237,7 +237,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?delete
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?delete
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -269,12 +269,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/delete-dir/verbatim/</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/other.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/delete-dir/verbatim/</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/other.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -301,12 +301,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdelete-dir%2Fverbatim%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/delete-dir/verbatim/</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/other.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/delete-dir/verbatim/</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/delete-dir/verbatim/other.txt</Key><LastModified>2026-08-20T05:41:17.000Z</LastModified><ETag>&quot;f1ad49fa5b04dda0c8d95f0f302b01c6&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>8</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -339,7 +339,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?delete
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?delete
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

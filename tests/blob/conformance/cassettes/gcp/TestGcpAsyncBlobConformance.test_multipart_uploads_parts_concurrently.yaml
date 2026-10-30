@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__3&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__3&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__3/1786557432742152\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3?generation=1786557432742152&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__3/1786557432742152\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3?generation=1786557432742152&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__3\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557432742152\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786557432742152\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"32\",\n  \"md5Hash\": \"G7wZfXpxIeodLiyeG387+g==\",\n  \"crc32c\": \"Dexslg==\",\n
         \ \"etag\": \"CIiCmYnVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:12.811Z\",\n
@@ -65,14 +65,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__1&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__1&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__1/1786557432978382\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1?generation=1786557432978382&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__1/1786557432978382\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1?generation=1786557432978382&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557432978382\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786557432978382\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"5242880\",\n  \"md5Hash\": \"vTgfq5Xo8JMQzSOjcxxJ6A==\",\n  \"crc32c\":
         \"wvRTBQ==\",\n  \"etag\": \"CM63p4nVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:13.048Z\",\n
@@ -118,14 +118,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__2&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__2&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__2/1786557432998151\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2?generation=1786557432998151&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__2/1786557432998151\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2?generation=1786557432998151&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__2\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557432998151\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786557432998151\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"5242880\",\n  \"md5Hash\": \"BwRScD5aylxCLM6qynfNNQ==\",\n  \"crc32c\":
         \"6TPWQg==\",\n  \"etag\": \"CIfSqInVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:13.069Z\",\n
@@ -168,14 +168,14 @@ interactions:
       Content-Type:
       - application/json; charset=UTF-8
     method: POST
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin/compose
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin/compose
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557433213353\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786557433213353\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"10485792\",\n  \"crc32c\": \"iIrneQ==\",\n  \"componentCount\": 3,\n  \"etag\":
         \"CKnjtYnVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:13.283Z\",\n
@@ -212,7 +212,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__1
   response:
     body:
       string: ''
@@ -245,7 +245,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__2
   response:
     body:
       string: ''
@@ -278,7 +278,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin__multipart__00000000000000000000000000000002__3
   response:
     body:
       string: ''
@@ -311,14 +311,14 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=json
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=json
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557433213353\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786557433213353\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"10485792\",\n  \"crc32c\": \"iIrneQ==\",\n  \"componentCount\": 3,\n  \"etag\":
         \"CKnjtYnVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:13.283Z\",\n
@@ -355,7 +355,7 @@ interactions:
       Range:
       - bytes=5242880-5242880
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=media
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=media
   response:
     body:
       string: "\v"
@@ -406,14 +406,14 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=json
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?alt=json
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
         \ \"name\": \"conformance-test-async/multipart-concurrent.bin\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786557433213353\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786557433213353\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"10485792\",\n  \"crc32c\": \"iIrneQ==\",\n  \"componentCount\": 3,\n  \"etag\":
         \"CKnjtYnVm5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T17:57:13.283Z\",\n
@@ -448,7 +448,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?prefix=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?prefix=conformance-test-async/multipart-concurrent.bin__multipart__00000000000000000000000000000002__&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"
@@ -479,15 +479,15 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/multipart-concurrent.bin
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/multipart-concurrent.bin
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/multipart-concurrent.bin/1786557433213353\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin?generation=1786557433213353&alt=media\",\n
         \     \"name\": \"conformance-test-async/multipart-concurrent.bin\",\n      \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786557433213353\",\n
+        \"example-test-bucket-barry\",\n      \"generation\": \"1786557433213353\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"10485792\",\n      \"crc32c\": \"iIrneQ==\",\n      \"componentCount\":
         3,\n      \"etag\": \"CKnjtYnVm5YDEAE=\",\n      \"timeCreated\": \"2026-08-12T17:57:13.283Z\",\n
@@ -521,7 +521,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fmultipart-concurrent.bin
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fmultipart-concurrent.bin
   response:
     body:
       string: ''

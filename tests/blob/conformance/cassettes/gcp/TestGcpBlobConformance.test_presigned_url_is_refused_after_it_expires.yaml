@@ -61,13 +61,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/presign/expired.txt/1786065496515191\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fexpired.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fexpired.txt?generation=1786065496515191&alt=media\",\n
-        \ \"name\": \"conformance-test/presign/expired.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/presign/expired.txt/1786065496515191\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fexpired.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fexpired.txt?generation=1786065496515191&alt=media\",\n
+        \ \"name\": \"conformance-test/presign/expired.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1786065496515191\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"36\",\n  \"md5Hash\": \"ztF0xU5+csZEEGakDeEAOQ==\",\n  \"crc32c\": \"WBh7Jg==\",\n
@@ -152,7 +152,7 @@ interactions:
       Connection:
       - keep-alive
     method: GET
-    uri: https://storage.googleapis.com/testcloud-python-sdk-bucket/conformance-test/presign/expired.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
+    uri: https://storage.googleapis.com/example-test-bucket-barry/conformance-test/presign/expired.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
   response:
     body:
       string: '<?xml version=''1.0'' encoding=''UTF-8''?><Error><Code>ExpiredToken</Code><Message>Invalid
@@ -190,7 +190,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fexpired.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fexpired.txt?prettyPrint=false
   response:
     body:
       string: ''

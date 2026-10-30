@@ -32,7 +32,7 @@ from tests.blob.conformance.base_blob_store_conformance import (
     Harness,
 )
 
-AWS_BUCKET = os.environ.get("CONFORMANCE_AWS_BUCKET", "testcloud-python-sdk-bucket")
+AWS_BUCKET = os.environ.get("CONFORMANCE_AWS_BUCKET", "example-test-bucket-barry")
 AWS_REGION = os.environ.get("CONFORMANCE_AWS_REGION", "us-west-2")
 # Deliberately not env-overridable, like AWS_ABSENT_BUCKET below. The name
 # appears in the request URI, which the cassette matcher compares, so
@@ -42,10 +42,10 @@ AWS_REGION = os.environ.get("CONFORMANCE_AWS_REGION", "us-west-2")
 # name ever does get taken, changing it here and re-recording is the fix.
 AWS_NONEXISTENT_BUCKET = "multicloud-conformance-nonexistent-bucket-aws-9f8e7d"
 AWS_VERSIONED_BUCKET = os.environ.get(
-    "CONFORMANCE_AWS_VERSIONED_BUCKET", "testcloud-python-sdk-versioned"
+    "CONFORMANCE_AWS_VERSIONED_BUCKET", "chameleon-python-sdk-versioned"
 )
 AWS_OBJECT_LOCK_BUCKET = os.environ.get(
-    "CONFORMANCE_AWS_OBJECT_LOCK_BUCKET", "testcloud-python-sdk-object-lock"
+    "CONFORMANCE_AWS_OBJECT_LOCK_BUCKET", "chameleon-test-bucket-with-object-lock"
 )
 # Deliberately not env-overridable, unlike the constants above. Those name
 # buckets that must exist in whichever account is recording, so each recorder

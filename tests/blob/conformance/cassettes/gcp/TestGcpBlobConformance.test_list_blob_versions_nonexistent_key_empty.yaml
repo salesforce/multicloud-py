@@ -9,7 +9,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Flist-versions%2Fnever-existed-xyz789.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Flist-versions%2Fnever-existed-xyz789.txt&versions=True&prettyPrint=false
   response:
     body:
       string: '{"kind":"storage#objects"}'

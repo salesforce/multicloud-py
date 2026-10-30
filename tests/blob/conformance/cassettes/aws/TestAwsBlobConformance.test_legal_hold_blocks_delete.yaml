@@ -33,7 +33,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt
   response:
     body:
       string: ''
@@ -79,7 +79,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?legal-hold
   response:
     body:
       string: ''
@@ -111,7 +111,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?versionId=HD_uupBTnK49x16nypwalfdYmd6Sc4FW
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?versionId=HD_uupBTnK49x16nypwalfdYmd6Sc4FW
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -152,7 +152,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?legal-hold
   response:
     body:
       string: ''
@@ -182,12 +182,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fupdate-legal-hold%2Fblocks-delete.txt&encoding-type=url
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fupdate-legal-hold%2Fblocks-delete.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-object-lock</Name><Prefix>conformance-test/update-legal-hold/blocks-delete.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/update-legal-hold/blocks-delete.txt</Key><VersionId>HD_uupBTnK49x16nypwalfdYmd6Sc4FW</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-13T06:01:11.000Z</LastModified><ETag>&quot;174f1013575a69ad484d5552495bc679&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>24</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-test-bucket-with-object-lock</Name><Prefix>conformance-test/update-legal-hold/blocks-delete.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/update-legal-hold/blocks-delete.txt</Key><VersionId>HD_uupBTnK49x16nypwalfdYmd6Sc4FW</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-13T06:01:11.000Z</LastModified><ETag>&quot;174f1013575a69ad484d5552495bc679&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>24</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -219,7 +219,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?versionId=HD_uupBTnK49x16nypwalfdYmd6Sc4FW
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/blocks-delete.txt?versionId=HD_uupBTnK49x16nypwalfdYmd6Sc4FW
   response:
     body:
       string: ''

@@ -15,7 +15,7 @@ interactions:
         ZXhhbXBsZS10ZXN0LWJ1Y2tldC1iYXJyeS9jb25mb3JtYW5jZS10ZXN0L2NvcHkvZG9lcy1ub3Qt
         ZXhpc3QtYWJjMTIzLnR4dA==
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-missing-src.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-missing-src.txt
   response:
     body:
       string: <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>conformance-test/copy/does-not-exist-abc123.txt</Key><RequestId>AJARTXJZWWAEBEW2</RequestId><HostId>N+ehSp4cajJqAYnCF2Zlwky9NEkxcMous9zhHRtYgYTKUtGfCT9z493R2mMSoJe0g2hwafjPMjpCVR6wDOCCHz7uuFNs4C7l</HostId></Error>

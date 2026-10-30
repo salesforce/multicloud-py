@@ -24,7 +24,7 @@ from tests.blob.conformance.base_blob_store_conformance import (
 )
 from tests.gcp_common.mock_gcp_credentials import make_mock_credentials
 
-GCP_BUCKET = os.environ.get("CONFORMANCE_GCP_BUCKET", "testcloud-python-sdk-bucket")
+GCP_BUCKET = os.environ.get("CONFORMANCE_GCP_BUCKET", "example-test-bucket-barry")
 # Deliberately not env-overridable, like GCP_ABSENT_BUCKET below. The name
 # appears in the request URI, which the cassette matcher compares, so
 # overriding it would send a request no committed cassette can answer. Unlike
@@ -33,7 +33,7 @@ GCP_BUCKET = os.environ.get("CONFORMANCE_GCP_BUCKET", "testcloud-python-sdk-buck
 # name ever does get taken, changing it here and re-recording is the fix.
 GCP_NONEXISTENT_BUCKET = "multicloud-conformance-nonexistent-bucket-gcp-9f8e7d"
 GCP_VERSIONED_BUCKET = os.environ.get(
-    "CONFORMANCE_GCP_VERSIONED_BUCKET", "testcloud-python-sdk-versioned"
+    "CONFORMANCE_GCP_VERSIONED_BUCKET", "chameleon-python-sdk-versioned"
 )
 GCP_OBJECT_LOCK_BUCKET = os.environ.get(
     "CONFORMANCE_GCP_OBJECT_LOCK_BUCKET", "sdk-blob-with-object-lock"

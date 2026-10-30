@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?name=async-conformance-test/delete/versioned-bulk.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?name=async-conformance-test/delete/versioned-bulk.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/async-conformance-test/delete/versioned-bulk.txt/1787241942279546\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942279546&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/async-conformance-test/delete/versioned-bulk.txt/1787241942279546\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942279546&alt=media\",\n
         \ \"name\": \"async-conformance-test/delete/versioned-bulk.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1787241942279546\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1787241942279546\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"7\",\n  \"md5Hash\": \"3/QvsQfzPok5UOENGz43FQ==\",\n
         \ \"crc32c\": \"LUfh1Q==\",\n  \"etag\": \"CPrK44jLr5YDEAE=\",\n  \"timeCreated\":
@@ -66,14 +66,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?name=async-conformance-test/delete/versioned-bulk.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?name=async-conformance-test/delete/versioned-bulk.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/async-conformance-test/delete/versioned-bulk.txt/1787241942474283\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942474283&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/async-conformance-test/delete/versioned-bulk.txt/1787241942474283\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942474283&alt=media\",\n
         \ \"name\": \"async-conformance-test/delete/versioned-bulk.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1787241942474283\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1787241942474283\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"7\",\n  \"md5Hash\": \"kInyA1VmKdxWjFbzDZ5Ilg==\",\n
         \ \"crc32c\": \"PhcSIQ==\",\n  \"etag\": \"CKu874jLr5YDEAE=\",\n  \"timeCreated\":
@@ -111,12 +111,12 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk-missing.txt
+    uri: https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk-missing.txt
   response:
     body:
       string: "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"No such object:
-        testcloud-python-sdk-versioned/async-conformance-test/delete/versioned-bulk-missing.txt\",\n
-        \   \"errors\": [\n      {\n        \"message\": \"No such object: testcloud-python-sdk-versioned/async-conformance-test/delete/versioned-bulk-missing.txt\",\n
+        chameleon-python-sdk-versioned/async-conformance-test/delete/versioned-bulk-missing.txt\",\n
+        \   \"errors\": [\n      {\n        \"message\": \"No such object: chameleon-python-sdk-versioned/async-conformance-test/delete/versioned-bulk-missing.txt\",\n
         \       \"domain\": \"global\",\n        \"reason\": \"notFound\"\n      }\n
         \   ]\n  }\n}\n"
     headers:
@@ -148,7 +148,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942279546
+    uri: https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942279546
   response:
     body:
       string: ''
@@ -181,7 +181,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942474283
+    uri: https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/async-conformance-test%2Fdelete%2Fversioned-bulk.txt?generation=1787241942474283
   response:
     body:
       string: ''
@@ -214,7 +214,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?prefix=async-conformance-test/delete/versioned-bulk.txt&versions=true&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?prefix=async-conformance-test/delete/versioned-bulk.txt&versions=true&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"
@@ -245,7 +245,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?prefix=async-conformance-test/delete/versioned-bulk.txt&versions=true&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?prefix=async-conformance-test/delete/versioned-bulk.txt&versions=true&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"

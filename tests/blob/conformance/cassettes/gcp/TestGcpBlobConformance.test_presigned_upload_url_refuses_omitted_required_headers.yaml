@@ -95,7 +95,7 @@ interactions:
       Content-Length:
       - '15'
     method: PUT
-    uri: https://storage.googleapis.com/testcloud-python-sdk-bucket/conformance-test/presign/missing-headers.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
+    uri: https://storage.googleapis.com/example-test-bucket-barry/conformance-test/presign/missing-headers.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
   response:
     body:
       string: <?xml version='1.0' encoding='UTF-8'?><Error><Code>MalformedSecurityHeader</Code><Message>Invalid

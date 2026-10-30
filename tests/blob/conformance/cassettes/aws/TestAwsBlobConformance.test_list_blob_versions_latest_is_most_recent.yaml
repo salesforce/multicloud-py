@@ -32,7 +32,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt
   response:
     body:
       string: ''
@@ -93,7 +93,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt
   response:
     body:
       string: ''
@@ -131,12 +131,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Flist-versions%2Flatest.txt&encoding-type=url
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Flist-versions%2Flatest.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-versioned</Name><Prefix>conformance-test/list-versions/latest.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-20T09:16:29.000Z</LastModified><ETag>&quot;0c10f4a0c12ba89211235026b861263d&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-20T09:16:28.000Z</LastModified><ETag>&quot;6a3a6f6e33217afa6373df9d6b2e8a00&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-python-sdk-versioned</Name><Prefix>conformance-test/list-versions/latest.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-20T09:16:29.000Z</LastModified><ETag>&quot;0c10f4a0c12ba89211235026b861263d&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-20T09:16:28.000Z</LastModified><ETag>&quot;6a3a6f6e33217afa6373df9d6b2e8a00&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -163,12 +163,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Flist-versions%2Flatest.txt&encoding-type=url
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Flist-versions%2Flatest.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-versioned</Name><Prefix>conformance-test/list-versions/latest.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-20T09:16:29.000Z</LastModified><ETag>&quot;0c10f4a0c12ba89211235026b861263d&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-20T09:16:28.000Z</LastModified><ETag>&quot;6a3a6f6e33217afa6373df9d6b2e8a00&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-python-sdk-versioned</Name><Prefix>conformance-test/list-versions/latest.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-20T09:16:29.000Z</LastModified><ETag>&quot;0c10f4a0c12ba89211235026b861263d&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version><Version><Key>conformance-test/list-versions/latest.txt</Key><VersionId>nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-20T09:16:28.000Z</LastModified><ETag>&quot;6a3a6f6e33217afa6373df9d6b2e8a00&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -197,7 +197,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt?versionId=Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt?versionId=Hdu14K6fcAmqoFRlUkKBme3h3cNKGiMW
   response:
     body:
       string: ''
@@ -227,7 +227,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt?versionId=nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/list-versions/latest.txt?versionId=nNr2sZBeD6yTGJPTN..hfjxabv0O8xlR
   response:
     body:
       string: ''

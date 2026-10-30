@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart&ifGenerationMatch=0
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart&ifGenerationMatch=0
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/conditional/create-if-absent.txt/1787846133393912\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/conditional/create-if-absent.txt/1787846133393912\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media\",\n
         \ \"name\": \"conformance-test/conditional/create-if-absent.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787846133393912\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787846133393912\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"5\",\n  \"md5Hash\": \"dgEIWMg2LXMC71+UNqpmOQ==\",\n
         \ \"crc32c\": \"rnPr7g==\",\n  \"etag\": \"CPjTxu2VwZYDEAE=\",\n  \"timeCreated\":
@@ -75,7 +75,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?alt=media
   response:
     body:
       string: fresh
@@ -132,10 +132,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/conditional/create-if-absent.txt/1787846133393912","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media","name":"conformance-test/conditional/create-if-absent.txt","bucket":"testcloud-python-sdk-bucket","generation":"1787846133393912","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"5","md5Hash":"dgEIWMg2LXMC71+UNqpmOQ==","crc32c":"rnPr7g==","etag":"CPjTxu2VwZYDEAE=","timeCreated":"2026-08-27T15:55:33.450Z","updated":"2026-08-27T15:55:33.450Z","timeStorageClassUpdated":"2026-08-27T15:55:33.450Z","timeFinalized":"2026-08-27T15:55:33.450Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/conditional/create-if-absent.txt/1787846133393912","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media","name":"conformance-test/conditional/create-if-absent.txt","bucket":"example-test-bucket-barry","generation":"1787846133393912","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"5","md5Hash":"dgEIWMg2LXMC71+UNqpmOQ==","crc32c":"rnPr7g==","etag":"CPjTxu2VwZYDEAE=","timeCreated":"2026-08-27T15:55:33.450Z","updated":"2026-08-27T15:55:33.450Z","timeStorageClassUpdated":"2026-08-27T15:55:33.450Z","timeFinalized":"2026-08-27T15:55:33.450Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -182,7 +182,7 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart&ifGenerationMatch=0
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart&ifGenerationMatch=0
   response:
     body:
       string: "{\n  \"error\": {\n    \"code\": 412,\n    \"message\": \"At least
@@ -230,7 +230,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?alt=media
   response:
     body:
       string: fresh
@@ -287,10 +287,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/conditional/create-if-absent.txt/1787846133393912","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media","name":"conformance-test/conditional/create-if-absent.txt","bucket":"testcloud-python-sdk-bucket","generation":"1787846133393912","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"5","md5Hash":"dgEIWMg2LXMC71+UNqpmOQ==","crc32c":"rnPr7g==","etag":"CPjTxu2VwZYDEAE=","timeCreated":"2026-08-27T15:55:33.450Z","updated":"2026-08-27T15:55:33.450Z","timeStorageClassUpdated":"2026-08-27T15:55:33.450Z","timeFinalized":"2026-08-27T15:55:33.450Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/conditional/create-if-absent.txt/1787846133393912","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?generation=1787846133393912&alt=media","name":"conformance-test/conditional/create-if-absent.txt","bucket":"example-test-bucket-barry","generation":"1787846133393912","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"5","md5Hash":"dgEIWMg2LXMC71+UNqpmOQ==","crc32c":"rnPr7g==","etag":"CPjTxu2VwZYDEAE=","timeCreated":"2026-08-27T15:55:33.450Z","updated":"2026-08-27T15:55:33.450Z","timeStorageClassUpdated":"2026-08-27T15:55:33.450Z","timeFinalized":"2026-08-27T15:55:33.450Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -328,7 +328,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fcreate-if-absent.txt?prettyPrint=false
   response:
     body:
       string: ''

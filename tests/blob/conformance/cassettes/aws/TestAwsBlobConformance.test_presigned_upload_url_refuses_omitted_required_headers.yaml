@@ -9,7 +9,7 @@ interactions:
       Content-Length:
       - '15'
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.amazonaws.com/conformance-test/presign/missing-headers.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
+    uri: https://example-test-bucket-barry.s3.amazonaws.com/conformance-test/presign/missing-headers.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +34,7 @@ interactions:
 
         X-Amz-Algorithm=FILTERED&amp;X-Amz-Credential=FILTERED&amp;X-Amz-Date=FILTERED&amp;X-Amz-Expires=FILTERED&amp;X-Amz-Security-Token=FILTERED&amp;X-Amz-SignedHeaders=FILTERED
 
-        host:testcloud-python-sdk-bucket.s3.amazonaws.com
+        host:example-test-bucket-barry.s3.amazonaws.com
 
         x-amz-meta-owner:
 

@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt
   response:
     body:
       string: ''
@@ -61,7 +61,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
   response:
     body:
       string: ''
@@ -89,7 +89,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?retention&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?retention&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -120,7 +120,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -154,7 +154,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?legal-hold&versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
   response:
     body:
       string: ''
@@ -182,12 +182,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fupdate-legal-hold%2Fby-version.txt&encoding-type=url
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fupdate-legal-hold%2Fby-version.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-object-lock</Name><Prefix>async-conformance-test/update-legal-hold/by-version.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/update-legal-hold/by-version.txt</Key><VersionId>BD6RJ3oSyraaspOgt8vaizjOX55NCuWO</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-24T07:14:42.000Z</LastModified><ETag>&quot;84825060d5337411c38667853d2bba69&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>15</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-test-bucket-with-object-lock</Name><Prefix>async-conformance-test/update-legal-hold/by-version.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/update-legal-hold/by-version.txt</Key><VersionId>BD6RJ3oSyraaspOgt8vaizjOX55NCuWO</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-24T07:14:42.000Z</LastModified><ETag>&quot;84825060d5337411c38667853d2bba69&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>15</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -214,7 +214,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/update-legal-hold/by-version.txt?versionId=BD6RJ3oSyraaspOgt8vaizjOX55NCuWO
   response:
     body:
       string: ''

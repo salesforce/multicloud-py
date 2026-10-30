@@ -21,7 +21,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
   response:
     body:
       string: ''
@@ -57,7 +57,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
   response:
     body:
       string: ''
@@ -103,7 +103,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/upload-from-path/with-metadata.txt
   response:
     body:
       string: ''

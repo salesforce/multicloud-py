@@ -11,12 +11,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/complete-after-abort.bin</Key><UploadId>ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/complete-after-abort.bin</Key><UploadId>ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 22 Jul 2026 18:10:34 GMT
@@ -66,7 +66,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z&partNumber=1
   response:
     body:
       string: ''
@@ -102,7 +102,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z
   response:
     body:
       string: ''
@@ -130,7 +130,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin?uploadId=ekn3clHbC5b_2hC3wJ3ZBBbZPKBPC9svTzNb4G5D_VvLzvSZAuzX11m6X9IfqhbTx9lnm_v1FfR5qWvGSBBuhX4lrWihWri2WoeUsO64aZ9u.l3Wg28yDsKUWBNmLroKw.7b2x34eRoYtpB1wOtQQrtODvyuTntLp0WbM0ZolPWoV8OvBDZY0pElLbJNpk4Z
   response:
     body:
       string: <Error><Code>NoSuchUpload</Code><Message>The specified upload does not
@@ -164,7 +164,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/complete-after-abort.bin
   response:
     body:
       string: ''

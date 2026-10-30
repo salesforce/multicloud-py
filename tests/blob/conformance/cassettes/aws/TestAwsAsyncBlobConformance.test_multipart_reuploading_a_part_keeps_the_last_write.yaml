@@ -9,12 +9,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test-async/multipart-part-replaced.bin</Key><UploadId>_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test-async/multipart-part-replaced.bin</Key><UploadId>_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 12 Aug 2026 17:56:52 GMT
@@ -49,7 +49,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv&partNumber=1
   response:
     body:
       string: ''
@@ -91,7 +91,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv&partNumber=1
   response:
     body:
       string: ''
@@ -125,13 +125,13 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin?uploadId=_TLz9l6TT637.4rddRDdOARshFQGyKVySc725AS3iG2859HR6f4gFM6f9ZdHb7rBKw3lVzOR3pxGM1_7s7vNLhCSFz6a4UlFvx4g8OL4iJhUzp7oJkO_mmeiX_iVxj4eAn3KUZsQ4_U4DCwzK90eeNMxGRxJ27zDyaQ1H3ssKCBY5_Zu6vOxmvMI9BrmEwrv
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
 
-        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async%2Fmultipart-part-replaced.bin</Location><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test-async/multipart-part-replaced.bin</Key><ETag>"e2a005d5ccf772f6aac98f5446363aaf-1"</ETag><ChecksumCRC64NVME>4fiDQE25hi0=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
+        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async%2Fmultipart-part-replaced.bin</Location><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test-async/multipart-part-replaced.bin</Key><ETag>"e2a005d5ccf772f6aac98f5446363aaf-1"</ETag><ChecksumCRC64NVME>4fiDQE25hi0=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
     headers:
       Content-Type:
       - application/xml
@@ -164,7 +164,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-part-replaced.bin
   response:
     body:
       string: "\x02"
@@ -208,12 +208,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fmultipart-part-replaced.bin&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fmultipart-part-replaced.bin&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/multipart-part-replaced.bin</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/multipart-part-replaced.bin</Key><LastModified>2026-08-12T17:56:52.000Z</LastModified><ETag>&quot;e2a005d5ccf772f6aac98f5446363aaf-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5242880</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/multipart-part-replaced.bin</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/multipart-part-replaced.bin</Key><LastModified>2026-08-12T17:56:52.000Z</LastModified><ETag>&quot;e2a005d5ccf772f6aac98f5446363aaf-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>5242880</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -246,7 +246,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?delete
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?delete
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

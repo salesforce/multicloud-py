@@ -23,7 +23,7 @@ interactions:
       x-amz-server-side-encryption-aws-kms-key-id:
       - arn:aws:kms:us-west-2:123456789012:key/00000000-0000-4000-8000-000000000000
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
   response:
     body:
       string: ''
@@ -65,7 +65,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
   response:
     body:
       string: kms-encrypted async conformance payload
@@ -117,7 +117,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/encryption/kms-upload.txt
   response:
     body:
       string: ''

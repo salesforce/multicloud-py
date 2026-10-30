@@ -11,12 +11,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/bad-etag.bin</Key><UploadId>ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/bad-etag.bin</Key><UploadId>ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 22 Jul 2026 18:10:39 GMT
@@ -66,7 +66,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC&partNumber=1
   response:
     body:
       string: ''
@@ -102,7 +102,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC
   response:
     body:
       string: <Error><Code>InvalidPart</Code><Message>One or more of the specified
@@ -138,7 +138,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin?uploadId=ky_UCz0JDocXfXcDHK0IiOQqjdvsoEn9HK1H.ndWMSVvcU1GWmkf5qB5ZXU.Og_U9wZ0ibEVGd.5AGtN6pDCVxdwK0ILVshtZtvffXlutPvlt9wCS1eDUg3eFmXKRewIIeDDzMnKiy6rvwIpNbXfBxhTloL.L0BeO1Ep3H97CCYtLrErAxiRlNTyAdXhjRBC
   response:
     body:
       string: ''
@@ -166,7 +166,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/bad-etag.bin
   response:
     body:
       string: ''

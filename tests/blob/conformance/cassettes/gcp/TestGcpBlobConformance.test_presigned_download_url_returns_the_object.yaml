@@ -61,14 +61,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/presign/download-roundtrip.txt/1786065492397147\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt?generation=1786065492397147&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/presign/download-roundtrip.txt/1786065492397147\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt?generation=1786065492397147&alt=media\",\n
         \ \"name\": \"conformance-test/presign/download-roundtrip.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786065492397147\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786065492397147\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"31\",\n  \"md5Hash\": \"0Wf2uYWpARDqU1PZRcLf7A==\",\n
         \ \"crc32c\": \"Awd5Sg==\",\n  \"etag\": \"CNuY4bmsjZYDEAE=\",\n  \"timeCreated\":
@@ -153,7 +153,7 @@ interactions:
       Connection:
       - keep-alive
     method: GET
-    uri: https://storage.googleapis.com/testcloud-python-sdk-bucket/conformance-test/presign/download-roundtrip.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
+    uri: https://storage.googleapis.com/example-test-bucket-barry/conformance-test/presign/download-roundtrip.txt?X-Goog-Algorithm=FILTERED&X-Goog-Credential=FILTERED&X-Goog-Date=FILTERED&X-Goog-Expires=FILTERED&X-Goog-SignedHeaders=FILTERED&X-Goog-Signature=FILTERED
   response:
     body:
       string: fetched through a presigned url
@@ -208,7 +208,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fpresign%2Fdownload-roundtrip.txt?prettyPrint=false
   response:
     body:
       string: ''

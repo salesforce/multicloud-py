@@ -11,12 +11,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/nonexistent-parts.bin</Key><UploadId>lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/nonexistent-parts.bin</Key><UploadId>lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 22 Jul 2026 18:10:37 GMT
@@ -66,7 +66,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn&partNumber=1
   response:
     body:
       string: ''
@@ -102,7 +102,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn
   response:
     body:
       string: <Error><Code>InvalidPart</Code><Message>One or more of the specified
@@ -138,7 +138,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin?uploadId=lzof2T4EaA7XubGyMSGoznpFnY_TRuy3jbBgmHQ9tDWB1mCJskHkH8WidV.zPpcHDuJkjc2pjjpdhYep0MhxOVCBiPoWAojaTpV4Z6ZscReBBGQRR8LWWcjT5Bi8f5MNK_mQbIVj_PB.rOIZCI43AtdBYkpY7CK5ntIg2cIVon1g8Lt.BkYTA5wnIBPGZDDn
   response:
     body:
       string: ''
@@ -166,7 +166,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/nonexistent-parts.bin
   response:
     body:
       string: ''

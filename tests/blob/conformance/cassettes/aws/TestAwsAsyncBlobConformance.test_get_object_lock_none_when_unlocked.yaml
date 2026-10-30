@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt
   response:
     body:
       string: ''
@@ -57,7 +57,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt
   response:
     body:
       string: no lock here
@@ -99,7 +99,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?retention
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?retention
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -130,7 +130,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?legal-hold
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -161,12 +161,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fobject-lock%2Funlocked.txt&encoding-type=url
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fobject-lock%2Funlocked.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-object-lock</Name><Prefix>async-conformance-test/object-lock/unlocked.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/object-lock/unlocked.txt</Key><VersionId>xZFAnmHeOCjl4LSY5FZcyRnFFUzr1MP9</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-21T12:43:02.000Z</LastModified><ETag>&quot;dd935532ac12caf4f86572d8122df3d2&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>12</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-test-bucket-with-object-lock</Name><Prefix>async-conformance-test/object-lock/unlocked.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/object-lock/unlocked.txt</Key><VersionId>xZFAnmHeOCjl4LSY5FZcyRnFFUzr1MP9</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-21T12:43:02.000Z</LastModified><ETag>&quot;dd935532ac12caf4f86572d8122df3d2&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>12</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -193,7 +193,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?versionId=xZFAnmHeOCjl4LSY5FZcyRnFFUzr1MP9
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/unlocked.txt?versionId=xZFAnmHeOCjl4LSY5FZcyRnFFUzr1MP9
   response:
     body:
       string: ''

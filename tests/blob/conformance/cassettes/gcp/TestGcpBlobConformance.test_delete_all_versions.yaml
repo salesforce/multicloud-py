@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/versioned-all.txt/1782997815432369\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815432369&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/versioned-all.txt/1782997815432369\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815432369&alt=media\",\n
         \ \"name\": \"conformance-test/delete/versioned-all.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1782997815432369\",\n  \"metageneration\":
+        \"example-test-bucket-barry\",\n  \"generation\": \"1782997815432369\",\n  \"metageneration\":
         \"1\",\n  \"contentType\": \"application/octet-stream\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"2\",\n  \"md5Hash\": \"ZlTHNMyrj0QP8IJetEPcfw==\",\n
         \ \"crc32c\": \"5X841Q==\",\n  \"etag\": \"CLGpsruItJUDEAE=\",\n  \"timeCreated\":
@@ -82,14 +82,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/versioned-all.txt/1782997815955097\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815955097&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/versioned-all.txt/1782997815955097\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815955097&alt=media\",\n
         \ \"name\": \"conformance-test/delete/versioned-all.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1782997815955097\",\n  \"metageneration\":
+        \"example-test-bucket-barry\",\n  \"generation\": \"1782997815955097\",\n  \"metageneration\":
         \"1\",\n  \"contentType\": \"application/octet-stream\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"2\",\n  \"md5Hash\": \"GyZ2GcSBLMRu4oF0eITKUA==\",\n
         \ \"crc32c\": \"9i/LIQ==\",\n  \"etag\": \"CJmd0ruItJUDEAE=\",\n  \"timeCreated\":
@@ -135,7 +135,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815432369&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815432369&prettyPrint=false
   response:
     body:
       string: ''
@@ -176,7 +176,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815955097&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fversioned-all.txt?generation=1782997815955097&prettyPrint=false
   response:
     body:
       string: ''
@@ -215,7 +215,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?projection=noAcl&prefix=conformance-test%2Fdelete%2Fversioned-all.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?projection=noAcl&prefix=conformance-test%2Fdelete%2Fversioned-all.txt&versions=True&prettyPrint=false
   response:
     body:
       string: '{"kind":"storage#objects"}'
@@ -252,7 +252,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?projection=noAcl&prefix=conformance-test%2Fdelete%2Fversioned-all.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?projection=noAcl&prefix=conformance-test%2Fdelete%2Fversioned-all.txt&versions=True&prettyPrint=false
   response:
     body:
       string: '{"kind":"storage#objects"}'

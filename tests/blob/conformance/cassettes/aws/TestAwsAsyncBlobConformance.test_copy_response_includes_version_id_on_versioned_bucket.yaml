@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/src-response.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/src-response.txt
   response:
     body:
       string: ''
@@ -57,9 +57,9 @@ interactions:
       amz-sdk-request:
       - attempt=1
       x-amz-copy-source:
-      - testcloud-python-sdk-versioned/async-conformance-test/copy-versioned/src-response.txt
+      - chameleon-python-sdk-versioned/async-conformance-test/copy-versioned/src-response.txt
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/dest-response.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/dest-response.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -95,12 +95,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fcopy-versioned%2Fsrc-response.txt&encoding-type=url
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fcopy-versioned%2Fsrc-response.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-versioned</Name><Prefix>async-conformance-test/copy-versioned/src-response.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/copy-versioned/src-response.txt</Key><VersionId>uHe94420f.p3OsyIwaLM4irUFdBrVNRP</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-20T21:06:24.000Z</LastModified><ETag>&quot;321c3cf486ed509164edec1e1981fec8&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>7</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-python-sdk-versioned</Name><Prefix>async-conformance-test/copy-versioned/src-response.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/copy-versioned/src-response.txt</Key><VersionId>uHe94420f.p3OsyIwaLM4irUFdBrVNRP</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-20T21:06:24.000Z</LastModified><ETag>&quot;321c3cf486ed509164edec1e1981fec8&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>7</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -127,7 +127,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/src-response.txt?versionId=uHe94420f.p3OsyIwaLM4irUFdBrVNRP
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/src-response.txt?versionId=uHe94420f.p3OsyIwaLM4irUFdBrVNRP
   response:
     body:
       string: ''
@@ -153,12 +153,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fcopy-versioned%2Fdest-response.txt&encoding-type=url
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=async-conformance-test%2Fcopy-versioned%2Fdest-response.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-versioned</Name><Prefix>async-conformance-test/copy-versioned/dest-response.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/copy-versioned/dest-response.txt</Key><VersionId>fipj_j_DDeD.Krw7YfpmmYO.zYf7ZcvG</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-20T21:06:25.000Z</LastModified><ETag>&quot;321c3cf486ed509164edec1e1981fec8&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>7</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-python-sdk-versioned</Name><Prefix>async-conformance-test/copy-versioned/dest-response.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>async-conformance-test/copy-versioned/dest-response.txt</Key><VersionId>fipj_j_DDeD.Krw7YfpmmYO.zYf7ZcvG</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-20T21:06:25.000Z</LastModified><ETag>&quot;321c3cf486ed509164edec1e1981fec8&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>7</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -185,7 +185,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/dest-response.txt?versionId=fipj_j_DDeD.Krw7YfpmmYO.zYf7ZcvG
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/copy-versioned/dest-response.txt?versionId=fipj_j_DDeD.Krw7YfpmmYO.zYf7ZcvG
   response:
     body:
       string: ''

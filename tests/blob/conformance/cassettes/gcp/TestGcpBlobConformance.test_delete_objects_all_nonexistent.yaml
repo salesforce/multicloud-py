@@ -11,11 +11,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-a.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-a.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-a.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-a.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-a.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-a.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -53,11 +53,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-b.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-b.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-b.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-b.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-b.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-b.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -95,11 +95,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-c.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-c.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-c.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-c.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-c.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-c.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -139,10 +139,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-a.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-a.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-a.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-a.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -180,10 +180,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-b.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-b.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-b.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-b.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -221,10 +221,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-missing-only-c.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-missing-only-c.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-missing-only-c.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-missing-only-c.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

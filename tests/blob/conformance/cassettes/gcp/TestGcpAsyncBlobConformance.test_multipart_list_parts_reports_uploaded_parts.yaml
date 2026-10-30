@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
         \ \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786566987595156\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786566987595156\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"20\",\n  \"md5Hash\": \"FYWndRZaxQnV5PIjomIB1g==\",\n  \"crc32c\": \"Cxsgww==\",\n
         \ \"etag\": \"CJT7ptX4m5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T20:36:27.656Z\",\n
@@ -65,14 +65,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
         \ \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786566987765460\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786566987765460\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"10\",\n  \"md5Hash\": \"SExWJJEOYoj61p5XKgY39w==\",\n  \"crc32c\": \"s2Yrbg==\",\n
         \ \"etag\": \"CNStsdX4m5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T20:36:27.826Z\",\n
@@ -118,14 +118,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
         \ \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786566987944156\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786566987944156\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"30\",\n  \"md5Hash\": \"ZALNKnyoitXtbgWuth/s/w==\",\n  \"crc32c\": \"BtE6uA==\",\n
         \ \"etag\": \"CNyhvNX4m5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T20:36:28.007Z\",\n
@@ -162,37 +162,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?prefix=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?prefix=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987765460\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987765460\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"10\",\n      \"md5Hash\": \"SExWJJEOYoj61p5XKgY39w==\",\n
         \     \"crc32c\": \"s2Yrbg==\",\n      \"etag\": \"CNStsdX4m5YDEAE=\",\n      \"timeCreated\":
         \"2026-08-12T20:36:27.826Z\",\n      \"updated\": \"2026-08-12T20:36:27.826Z\",\n
         \     \"timeStorageClassUpdated\": \"2026-08-12T20:36:27.826Z\",\n      \"timeFinalized\":
         \"2026-08-12T20:36:27.826Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n
-        \     \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
+        \     \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987595156\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987595156\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"20\",\n      \"md5Hash\": \"FYWndRZaxQnV5PIjomIB1g==\",\n
         \     \"crc32c\": \"Cxsgww==\",\n      \"etag\": \"CJT7ptX4m5YDEAE=\",\n      \"timeCreated\":
         \"2026-08-12T20:36:27.656Z\",\n      \"updated\": \"2026-08-12T20:36:27.656Z\",\n
         \     \"timeStorageClassUpdated\": \"2026-08-12T20:36:27.656Z\",\n      \"timeFinalized\":
         \"2026-08-12T20:36:27.656Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n
-        \     \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
+        \     \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987944156\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987944156\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"30\",\n      \"md5Hash\": \"ZALNKnyoitXtbgWuth/s/w==\",\n
         \     \"crc32c\": \"BtE6uA==\",\n      \"etag\": \"CNyhvNX4m5YDEAE=\",\n      \"timeCreated\":
@@ -226,37 +226,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?prefix=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?prefix=async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1/1786566987765460\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1?generation=1786566987765460&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987765460\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987765460\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"10\",\n      \"md5Hash\": \"SExWJJEOYoj61p5XKgY39w==\",\n
         \     \"crc32c\": \"s2Yrbg==\",\n      \"etag\": \"CNStsdX4m5YDEAE=\",\n      \"timeCreated\":
         \"2026-08-12T20:36:27.826Z\",\n      \"updated\": \"2026-08-12T20:36:27.826Z\",\n
         \     \"timeStorageClassUpdated\": \"2026-08-12T20:36:27.826Z\",\n      \"timeFinalized\":
         \"2026-08-12T20:36:27.826Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n
-        \     \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
+        \     \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2/1786566987595156\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2?generation=1786566987595156&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__2\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987595156\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987595156\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"20\",\n      \"md5Hash\": \"FYWndRZaxQnV5PIjomIB1g==\",\n
         \     \"crc32c\": \"Cxsgww==\",\n      \"etag\": \"CJT7ptX4m5YDEAE=\",\n      \"timeCreated\":
         \"2026-08-12T20:36:27.656Z\",\n      \"updated\": \"2026-08-12T20:36:27.656Z\",\n
         \     \"timeStorageClassUpdated\": \"2026-08-12T20:36:27.656Z\",\n      \"timeFinalized\":
         \"2026-08-12T20:36:27.656Z\"\n    },\n    {\n      \"kind\": \"storage#object\",\n
-        \     \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
+        \     \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3/1786566987944156\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3?generation=1786566987944156&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-parts.bin__multipart__00000000000000000000000000000002__3\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566987944156\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566987944156\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"30\",\n      \"md5Hash\": \"ZALNKnyoitXtbgWuth/s/w==\",\n
         \     \"crc32c\": \"BtE6uA==\",\n      \"etag\": \"CNyhvNX4m5YDEAE=\",\n      \"timeCreated\":
@@ -290,7 +290,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__1
   response:
     body:
       string: ''
@@ -323,7 +323,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__2
   response:
     body:
       string: ''
@@ -356,7 +356,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-parts.bin__multipart__00000000000000000000000000000002__3
   response:
     body:
       string: ''

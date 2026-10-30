@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/multipart/tags-at-initiate.bin__multipart__00000000000000000000000000000001__1/1787281456797396\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1?generation=1787281456797396&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/multipart/tags-at-initiate.bin__multipart__00000000000000000000000000000001__1/1787281456797396\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1?generation=1787281456797396&alt=media\",\n
         \ \"name\": \"conformance-test/multipart/tags-at-initiate.bin__multipart__00000000000000000000000000000001__1\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787281456797396\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1787281456797396\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"18\",\n  \"md5Hash\": \"G/vExTqQhuq0VFlYiKpoeQ==\",\n
         \ \"crc32c\": \"sySnDQ==\",\n  \"etag\": \"CNSt4qLesJYDEAE=\",\n  \"timeCreated\":
@@ -77,10 +77,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: POST
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin/compose?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin/compose?prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"testcloud-python-sdk-bucket","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"example-test-bucket-barry","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -120,7 +120,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin__multipart__00000000000000000000000000000001__1?prettyPrint=false
   response:
     body:
       string: ''
@@ -159,10 +159,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"testcloud-python-sdk-bucket","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"example-test-bucket-barry","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -198,10 +198,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"testcloud-python-sdk-bucket","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/multipart/tags-at-initiate.bin/1787281457055022","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?generation=1787281457055022&alt=media","name":"conformance-test/multipart/tags-at-initiate.bin","bucket":"example-test-bucket-barry","generation":"1787281457055022","metageneration":"1","storageClass":"STANDARD","size":"18","crc32c":"sySnDQ==","componentCount":1,"etag":"CK6K8qLesJYDEAE=","timeCreated":"2026-08-21T03:04:17.125Z","updated":"2026-08-21T03:04:17.125Z","timeStorageClassUpdated":"2026-08-21T03:04:17.125Z","timeFinalized":"2026-08-21T03:04:17.125Z","metadata":{"gcp-tag-env":"conformance","gcp-tag-tier":"gold"}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -239,7 +239,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Ftags-at-initiate.bin?prettyPrint=false
   response:
     body:
       string: ''

@@ -36,7 +36,7 @@ interactions:
       - !!binary |
         dGFnMT12YWx1ZTE=
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt
   response:
     body:
       string: ''
@@ -74,7 +74,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -114,7 +114,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
   response:
     body:
       string: ''
@@ -144,7 +144,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?tagging
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -176,12 +176,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Ftags%2Fobject-lock.txt&encoding-type=url
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Ftags%2Fobject-lock.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-versioned</Name><Prefix>conformance-test/tags/object-lock.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/tags/object-lock.txt</Key><VersionId>qSChgVDzvy4VQZPPC3mBuHgsrF3IpFbn</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-21T20:28:55.000Z</LastModified><ETag>&quot;d059b96c4d332d1b6722defcf72ce15e&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>26</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-python-sdk-versioned</Name><Prefix>conformance-test/tags/object-lock.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/tags/object-lock.txt</Key><VersionId>qSChgVDzvy4VQZPPC3mBuHgsrF3IpFbn</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-21T20:28:55.000Z</LastModified><ETag>&quot;d059b96c4d332d1b6722defcf72ce15e&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>26</Size><Owner><ID>b6eaab2af32ba61bce00b8c9aceaa1c649844388ec2c3827bbd3e2b06f798cf1</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -210,7 +210,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?versionId=qSChgVDzvy4VQZPPC3mBuHgsrF3IpFbn
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/tags/object-lock.txt?versionId=qSChgVDzvy4VQZPPC3mBuHgsrF3IpFbn
   response:
     body:
       string: ''

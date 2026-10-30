@@ -33,7 +33,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/presign/expired.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/presign/expired.txt
   response:
     body:
       string: ''
@@ -69,7 +69,7 @@ interactions:
       Connection:
       - keep-alive
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.amazonaws.com/conformance-test/presign/expired.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
+    uri: https://example-test-bucket-barry.s3.amazonaws.com/conformance-test/presign/expired.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -103,7 +103,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/presign/expired.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/presign/expired.txt
   response:
     body:
       string: ''

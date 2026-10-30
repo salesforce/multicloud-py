@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -115,7 +115,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -163,7 +163,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-3.txt
   response:
     body:
       string: ''
@@ -199,12 +199,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Fpaginate-ns%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Fpaginate-ns%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>async-conformance-test/list-page/paginate-ns/</Prefix><NextContinuationToken>18qU3QF9a+thbGExA2z75SPJjBQG+QRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL+PTVNR6ivAB/Vtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o+ItWaCji</NextContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>true</IsTruncated><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:23.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:23.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>async-conformance-test/list-page/paginate-ns/</Prefix><NextContinuationToken>18qU3QF9a+thbGExA2z75SPJjBQG+QRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL+PTVNR6ivAB/Vtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o+ItWaCji</NextContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>true</IsTruncated><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:23.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:23.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -231,12 +231,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Fpaginate-ns%2F&continuation-token=18qU3QF9a%2BthbGExA2z75SPJjBQG%2BQRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL%2BPTVNR6ivAB%2FVtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o%2BItWaCji&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Fpaginate-ns%2F&continuation-token=18qU3QF9a%2BthbGExA2z75SPJjBQG%2BQRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL%2BPTVNR6ivAB%2FVtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o%2BItWaCji&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>async-conformance-test/list-page/paginate-ns/</Prefix><ContinuationToken>18qU3QF9a+thbGExA2z75SPJjBQG+QRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL+PTVNR6ivAB/Vtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o+ItWaCji</ContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-2.txt</Key><LastModified>2026-08-20T21:04:24.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-3.txt</Key><LastModified>2026-08-20T21:04:24.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>async-conformance-test/list-page/paginate-ns/</Prefix><ContinuationToken>18qU3QF9a+thbGExA2z75SPJjBQG+QRTHtmdfegdyqSReYBI4kqi92R7NGVKklGFPB1oUUpONcGfqL+PTVNR6ivAB/Vtgn4edSYP1PiBnGoCcFOj2kz4Mjt0o+ItWaCji</ContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-2.txt</Key><LastModified>2026-08-20T21:04:24.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/paginate-ns/obj-3.txt</Key><LastModified>2026-08-20T21:04:24.000Z</LastModified><ETag>&quot;47b7b32886aee4c7aa9923da6ee75c26&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -265,7 +265,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -295,7 +295,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -325,7 +325,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -355,7 +355,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/paginate-ns/obj-3.txt
   response:
     body:
       string: ''

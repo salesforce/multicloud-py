@@ -20,13 +20,13 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/upload/simple.txt/1784532288705118\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&alt=media\",\n
-        \ \"name\": \"conformance-test/upload/simple.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/upload/simple.txt/1784532288705118\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&alt=media\",\n
+        \ \"name\": \"conformance-test/upload/simple.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1784532288705118\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"text/plain\",\n  \"storageClass\": \"STANDARD\",\n  \"size\": \"24\",\n
         \ \"md5Hash\": \"hHEPG3a3r82+d2mQZ5AyIg==\",\n  \"crc32c\": \"vCk8Eg==\",\n
@@ -74,7 +74,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt?alt=media
   response:
     body:
       string: Hello, conformance test!
@@ -131,10 +131,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/upload/simple.txt/1784532288705118","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&alt=media","name":"conformance-test/upload/simple.txt","bucket":"testcloud-python-sdk-bucket","generation":"1784532288705118","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"24","md5Hash":"hHEPG3a3r82+d2mQZ5AyIg==","crc32c":"vCk8Eg==","etag":"CN6kounc4JUDEAE=","timeCreated":"2026-07-20T07:24:48.780Z","updated":"2026-07-20T07:24:48.780Z","timeStorageClassUpdated":"2026-07-20T07:24:48.780Z","timeFinalized":"2026-07-20T07:24:48.780Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/upload/simple.txt/1784532288705118","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt?generation=1784532288705118&alt=media","name":"conformance-test/upload/simple.txt","bucket":"example-test-bucket-barry","generation":"1784532288705118","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"24","md5Hash":"hHEPG3a3r82+d2mQZ5AyIg==","crc32c":"vCk8Eg==","etag":"CN6kounc4JUDEAE=","timeCreated":"2026-07-20T07:24:48.780Z","updated":"2026-07-20T07:24:48.780Z","timeStorageClassUpdated":"2026-07-20T07:24:48.780Z","timeFinalized":"2026-07-20T07:24:48.780Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -172,7 +172,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fupload%2Fsimple.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fupload%2Fsimple.txt?prettyPrint=false
   response:
     body:
       string: ''

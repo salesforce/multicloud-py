@@ -18,13 +18,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483595237\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&alt=media\",\n
-        \ \"name\": \"conformance-test/exists/versioned.txt\",\n  \"bucket\": \"testcloud-python-sdk-versioned\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483595237\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&alt=media\",\n
+        \ \"name\": \"conformance-test/exists/versioned.txt\",\n  \"bucket\": \"chameleon-python-sdk-versioned\",\n
         \ \"generation\": \"1785993483595237\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"11\",\n  \"md5Hash\": \"X0MnEa9/+olC1ViOISWQIg==\",\n  \"crc32c\": \"ikEDEQ==\",\n
@@ -79,13 +79,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483899956\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&alt=media\",\n
-        \ \"name\": \"conformance-test/exists/versioned.txt\",\n  \"bucket\": \"testcloud-python-sdk-versioned\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483899956\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&alt=media\",\n
+        \ \"name\": \"conformance-test/exists/versioned.txt\",\n  \"bucket\": \"chameleon-python-sdk-versioned\",\n
         \ \"generation\": \"1785993483899956\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"11\",\n  \"md5Hash\": \"mQUj1Iv+p5EKqfsgAvtlWA==\",\n  \"crc32c\": \"8g0CWw==\",\n
@@ -129,7 +129,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&fields=name&prettyPrint=false
   response:
     body:
       string: '{"name":"conformance-test/exists/versioned.txt"}'
@@ -168,7 +168,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&fields=name&prettyPrint=false
   response:
     body:
       string: '{"name":"conformance-test/exists/versioned.txt"}'
@@ -207,7 +207,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?fields=name&prettyPrint=false
   response:
     body:
       string: '{"name":"conformance-test/exists/versioned.txt"}'
@@ -257,14 +257,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/exists/versioned-other.txt/1785993484631268\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/exists/versioned-other.txt/1785993484631268\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&alt=media\",\n
         \ \"name\": \"conformance-test/exists/versioned-other.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1785993484631268\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1785993484631268\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"16\",\n  \"md5Hash\": \"CCg1/te+4byOgUFCZ96YCg==\",\n
         \ \"crc32c\": \"CLf88g==\",\n  \"etag\": \"COT545mgi5YDEAE=\",\n  \"timeCreated\":
@@ -308,11 +308,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993484631268&fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993484631268&fields=name&prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt","errors":[{"message":"No
+        such object: chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -348,10 +348,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fversioned.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fversioned.txt&versions=True&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483595237","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&alt=media","name":"conformance-test/exists/versioned.txt","bucket":"testcloud-python-sdk-versioned","generation":"1785993483595237","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"11","md5Hash":"X0MnEa9/+olC1ViOISWQIg==","crc32c":"ikEDEQ==","etag":"COXbpJmgi5YDEAE=","timeCreated":"2026-08-06T05:18:03.666Z","updated":"2026-08-06T05:18:03.666Z","timeDeleted":"2026-08-06T05:18:04.023Z","timeStorageClassUpdated":"2026-08-06T05:18:03.666Z","timeFinalized":"2026-08-06T05:18:03.666Z"},{"kind":"storage#object","id":"testcloud-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483899956","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&alt=media","name":"conformance-test/exists/versioned.txt","bucket":"testcloud-python-sdk-versioned","generation":"1785993483899956","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"11","md5Hash":"mQUj1Iv+p5EKqfsgAvtlWA==","crc32c":"8g0CWw==","etag":"CLSot5mgi5YDEAE=","timeCreated":"2026-08-06T05:18:04.023Z","updated":"2026-08-06T05:18:04.023Z","timeStorageClassUpdated":"2026-08-06T05:18:04.023Z","timeFinalized":"2026-08-06T05:18:04.023Z"}]}'
+      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483595237","selfLink":"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&alt=media","name":"conformance-test/exists/versioned.txt","bucket":"chameleon-python-sdk-versioned","generation":"1785993483595237","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"11","md5Hash":"X0MnEa9/+olC1ViOISWQIg==","crc32c":"ikEDEQ==","etag":"COXbpJmgi5YDEAE=","timeCreated":"2026-08-06T05:18:03.666Z","updated":"2026-08-06T05:18:03.666Z","timeDeleted":"2026-08-06T05:18:04.023Z","timeStorageClassUpdated":"2026-08-06T05:18:03.666Z","timeFinalized":"2026-08-06T05:18:03.666Z"},{"kind":"storage#object","id":"chameleon-python-sdk-versioned/conformance-test/exists/versioned.txt/1785993483899956","selfLink":"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&alt=media","name":"conformance-test/exists/versioned.txt","bucket":"chameleon-python-sdk-versioned","generation":"1785993483899956","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"11","md5Hash":"mQUj1Iv+p5EKqfsgAvtlWA==","crc32c":"8g0CWw==","etag":"CLSot5mgi5YDEAE=","timeCreated":"2026-08-06T05:18:04.023Z","updated":"2026-08-06T05:18:04.023Z","timeStorageClassUpdated":"2026-08-06T05:18:04.023Z","timeFinalized":"2026-08-06T05:18:04.023Z"}]}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -387,7 +387,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483595237&prettyPrint=false
   response:
     body:
       string: ''
@@ -428,7 +428,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned.txt?generation=1785993483899956&prettyPrint=false
   response:
     body:
       string: ''
@@ -467,10 +467,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fversioned-other.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fversioned-other.txt&versions=True&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"testcloud-python-sdk-versioned/conformance-test/exists/versioned-other.txt/1785993484631268","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&alt=media","name":"conformance-test/exists/versioned-other.txt","bucket":"testcloud-python-sdk-versioned","generation":"1785993484631268","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"16","md5Hash":"CCg1/te+4byOgUFCZ96YCg==","crc32c":"CLf88g==","etag":"COT545mgi5YDEAE=","timeCreated":"2026-08-06T05:18:04.692Z","updated":"2026-08-06T05:18:04.692Z","timeStorageClassUpdated":"2026-08-06T05:18:04.692Z","timeFinalized":"2026-08-06T05:18:04.692Z"}]}'
+      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"chameleon-python-sdk-versioned/conformance-test/exists/versioned-other.txt/1785993484631268","selfLink":"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&alt=media","name":"conformance-test/exists/versioned-other.txt","bucket":"chameleon-python-sdk-versioned","generation":"1785993484631268","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"16","md5Hash":"CCg1/te+4byOgUFCZ96YCg==","crc32c":"CLf88g==","etag":"COT545mgi5YDEAE=","timeCreated":"2026-08-06T05:18:04.692Z","updated":"2026-08-06T05:18:04.692Z","timeStorageClassUpdated":"2026-08-06T05:18:04.692Z","timeFinalized":"2026-08-06T05:18:04.692Z"}]}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -506,7 +506,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fversioned-other.txt?generation=1785993484631268&prettyPrint=false
   response:
     body:
       string: ''

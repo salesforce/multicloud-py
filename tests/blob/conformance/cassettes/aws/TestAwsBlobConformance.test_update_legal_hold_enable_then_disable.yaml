@@ -33,7 +33,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt
   response:
     body:
       string: ''
@@ -79,7 +79,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
   response:
     body:
       string: ''
@@ -109,7 +109,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?retention
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?retention
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -142,7 +142,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -180,7 +180,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
   response:
     body:
       string: ''
@@ -210,7 +210,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?retention
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?retention
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -243,7 +243,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -281,7 +281,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?legal-hold
   response:
     body:
       string: ''
@@ -311,12 +311,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fupdate-legal-hold%2Ftoggle.txt&encoding-type=url
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fupdate-legal-hold%2Ftoggle.txt&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-object-lock</Name><Prefix>conformance-test/update-legal-hold/toggle.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/update-legal-hold/toggle.txt</Key><VersionId>dktMigx_JDov78_Rd1ojVzu_KYkAN7ne</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-12T23:09:51.000Z</LastModified><ETag>&quot;11fb221784f3147ac5a5d0cd81da9478&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-test-bucket-with-object-lock</Name><Prefix>conformance-test/update-legal-hold/toggle.txt</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/update-legal-hold/toggle.txt</Key><VersionId>dktMigx_JDov78_Rd1ojVzu_KYkAN7ne</VersionId><IsLatest>true</IsLatest><LastModified>2026-08-12T23:09:51.000Z</LastModified><ETag>&quot;11fb221784f3147ac5a5d0cd81da9478&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -348,7 +348,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?versionId=dktMigx_JDov78_Rd1ojVzu_KYkAN7ne
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/update-legal-hold/toggle.txt?versionId=dktMigx_JDov78_Rd1ojVzu_KYkAN7ne
   response:
     body:
       string: ''

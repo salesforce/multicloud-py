@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/download-to-path/nested.txt/1783324043274067\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/download-to-path/nested.txt/1783324043274067\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&alt=media\",\n
         \ \"name\": \"conformance-test/download-to-path/nested.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1783324043274067\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1783324043274067\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"26\",\n  \"md5Hash\": \"e6PRBsiGIZu10FSGVz3HsA==\",\n
         \ \"crc32c\": \"cqKF4A==\",\n  \"etag\": \"CNPO+eDHvZUDEAE=\",\n  \"timeCreated\":
@@ -75,7 +75,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt?alt=media
   response:
     body:
       string: nested destination payload
@@ -132,10 +132,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/download-to-path/nested.txt/1783324043274067","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&alt=media","name":"conformance-test/download-to-path/nested.txt","bucket":"testcloud-python-sdk-bucket","generation":"1783324043274067","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"26","md5Hash":"e6PRBsiGIZu10FSGVz3HsA==","crc32c":"cqKF4A==","etag":"CNPO+eDHvZUDEAE=","timeCreated":"2026-07-06T07:47:23.347Z","updated":"2026-07-06T07:47:23.347Z","timeStorageClassUpdated":"2026-07-06T07:47:23.347Z","timeFinalized":"2026-07-06T07:47:23.347Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/download-to-path/nested.txt/1783324043274067","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt?generation=1783324043274067&alt=media","name":"conformance-test/download-to-path/nested.txt","bucket":"example-test-bucket-barry","generation":"1783324043274067","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"26","md5Hash":"e6PRBsiGIZu10FSGVz3HsA==","crc32c":"cqKF4A==","etag":"CNPO+eDHvZUDEAE=","timeCreated":"2026-07-06T07:47:23.347Z","updated":"2026-07-06T07:47:23.347Z","timeStorageClassUpdated":"2026-07-06T07:47:23.347Z","timeFinalized":"2026-07-06T07:47:23.347Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -173,7 +173,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-to-path%2Fnested.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-to-path%2Fnested.txt?prettyPrint=false
   response:
     body:
       string: ''

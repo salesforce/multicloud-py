@@ -20,13 +20,13 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/single.txt/1782997662264936\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fsingle.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fsingle.txt?generation=1782997662264936&alt=media\",\n
-        \ \"name\": \"conformance-test/delete/single.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/single.txt/1782997662264936\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fsingle.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fsingle.txt?generation=1782997662264936&alt=media\",\n
+        \ \"name\": \"conformance-test/delete/single.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1782997662264936\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"text/plain\",\n  \"storageClass\": \"STANDARD\",\n  \"size\": \"9\",\n  \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n  \"crc32c\": \"N2P7zQ==\",\n  \"etag\": \"COjcrfKHtJUDEAE=\",\n
@@ -72,7 +72,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fsingle.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fsingle.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -115,10 +115,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fsingle.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fsingle.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/single.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/single.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

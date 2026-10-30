@@ -36,7 +36,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/src-simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/src-simple.txt
   response:
     body:
       string: ''
@@ -80,7 +80,7 @@ interactions:
         ZXhhbXBsZS10ZXN0LWJ1Y2tldC1iYXJyeS9jb25mb3JtYW5jZS10ZXN0L2NvcHkvc3JjLXNpbXBs
         ZS50eHQ=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -121,7 +121,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
   response:
     body:
       string: copy conformance payload
@@ -171,7 +171,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/src-simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/src-simple.txt
   response:
     body:
       string: ''
@@ -203,7 +203,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/copy/dest-simple.txt
   response:
     body:
       string: ''

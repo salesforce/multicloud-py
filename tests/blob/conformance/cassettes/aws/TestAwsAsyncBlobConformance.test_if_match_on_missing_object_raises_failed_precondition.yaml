@@ -21,7 +21,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/conditional/if-match-missing.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/conditional/if-match-missing.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

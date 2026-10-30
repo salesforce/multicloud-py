@@ -11,10 +11,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload%2Fdoes-not-exist-xyz123.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload%2Fdoes-not-exist-xyz123.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/download/does-not-exist-xyz123.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/download/does-not-exist-xyz123.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

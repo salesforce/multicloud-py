@@ -42,7 +42,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
   response:
     body:
       string: ''
@@ -80,7 +80,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
   response:
     body:
       string: ''
@@ -130,7 +130,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/get-metadata/simple.txt
   response:
     body:
       string: ''

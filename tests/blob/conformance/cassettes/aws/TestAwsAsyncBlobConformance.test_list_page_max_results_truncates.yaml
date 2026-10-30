@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -115,7 +115,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -163,7 +163,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-3.txt
   response:
     body:
       string: ''
@@ -199,12 +199,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Ftruncate-ns%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=2&prefix=async-conformance-test%2Flist-page%2Ftruncate-ns%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>async-conformance-test/list-page/truncate-ns/</Prefix><NextContinuationToken>1do476nueZAbMdnJ6QSAsB2a8Ph4/Ut6f3yEjTlT3uqtE+cBGHyMx2SCEIEmk9krfRvfuszWMjhB6dtKjXfbj71qF8ExUr+1dHcgb4bZtCCIVPW4v0+vctJGi8LFGUxkV</NextContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>true</IsTruncated><Contents><Key>async-conformance-test/list-page/truncate-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:21.000Z</LastModified><ETag>&quot;ab33c34fa0e49a1cd3b231d0cc0bbaef&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/truncate-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:21.000Z</LastModified><ETag>&quot;ab33c34fa0e49a1cd3b231d0cc0bbaef&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>async-conformance-test/list-page/truncate-ns/</Prefix><NextContinuationToken>1do476nueZAbMdnJ6QSAsB2a8Ph4/Ut6f3yEjTlT3uqtE+cBGHyMx2SCEIEmk9krfRvfuszWMjhB6dtKjXfbj71qF8ExUr+1dHcgb4bZtCCIVPW4v0+vctJGi8LFGUxkV</NextContinuationToken><KeyCount>2</KeyCount><MaxKeys>2</MaxKeys><EncodingType>url</EncodingType><IsTruncated>true</IsTruncated><Contents><Key>async-conformance-test/list-page/truncate-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:21.000Z</LastModified><ETag>&quot;ab33c34fa0e49a1cd3b231d0cc0bbaef&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/truncate-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:21.000Z</LastModified><ETag>&quot;ab33c34fa0e49a1cd3b231d0cc0bbaef&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -233,7 +233,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -263,7 +263,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -293,7 +293,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -323,7 +323,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/truncate-ns/obj-3.txt
   response:
     body:
       string: ''

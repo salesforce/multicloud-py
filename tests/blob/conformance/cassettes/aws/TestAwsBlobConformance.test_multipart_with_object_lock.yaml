@@ -20,12 +20,12 @@ interactions:
       - !!binary |
         MjAyNi0wOC0zMFQwMDowMDowMFo=
     method: POST
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploads
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-object-lock</Bucket><Key>conformance-test/multipart/object-lock.bin</Key><UploadId>4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>chameleon-test-bucket-with-object-lock</Bucket><Key>conformance-test/multipart/object-lock.bin</Key><UploadId>4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Fri, 31 Jul 2026 22:35:58 GMT
@@ -76,7 +76,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploadId=4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58&partNumber=1
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploadId=4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58&partNumber=1
   response:
     body:
       string: ''
@@ -112,13 +112,13 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploadId=4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?uploadId=4Eh.Fi9xf5x.stLT8WDhqBPXDWG8uTF5sha_5Jkl1kjzW0Px7AmGRWUv2KFeL5sO541vPjwrXm1bmmHWwfcteZ82f2MJKr9KaTTV.0fhc87QnVASJyTA0pzF0piwNoZXLteoSquKJ3WsBrzX0zQ10_8ddKreYgPr74lBYgZcyXYdnEdq_LP1BX_HBz50JW58
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
 
-        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fobject-lock.bin</Location><Bucket>testcloud-python-sdk-object-lock</Bucket><Key>conformance-test/multipart/object-lock.bin</Key><ETag>"103a7ae033a6ad5ec24474aaebdc3c22-1"</ETag><ChecksumCRC64NVME>610EdyqXsTQ=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
+        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fobject-lock.bin</Location><Bucket>chameleon-test-bucket-with-object-lock</Bucket><Key>conformance-test/multipart/object-lock.bin</Key><ETag>"103a7ae033a6ad5ec24474aaebdc3c22-1"</ETag><ChecksumCRC64NVME>610EdyqXsTQ=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
     headers:
       Content-Type:
       - application/xml
@@ -155,7 +155,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin
   response:
     body:
       string: o
@@ -203,7 +203,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?retention
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?retention
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -233,7 +233,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?legal-hold
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -271,7 +271,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?legal-hold
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?legal-hold
   response:
     body:
       string: ''
@@ -301,12 +301,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fmultipart%2Fobject-lock.bin&encoding-type=url
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/?versions&prefix=conformance-test%2Fmultipart%2Fobject-lock.bin&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-object-lock</Name><Prefix>conformance-test/multipart/object-lock.bin</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>3yeIjTaA1q5GM2JnAwnLmw9_rC202GXa</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-31T22:35:58.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>eP_XsX46TlchgwG1FpTR82OVW.VJnOH3</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:54.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>idJGUDoMkBUYXo9fI9rwBwocsMwwWjAQ</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:51.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>dxeoBICiWX4Z6Jf5mZjNX9mTeiyMTchX</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:26.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>8aE3Hnzt3i0PXKKvz.Bkl1u7_b0yqHfh</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:27:04.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>dRR4SI6ZWt05524QufV.hYEklz.rxonn</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:27:01.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>0.sU3bdl25S6WFdeAM6avhhBH6HzZf7K</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-22T22:26:43.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>MSTP9z_bnwg7ayvi5gjYf26yGIRMvcxc</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-22T22:26:40.000Z</LastModified><ETag>&quot;b27a9892ea59b7d9b21de27cf99e8a4d-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>12</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
+        <ListVersionsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>chameleon-test-bucket-with-object-lock</Name><Prefix>conformance-test/multipart/object-lock.bin</Prefix><KeyMarker></KeyMarker><VersionIdMarker></VersionIdMarker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>3yeIjTaA1q5GM2JnAwnLmw9_rC202GXa</VersionId><IsLatest>true</IsLatest><LastModified>2026-07-31T22:35:58.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>eP_XsX46TlchgwG1FpTR82OVW.VJnOH3</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:54.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>idJGUDoMkBUYXo9fI9rwBwocsMwwWjAQ</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:51.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>dxeoBICiWX4Z6Jf5mZjNX9mTeiyMTchX</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:30:26.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>8aE3Hnzt3i0PXKKvz.Bkl1u7_b0yqHfh</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:27:04.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>dRR4SI6ZWt05524QufV.hYEklz.rxonn</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-30T21:27:01.000Z</LastModified><ETag>&quot;103a7ae033a6ad5ec24474aaebdc3c22-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version><DeleteMarker><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>0.sU3bdl25S6WFdeAM6avhhBH6HzZf7K</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-22T22:26:43.000Z</LastModified><Owner><ID>REDACTED</ID></Owner></DeleteMarker><Version><Key>conformance-test/multipart/object-lock.bin</Key><VersionId>MSTP9z_bnwg7ayvi5gjYf26yGIRMvcxc</VersionId><IsLatest>false</IsLatest><LastModified>2026-07-22T22:26:40.000Z</LastModified><ETag>&quot;b27a9892ea59b7d9b21de27cf99e8a4d-1&quot;</ETag><ChecksumAlgorithm>CRC64NVME</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>12</Size><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass></Version></ListVersionsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -338,7 +338,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=3yeIjTaA1q5GM2JnAwnLmw9_rC202GXa
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=3yeIjTaA1q5GM2JnAwnLmw9_rC202GXa
   response:
     body:
       string: ''
@@ -371,7 +371,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=idJGUDoMkBUYXo9fI9rwBwocsMwwWjAQ
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=idJGUDoMkBUYXo9fI9rwBwocsMwwWjAQ
   response:
     body:
       string: ''
@@ -404,7 +404,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=dRR4SI6ZWt05524QufV.hYEklz.rxonn
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=dRR4SI6ZWt05524QufV.hYEklz.rxonn
   response:
     body:
       string: ''
@@ -437,7 +437,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=MSTP9z_bnwg7ayvi5gjYf26yGIRMvcxc
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=MSTP9z_bnwg7ayvi5gjYf26yGIRMvcxc
   response:
     body:
       string: ''
@@ -470,7 +470,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=eP_XsX46TlchgwG1FpTR82OVW.VJnOH3
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=eP_XsX46TlchgwG1FpTR82OVW.VJnOH3
   response:
     body:
       string: ''
@@ -505,7 +505,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=dxeoBICiWX4Z6Jf5mZjNX9mTeiyMTchX
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=dxeoBICiWX4Z6Jf5mZjNX9mTeiyMTchX
   response:
     body:
       string: ''
@@ -540,7 +540,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=8aE3Hnzt3i0PXKKvz.Bkl1u7_b0yqHfh
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=8aE3Hnzt3i0PXKKvz.Bkl1u7_b0yqHfh
   response:
     body:
       string: ''
@@ -575,7 +575,7 @@ interactions:
       - !!binary |
         dHJ1ZQ==
     method: DELETE
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=0.sU3bdl25S6WFdeAM6avhhBH6HzZf7K
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/conformance-test/multipart/object-lock.bin?versionId=0.sU3bdl25S6WFdeAM6avhhBH6HzZf7K
   response:
     body:
       string: ''

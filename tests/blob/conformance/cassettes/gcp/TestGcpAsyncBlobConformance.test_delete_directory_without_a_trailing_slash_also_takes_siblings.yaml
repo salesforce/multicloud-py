@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/verbatim/logs/inside.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/verbatim/logs/inside.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs/inside.txt/1787204460874945\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt?generation=1787204460874945&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs/inside.txt/1787204460874945\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt?generation=1787204460874945&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/verbatim/logs/inside.txt\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204460874945\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1787204460874945\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"8\",\n  \"md5Hash\": \"8a1J+lsE3aDI2V8PMCsBxg==\",\n
         \ \"crc32c\": \"U8A/ow==\",\n  \"etag\": \"CMGZoLi/rpYDEAE=\",\n  \"timeCreated\":
@@ -66,14 +66,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/verbatim/logs.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/verbatim/logs.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs.txt/1787204461069321\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt?generation=1787204461069321&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs.txt/1787204461069321\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt?generation=1787204461069321&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/verbatim/logs.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204461069321\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787204461069321\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"8\",\n  \"md5Hash\": \"8a1J+lsE3aDI2V8PMCsBxg==\",\n
         \ \"crc32c\": \"U8A/ow==\",\n  \"etag\": \"CImIrLi/rpYDEAE=\",\n  \"timeCreated\":
@@ -120,14 +120,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt/1787204461260518\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt?generation=1787204461260518&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt/1787204461260518\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt?generation=1787204461260518&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204461260518\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1787204461260518\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"8\",\n  \"md5Hash\": \"8a1J+lsE3aDI2V8PMCsBxg==\",\n
         \ \"crc32c\": \"U8A/ow==\",\n  \"etag\": \"CObdt7i/rpYDEAE=\",\n  \"timeCreated\":
@@ -174,14 +174,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/verbatim/other.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/verbatim/other.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/verbatim/other.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204461434973\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787204461434973\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"8\",\n  \"md5Hash\": \"8a1J+lsE3aDI2V8PMCsBxg==\",\n
         \ \"crc32c\": \"U8A/ow==\",\n  \"etag\": \"CN2wwri/rpYDEAE=\",\n  \"timeCreated\":
@@ -219,37 +219,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/logs
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/logs
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt/1787204461260518\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt?generation=1787204461260518&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt/1787204461260518\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt?generation=1787204461260518&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/verbatim/logs-archive/outside.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204461260518\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204461260518\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"8\",\n      \"md5Hash\":
         \"8a1J+lsE3aDI2V8PMCsBxg==\",\n      \"crc32c\": \"U8A/ow==\",\n      \"etag\":
         \"CObdt7i/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:41:01.322Z\",\n
         \     \"updated\": \"2026-08-20T05:41:01.322Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:41:01.322Z\",\n      \"timeFinalized\": \"2026-08-20T05:41:01.322Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs.txt/1787204461069321\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt?generation=1787204461069321&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs.txt/1787204461069321\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt?generation=1787204461069321&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/verbatim/logs.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204461069321\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204461069321\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"8\",\n      \"md5Hash\":
         \"8a1J+lsE3aDI2V8PMCsBxg==\",\n      \"crc32c\": \"U8A/ow==\",\n      \"etag\":
         \"CImIrLi/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:41:01.132Z\",\n
         \     \"updated\": \"2026-08-20T05:41:01.132Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:41:01.132Z\",\n      \"timeFinalized\": \"2026-08-20T05:41:01.132Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/logs/inside.txt/1787204460874945\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt?generation=1787204460874945&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/logs/inside.txt/1787204460874945\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt?generation=1787204460874945&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/verbatim/logs/inside.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204460874945\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204460874945\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"8\",\n      \"md5Hash\":
         \"8a1J+lsE3aDI2V8PMCsBxg==\",\n      \"crc32c\": \"U8A/ow==\",\n      \"etag\":
@@ -284,7 +284,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs-archive%2Foutside.txt
   response:
     body:
       string: ''
@@ -317,7 +317,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs.txt
   response:
     body:
       string: ''
@@ -350,7 +350,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Flogs%2Finside.txt
   response:
     body:
       string: ''
@@ -383,15 +383,15 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/verbatim/other.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204461434973\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204461434973\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"8\",\n      \"md5Hash\":
         \"8a1J+lsE3aDI2V8PMCsBxg==\",\n      \"crc32c\": \"U8A/ow==\",\n      \"etag\":
@@ -426,15 +426,15 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/verbatim/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/verbatim/other.txt/1787204461434973\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt?generation=1787204461434973&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/verbatim/other.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204461434973\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204461434973\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"8\",\n      \"md5Hash\":
         \"8a1J+lsE3aDI2V8PMCsBxg==\",\n      \"crc32c\": \"U8A/ow==\",\n      \"etag\":
@@ -469,7 +469,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Fverbatim%2Fother.txt
   response:
     body:
       string: ''

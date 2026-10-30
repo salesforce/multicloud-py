@@ -11,12 +11,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Mon, 10 Aug 2026 17:11:05 GMT
@@ -43,12 +43,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>0</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated></ListPartsResult>'
+        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>0</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated></ListPartsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -98,7 +98,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r&partNumber=1
   response:
     body:
       string: ''
@@ -132,12 +132,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>1</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated><Part><PartNumber>1</PartNumber><LastModified>2026-08-10T17:11:06.000Z</LastModified><ETag>&quot;cf991820b977325adad84b8e332eb4b3&quot;</ETag><Size>12</Size></Part></ListPartsResult>'
+        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/list-parts-empty.bin</Key><UploadId>MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>1</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated><Part><PartNumber>1</PartNumber><LastModified>2026-08-10T17:11:06.000Z</LastModified><ETag>&quot;cf991820b977325adad84b8e332eb4b3&quot;</ETag><Size>12</Size></Part></ListPartsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -166,7 +166,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin?uploadId=MEl5a2TJFzRf85xnr9FwkP57Dp7CaRML9By45c2kysEjeyVtD_QEUZdCRNbl_zW8C_BR6XeodosYOkIBfXzS2oLAVK0ooDYx2xG7sVXAbpd3H9H.z941Evc_p9PB7ZDt_2oY7lAU0R2AZElQkR2KLNY5oD9.HwEVIzMg39Abf.NXRdyxt9XbdSfJ845Vak9r
   response:
     body:
       string: ''
@@ -194,7 +194,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/list-parts-empty.bin
   response:
     body:
       string: ''

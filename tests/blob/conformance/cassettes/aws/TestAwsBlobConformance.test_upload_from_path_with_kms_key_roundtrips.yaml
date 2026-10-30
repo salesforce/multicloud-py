@@ -43,7 +43,7 @@ interactions:
         YXJuOmF3czprbXM6dXMtd2VzdC0yOjY1NDY1NDM3MDg5NTprZXkvZmFhMTQwYWYtODE5NS00OWMw
         LTlmOGEtZjAzZTlmZDQ3ZDg5
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
   response:
     body:
       string: ''
@@ -88,7 +88,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
   response:
     body:
       string: kms-encrypted from-path payload
@@ -142,7 +142,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/encryption/kms-upload-from-path.txt
   response:
     body:
       string: ''
