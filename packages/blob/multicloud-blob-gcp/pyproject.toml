@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+requires = ["setuptools==84.1.0", "wheel==0.48.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -27,7 +27,7 @@ Issues = "https://github.com/salesforce/multicloud-py/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0", "mypy>=1.0.0"]
-async = ["gcloud-aio-storage>=9.0.0", "aiohttp>=3.14.1"]
+async = ["gcloud-aio-storage>=9.0.0", "aiohttp>=3.14.4"]
 
 [project.entry-points."multicloud.blob.providers"]
 gcp = "multicloud.blob.blob_gcp"
