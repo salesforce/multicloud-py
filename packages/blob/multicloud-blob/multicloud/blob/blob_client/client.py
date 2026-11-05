@@ -32,6 +32,7 @@ from multicloud.blob.blob_client.driver import (
     BlobIdentifier,
     BlobInfo,
     BlobMetadata,
+    ChecksumAlgorithm,
     CopyResponse,
     DeleteObjectsResponse,
     DownloadResponse,
@@ -116,6 +117,8 @@ class BucketClient:
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[Union[ChecksumAlgorithm, str]] = None,
     ) -> UploadResponse:
         """Upload ``payload`` to the object identified by ``key``.
 
@@ -153,9 +156,19 @@ class BucketClient:
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            checksum_value: Base64-encoded digest of ``payload`` (for example
+                ``base64.b64encode(hashlib.md5(payload).digest())``) that the
+                provider validates against the bytes it receives. Requires
+                checksum_algorithm. A mismatch raises InvalidArgumentException
+                and the object is not written.
+            checksum_algorithm: Algorithm of checksum_value, as a
+                :class:`ChecksumAlgorithm` or its case-insensitive name
+                (``"CRC32C"`` or ``"MD5"``). Requires checksum_value.
 
         Returns:
-            UploadResponse containing the key, ETag, and version ID.
+            UploadResponse containing the key, ETag, and version ID. When a
+            checksum was supplied, it also carries the algorithm and the
+            provider-computed checksum value.
         """
         try:
             return self._store.upload(
@@ -171,6 +184,8 @@ class BucketClient:
                 if_version_match=if_version_match,
                 kms_key_id=kms_key_id,
                 use_kms_managed_key=use_kms_managed_key,
+                checksum_value=checksum_value,
+                checksum_algorithm=checksum_algorithm,
             )
         except Exception as exc:
             raise self._store.translate_error(exc) from exc

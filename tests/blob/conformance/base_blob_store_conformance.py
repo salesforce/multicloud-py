@@ -29,6 +29,7 @@ import requests
 from multicloud.blob.blob_client import (
     BlobIdentifier,
     BucketClient,
+    ChecksumAlgorithm,
     MultipartPart,
     MultipartUpload,
     ObjectLockConfiguration,
@@ -47,6 +48,20 @@ from multicloud.common.exceptions import (
 )
 
 from tests.blob.conformance.vcr_filters import captured_legal_hold_writes
+
+
+def _crc32c_b64(data: bytes) -> str:
+    """Return the base64 big-endian CRC32C (Castagnoli) of *data*.
+
+    Computed here rather than with a provider library so the shared suite stays
+    independent of any provider's dependencies.
+    """
+    crc = 0xFFFFFFFF
+    for byte in data:
+        crc ^= byte
+        for _ in range(8):
+            crc = (crc >> 1) ^ (0x82F63B78 & -(crc & 1))
+    return base64.b64encode((crc ^ 0xFFFFFFFF).to_bytes(4, "big")).decode()
 
 
 class Harness(ABC):
@@ -399,6 +414,64 @@ class BaseBlobStoreConformance:
             client.upload(key, b"version2")
             resp = client.download(key)
             assert resp.content == b"version2"
+        finally:
+            self._safe_delete(client, key)
+
+    # Upload checksum conformance tests
+    #
+    # The provider validates the caller's digest against the bytes it stores
+    # and reports its own digest back; a mismatch must reject the write.
+
+    def test_upload_with_md5_checksum_roundtrips(self, client):
+        """A correct MD5 is accepted and echoed back as the server's digest."""
+        key = f"{self.TEST_PREFIX}upload/checksum-md5.txt"
+        payload = b"md5 checksum conformance payload"
+        expected = base64.b64encode(hashlib.md5(payload).digest()).decode()
+        try:
+            resp = client.upload(
+                key,
+                payload,
+                checksum_value=expected,
+                checksum_algorithm=ChecksumAlgorithm.MD5,
+            )
+            assert resp.checksum_algorithm is ChecksumAlgorithm.MD5
+            assert resp.checksum_value == expected
+            assert client.download(key).content == payload
+        finally:
+            self._safe_delete(client, key)
+
+    def test_upload_with_crc32c_checksum_roundtrips(self, client):
+        """A correct CRC32C, named as a string, is accepted and echoed back."""
+        key = f"{self.TEST_PREFIX}upload/checksum-crc32c.txt"
+        payload = b"crc32c checksum conformance payload"
+        expected = _crc32c_b64(payload)
+        try:
+            resp = client.upload(
+                key, payload, checksum_value=expected, checksum_algorithm="crc32c"
+            )
+            assert resp.checksum_algorithm is ChecksumAlgorithm.CRC32C
+            assert resp.checksum_value == expected
+            assert client.download(key).content == payload
+        finally:
+            self._safe_delete(client, key)
+
+    def test_upload_checksum_mismatch_rejected(self, client):
+        """A well-formed digest of different bytes fails and writes nothing."""
+        key = f"{self.TEST_PREFIX}upload/checksum-mismatch.txt"
+        wrong = base64.b64encode(hashlib.md5(b"other bytes").digest()).decode()
+        try:
+            assert client.does_object_exist(key) is False
+            with pytest.raises(
+                InvalidArgumentException,
+                match=f"upload: MD5 checksum mismatch for key '{key}'",
+            ):
+                client.upload(
+                    key,
+                    b"checksum mismatch payload",
+                    checksum_value=wrong,
+                    checksum_algorithm=ChecksumAlgorithm.MD5,
+                )
+            assert client.does_object_exist(key) is False
         finally:
             self._safe_delete(client, key)
 

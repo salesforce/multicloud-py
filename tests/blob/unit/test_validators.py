@@ -6,9 +6,14 @@ this file focuses on the generic helpers and field-level validators.
 
 from __future__ import annotations
 
+import base64
+import hashlib
+
 import pytest
-from multicloud.blob.blob_client.driver import PresignedOperation
+from multicloud.blob.blob_client.driver import ChecksumAlgorithm, PresignedOperation
 from multicloud.blob.blob_client.validators import (
+    CHECKSUM_ALGORITHM_WITHOUT_VALUE_MSG,
+    CHECKSUM_VALUE_WITHOUT_ALGORITHM_MSG,
     CREATE_IF_ABSENT_WITH_IF_MATCH_MSG,
     CREATE_IF_ABSENT_WITH_IF_VERSION_MATCH_MSG,
     EMPTY_IF_MATCH_MSG,
@@ -148,6 +153,55 @@ class TestValidateUploadWithContentLength:
         # Key validation runs first.
         with pytest.raises(InvalidArgumentException, match=INVALID_OBJECT_NAME_MSG):
             v.validate_upload("", -5)
+
+
+_MD5_B64 = base64.b64encode(hashlib.md5(b"data").digest()).decode()
+_CRC32C_B64 = base64.b64encode(b"\x00\x01\x02\x03").decode()
+
+
+class TestValidateChecksum:
+    """checksum_value / checksum_algorithm pairing and digest shape."""
+
+    def test_accepts_neither(self, v):
+        v.validate_checksum(None, None)
+
+    def test_accepts_md5_digest(self, v):
+        v.validate_checksum(_MD5_B64, ChecksumAlgorithm.MD5)
+
+    def test_accepts_crc32c_digest(self, v):
+        v.validate_checksum(_CRC32C_B64, ChecksumAlgorithm.CRC32C)
+
+    def test_rejects_value_without_algorithm(self, v):
+        with pytest.raises(
+            InvalidArgumentException, match=CHECKSUM_VALUE_WITHOUT_ALGORITHM_MSG
+        ):
+            v.validate_checksum(_MD5_B64, None)
+
+    def test_rejects_algorithm_without_value(self, v):
+        with pytest.raises(
+            InvalidArgumentException, match=CHECKSUM_ALGORITHM_WITHOUT_VALUE_MSG
+        ):
+            v.validate_checksum(None, ChecksumAlgorithm.MD5)
+
+    def test_rejects_non_base64_value(self, v):
+        with pytest.raises(
+            InvalidArgumentException, match="base64-encoded 16-byte MD5 digest"
+        ):
+            v.validate_checksum("not base64!", ChecksumAlgorithm.MD5)
+
+    def test_rejects_hex_encoded_md5(self, v):
+        # A hex digest is valid base64 text but decodes to 24 bytes, not 16.
+        with pytest.raises(
+            InvalidArgumentException, match="base64-encoded 16-byte MD5 digest"
+        ):
+            v.validate_checksum(hashlib.md5(b"data").hexdigest(), ChecksumAlgorithm.MD5)
+
+    def test_rejects_wrong_length_for_algorithm(self, v):
+        # A valid MD5 digest is the wrong size for CRC32C.
+        with pytest.raises(
+            InvalidArgumentException, match="base64-encoded 4-byte CRC32C digest"
+        ):
+            v.validate_checksum(_MD5_B64, ChecksumAlgorithm.CRC32C)
 
 
 class TestValidateWritePreconditions:

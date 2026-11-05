@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import io
 import os
 import tempfile
@@ -18,6 +20,7 @@ from multicloud.blob.blob_client.driver import (
     BlobInfo,
     BlobMetadata,
     BlobStoreValidator,
+    ChecksumAlgorithm,
     CopyResponse,
     DeleteObjectsResponse,
     DownloadResponse,
@@ -77,6 +80,8 @@ class _FakeBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[ChecksumAlgorithm] = None,
     ) -> UploadResponse:
         self.upload_calls.append(
             {
@@ -90,6 +95,8 @@ class _FakeBlobStore(BaseBlobStore):
                 "create_if_absent": create_if_absent,
                 "if_match": if_match,
                 "if_version_match": if_version_match,
+                "checksum_value": checksum_value,
+                "checksum_algorithm": checksum_algorithm,
             }
         )
         return UploadResponse(key=key, e_tag="fake-etag", version_id="v1")
@@ -611,6 +618,54 @@ class TestBaseBlobStore:
             store.upload("a" * 1025, b"data")
         assert store.upload_calls == []
 
+    def test_upload_forwards_checksum_to_do_upload(self):
+        store = _FakeBlobStore(bucket="b")
+        value = base64.b64encode(hashlib.md5(b"data").digest()).decode()
+        store.upload(
+            "k",
+            b"data",
+            checksum_value=value,
+            checksum_algorithm=ChecksumAlgorithm.MD5,
+        )
+        assert store.upload_calls[0]["checksum_value"] == value
+        assert store.upload_calls[0]["checksum_algorithm"] is ChecksumAlgorithm.MD5
+
+    def test_upload_without_checksum_forwards_none(self):
+        store = _FakeBlobStore(bucket="b")
+        store.upload("k", b"data")
+        assert store.upload_calls[0]["checksum_value"] is None
+        assert store.upload_calls[0]["checksum_algorithm"] is None
+
+    @pytest.mark.parametrize("name", ["CRC32C", "crc32c"])
+    def test_upload_normalizes_checksum_algorithm_string(self, name):
+        store = _FakeBlobStore(bucket="b")
+        store.upload(
+            "k",
+            b"data",
+            checksum_value=base64.b64encode(b"\x00\x01\x02\x03").decode(),
+            checksum_algorithm=name,
+        )
+        assert store.upload_calls[0]["checksum_algorithm"] is ChecksumAlgorithm.CRC32C
+
+    def test_upload_unsupported_checksum_algorithm_rejected_before_do_upload(self):
+        store = _FakeBlobStore(bucket="b")
+        with pytest.raises(
+            InvalidArgumentException,
+            match="checksum_algorithm must be one of CRC32C, MD5. value='SHA256'",
+        ):
+            store.upload(
+                "k", b"data", checksum_value="AAAA", checksum_algorithm="SHA256"
+            )
+        assert store.upload_calls == []
+
+    def test_upload_checksum_value_without_algorithm_rejected_before_do_upload(self):
+        store = _FakeBlobStore(bucket="b")
+        with pytest.raises(
+            InvalidArgumentException, match="checksum_value requires checksum_algorithm"
+        ):
+            store.upload("k", b"data", checksum_value="AAAAAA==")
+        assert store.upload_calls == []
+
     def test_generate_presigned_download_rejects_upload_only_params(self):
         store = _FakeBlobStore(bucket="b")
         with pytest.raises(
@@ -781,6 +836,8 @@ class TestDataclasses:
         r = UploadResponse(key="k")
         assert r.e_tag is None
         assert r.version_id is None
+        assert r.checksum_algorithm is None
+        assert r.checksum_value is None
 
     def test_upload_response_frozen(self):
         r = UploadResponse(key="k")
@@ -1032,6 +1089,8 @@ class _NoMultipartStore(BaseBlobStore):
         if_version_match=None,
         kms_key_id=None,
         use_kms_managed_key=False,
+        checksum_value=None,
+        checksum_algorithm=None,
     ):
         return UploadResponse(key=key)
 

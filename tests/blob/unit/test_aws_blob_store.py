@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import base64
+import hashlib
 from typing import Any
 from unittest.mock import ANY, MagicMock, patch
 
@@ -15,6 +17,7 @@ from multicloud.blob.blob_aws.aws_blob_store import (
 from multicloud.blob.blob_client.driver import (
     BlobInfo,
     BlobMetadata,
+    ChecksumAlgorithm,
     DownloadResponse,
     ListBlobsPageResponse,
     ObjectLockConfiguration,
@@ -229,6 +232,86 @@ class TestAwsBlobStoreUpload:
         call_kwargs = mock_s3.put_object.call_args[1]
         assert call_kwargs["ObjectLockLegalHoldStatus"] == "ON"
         assert "ObjectLockMode" not in call_kwargs
+
+    def test_upload_with_crc32c_checksum(self, store, mock_s3):
+        mock_s3.put_object.return_value = {"ETag": '"e"', "ChecksumCRC32C": "yZRlqg=="}
+        resp = store.upload(
+            "k",
+            b"x",
+            checksum_value="yZRlqg==",
+            checksum_algorithm=ChecksumAlgorithm.CRC32C,
+        )
+        call_kwargs = mock_s3.put_object.call_args[1]
+        assert call_kwargs["ChecksumCRC32C"] == "yZRlqg=="
+        assert "ChecksumMD5" not in call_kwargs
+        assert resp.checksum_algorithm is ChecksumAlgorithm.CRC32C
+        assert resp.checksum_value == "yZRlqg=="
+
+    def test_upload_with_md5_checksum(self, store, mock_s3):
+        md5 = base64.b64encode(hashlib.md5(b"x").digest()).decode()
+        mock_s3.put_object.return_value = {"ETag": '"e"', "ChecksumMD5": md5}
+        resp = store.upload(
+            "k", b"x", checksum_value=md5, checksum_algorithm=ChecksumAlgorithm.MD5
+        )
+        call_kwargs = mock_s3.put_object.call_args[1]
+        assert call_kwargs["ChecksumMD5"] == md5
+        assert "ChecksumCRC32C" not in call_kwargs
+        assert resp.checksum_algorithm is ChecksumAlgorithm.MD5
+        assert resp.checksum_value == md5
+
+    def test_upload_without_checksum_omits_checksum_kwargs(self, store, mock_s3):
+        # S3 returns a default checksum even when none was requested; the
+        # response only reports a checksum the caller asked to validate.
+        mock_s3.put_object.return_value = {"ETag": '"e"', "ChecksumCRC32": "AAAAAA=="}
+        resp = store.upload("k", b"x")
+        call_kwargs = mock_s3.put_object.call_args[1]
+        assert not [k for k in call_kwargs if k.startswith("Checksum")]
+        assert resp.checksum_algorithm is None
+        assert resp.checksum_value is None
+
+    def test_upload_checksum_mismatch_raises_invalid_argument(self, store, mock_s3):
+        mock_s3.put_object.side_effect = ClientError(
+            {
+                "Error": {
+                    "Code": "BadDigest",
+                    "Message": "The CRC32C you specified did not match the "
+                    "calculated checksum.",
+                },
+                "ResponseMetadata": {"HTTPStatusCode": 400},
+            },
+            "PutObject",
+        )
+        with pytest.raises(
+            InvalidArgumentException,
+            match="upload: CRC32C checksum mismatch for key 'k'; the object was "
+            "not written",
+        ) as exc_info:
+            store.upload(
+                "k",
+                b"x",
+                checksum_value="AAAAAA==",
+                checksum_algorithm=ChecksumAlgorithm.CRC32C,
+            )
+        assert isinstance(exc_info.value.__cause__, ClientError)
+
+    def test_upload_checksum_with_create_if_absent_keeps_exists_mapping(
+        self, store, mock_s3
+    ):
+        mock_s3.put_object.side_effect = ClientError(
+            {
+                "Error": {"Code": "PreconditionFailed", "Message": "exists"},
+                "ResponseMetadata": {"HTTPStatusCode": 412},
+            },
+            "PutObject",
+        )
+        with pytest.raises(ResourceExistsException):
+            store.upload(
+                "k",
+                b"x",
+                create_if_absent=True,
+                checksum_value="AAAAAA==",
+                checksum_algorithm=ChecksumAlgorithm.CRC32C,
+            )
 
     def test_upload_without_object_lock_omits_lock_kwargs(self, store, mock_s3):
         mock_s3.put_object.return_value = {"ETag": '"e"'}

@@ -59,6 +59,42 @@ with BucketClient(provider="aws", bucket="my-bucket", region="us-west-2") as cli
         resp = client.upload("backups/large-file.bin", f)
 ```
 
+### Checksum Validation
+
+Pass a base64-encoded digest of the payload and its algorithm to have the
+provider validate the bytes it stores. Both arguments are required together.
+Supported algorithms are `CRC32C` and `MD5`.
+
+```python
+import base64
+import hashlib
+
+from multicloud.blob.blob_client import BucketClient, ChecksumAlgorithm
+from multicloud.common.exceptions import InvalidArgumentException
+
+payload = b"Hello, World!"
+digest = base64.b64encode(hashlib.md5(payload).digest()).decode()
+
+with BucketClient(provider="aws", bucket="my-bucket", region="us-west-2") as client:
+    try:
+        resp = client.upload(
+            "hello.txt",
+            payload,
+            checksum_value=digest,
+            checksum_algorithm=ChecksumAlgorithm.MD5,  # or "MD5"
+        )
+        print(resp.checksum_value)  # digest computed by the provider
+    except InvalidArgumentException as exc:
+        print(f"Rejected, object not written: {exc}")
+```
+
+If the digest is malformed (not base64, or the wrong length for its
+algorithm), the client raises `InvalidArgumentException` before sending the
+request. If it is well formed but doesn't match the uploaded bytes, the
+provider rejects the upload and the client raises `InvalidArgumentException`
+with a `checksum mismatch` message. Checksum validation is currently
+available on the synchronous `upload` method only.
+
 ### Upload Parameters
 
 | Parameter | Type | Required | Description |
@@ -68,6 +104,8 @@ with BucketClient(provider="aws", bucket="my-bucket", region="us-west-2") as cli
 | `content_type` | `str` | | MIME type (e.g., `"text/plain"`) |
 | `content_length` | `int` | | Size in bytes (auto-detected if omitted) |
 | `metadata` | `Mapping[str, str]` | | User-defined metadata |
+| `checksum_value` | `str` | | Base64-encoded digest of the payload; requires `checksum_algorithm` |
+| `checksum_algorithm` | `ChecksumAlgorithm \| str` | | `CRC32C` or `MD5`; requires `checksum_value` |
 
 ### UploadResponse
 
@@ -78,6 +116,8 @@ with BucketClient(provider="aws", bucket="my-bucket", region="us-west-2") as cli
 | `key` | `str` | Object key |
 | `e_tag` | `str \| None` | Entity tag (content hash) |
 | `version_id` | `str \| None` | Version ID (if versioning enabled) |
+| `checksum_algorithm` | `ChecksumAlgorithm \| None` | Algorithm validated, when a checksum was supplied |
+| `checksum_value` | `str \| None` | Base64 digest computed by the provider, when a checksum was supplied |
 
 ## Downloading Objects
 

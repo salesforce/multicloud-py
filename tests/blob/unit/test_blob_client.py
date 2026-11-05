@@ -220,6 +220,8 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            checksum_value=None,
+            checksum_algorithm=None,
         )
 
     def test_upload_forwards_tags(self):
@@ -241,6 +243,8 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            checksum_value=None,
+            checksum_algorithm=None,
         )
 
     def test_upload_forwards_object_lock(self):
@@ -273,6 +277,8 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            checksum_value=None,
+            checksum_algorithm=None,
         )
 
     def test_upload_forwards_preconditions_and_kms(self):
@@ -300,6 +306,8 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id="arn:key/abc",
             use_kms_managed_key=True,
+            checksum_value=None,
+            checksum_algorithm=None,
         )
 
     def test_upload_forwards_if_match(self):
@@ -321,6 +329,8 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            checksum_value=None,
+            checksum_algorithm=None,
         )
 
     def test_upload_forwards_if_version_match(self):
@@ -342,6 +352,45 @@ class TestBucketClientForwardingMethods:
             if_version_match="42",
             kms_key_id=None,
             use_kms_managed_key=False,
+            checksum_value=None,
+            checksum_algorithm=None,
+        )
+
+    def test_upload_forwards_checksum(self):
+        client, mock_store = self._make_client_with_mock_store()
+        from multicloud.blob.blob_client.driver import (
+            ChecksumAlgorithm,
+            UploadResponse,
+        )
+
+        mock_store.upload.return_value = UploadResponse(
+            key="k",
+            checksum_algorithm=ChecksumAlgorithm.CRC32C,
+            checksum_value="server==",
+        )
+        resp = client.upload(
+            "k",
+            b"data",
+            checksum_value="AAECAw==",
+            checksum_algorithm=ChecksumAlgorithm.CRC32C,
+        )
+        assert resp.checksum_algorithm is ChecksumAlgorithm.CRC32C
+        assert resp.checksum_value == "server=="
+        mock_store.upload.assert_called_once_with(
+            "k",
+            b"data",
+            content_type=None,
+            content_length=None,
+            metadata=None,
+            tags=None,
+            object_lock=None,
+            create_if_absent=False,
+            if_match=None,
+            if_version_match=None,
+            kms_key_id=None,
+            use_kms_managed_key=False,
+            checksum_value="AAECAw==",
+            checksum_algorithm=ChecksumAlgorithm.CRC32C,
         )
 
     def test_download_forwards(self):

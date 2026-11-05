@@ -26,6 +26,7 @@ from multicloud.blob.blob_client.driver import (
     BlobIdentifier,
     BlobInfo,
     BlobMetadata,
+    ChecksumAlgorithm,
     CopyResponse,
     DeleteError,
     DeleteObjectsResponse,
@@ -45,6 +46,7 @@ from multicloud.blob.blob_client.driver import (
     UploadResponse,
 )
 from multicloud.blob.blob_client.retention_rules import resolve_and_validate
+from multicloud.blob.blob_client.validators import CHECKSUM_MISMATCH_MSG
 from multicloud.blob.blob_gcp._gcp_common import resolve_generation_match
 from multicloud.common.credentials import CredentialsOverrider
 from multicloud.common.exceptions import (
@@ -74,6 +76,18 @@ _GCP_TAG_PREFIX = "gcp-tag-"
 # past this surfaces as an opaque HTTP 400 from the service; we pre-flight
 # both upload_part and complete to fail fast with InvalidArgumentException.
 _GCS_COMPOSE_MAX_PARTS = 1024
+
+
+# Blob property holding each algorithm's base64 digest. Set before upload it is
+# sent in the object resource for GCS to validate; after upload it holds the
+# digest GCS computed over the stored bytes.
+_CHECKSUM_PROPERTIES = {
+    ChecksumAlgorithm.CRC32C: "crc32c",
+    ChecksumAlgorithm.MD5: "md5_hash",
+}
+# GCS rejects a mismatched digest with HTTP 400 and a message of the form
+# 'Provided CRC32C "..." doesn't match calculated CRC32C "..."'.
+_CHECKSUM_MISMATCH_MARKER = "doesn't match calculated"
 
 
 @BLOB_REGISTRY.register("gcp")
@@ -355,6 +369,8 @@ class GcpBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[ChecksumAlgorithm] = None,
     ) -> UploadResponse:
         blob = self._bucket_handle.blob(key)
         # GCS has no native object tagging API; encode tags as
@@ -383,19 +399,36 @@ class GcpBlobStore(BaseBlobStore):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
         )
-        self._put_object_conditional(
-            lambda: blob.upload_from_string(
-                payload,
-                content_type=content_type or "application/octet-stream",
-                **upload_kwargs,
-            ),
-            create_if_absent,
-        )
+        checksum_property = None
+        if checksum_algorithm is not None:
+            checksum_property = _CHECKSUM_PROPERTIES[checksum_algorithm]
+            setattr(blob, checksum_property, checksum_value)
+            # The library's own checksum option would replace the caller's value.
+            upload_kwargs["checksum"] = None
+        try:
+            self._put_object_conditional(
+                lambda: blob.upload_from_string(
+                    payload,
+                    content_type=content_type or "application/octet-stream",
+                    **upload_kwargs,
+                ),
+                create_if_absent,
+            )
+        except gcs_exceptions.BadRequest as exc:
+            if checksum_algorithm is not None and _CHECKSUM_MISMATCH_MARKER in str(exc):
+                raise InvalidArgumentException(
+                    CHECKSUM_MISMATCH_MSG.format(checksum_algorithm.value, key, exc)
+                ) from exc
+            raise
         self._apply_hold_after_upload(blob, object_lock)
         return UploadResponse(
             key=key,
             e_tag=blob.etag,
             version_id=str(blob.generation) if blob.generation is not None else None,
+            checksum_algorithm=checksum_algorithm,
+            checksum_value=(
+                getattr(blob, checksum_property) if checksum_property else None
+            ),
         )
 
     def do_upload_from_path(
