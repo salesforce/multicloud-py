@@ -7,7 +7,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/does-not-exist-xyz123.txt?retention
+    uri: https://chameleon-test-bucket-with-object-lock.s3.us-west-2.amazonaws.com/async-conformance-test/object-lock/does-not-exist-xyz123.txt?retention
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

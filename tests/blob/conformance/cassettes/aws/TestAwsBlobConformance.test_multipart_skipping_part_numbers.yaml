@@ -11,12 +11,12 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/skipping-numbers.bin</Key><UploadId>ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/skipping-numbers.bin</Key><UploadId>ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 22 Jul 2026 18:10:20 GMT
@@ -66,7 +66,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_&partNumber=1
   response:
     body:
       string: ''
@@ -124,7 +124,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_&partNumber=3
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_&partNumber=3
   response:
     body:
       string: ''
@@ -160,13 +160,13 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin?uploadId=ZD8BJILdoNxMflcCNNO0VXDMlHRc4rdvxwhq82NiAIjOIkVOjjgJaMxI7zhCRHJ5EV1C__LLOtEOMh3.ZgiXBan4BVLCgXod1bOyKA_7OgXPLe0By4aNw_SUMiGjglcsXjn5ZkkzqNH5QBd50ms.Xln6foIBw98XkmE.WEjfmEWTxscOJ_u7IGtgg8_cYza_
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
 
-        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fskipping-numbers.bin</Location><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/skipping-numbers.bin</Key><ETag>"b4d9f1567169bbe36b3810c544697b27-2"</ETag><ChecksumCRC64NVME>PHOBN1A4gPo=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
+        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fskipping-numbers.bin</Location><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/skipping-numbers.bin</Key><ETag>"b4d9f1567169bbe36b3810c544697b27-2"</ETag><ChecksumCRC64NVME>PHOBN1A4gPo=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
     headers:
       Content-Type:
       - application/xml
@@ -203,7 +203,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
   response:
     body:
       string: "\x01"
@@ -255,7 +255,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
   response:
     body:
       string: "\x03"
@@ -303,7 +303,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/skipping-numbers.bin
   response:
     body:
       string: ''

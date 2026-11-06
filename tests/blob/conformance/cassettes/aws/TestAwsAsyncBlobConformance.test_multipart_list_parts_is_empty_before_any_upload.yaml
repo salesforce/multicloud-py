@@ -9,12 +9,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>async-conformance-test/multipart-list-empty.bin</Key><UploadId>0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>async-conformance-test/multipart-list-empty.bin</Key><UploadId>0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 12 Aug 2026 20:36:19 GMT
@@ -39,12 +39,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploadId=0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploadId=0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>async-conformance-test/multipart-list-empty.bin</Key><UploadId>0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>0</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated></ListPartsResult>'
+        <ListPartsResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>async-conformance-test/multipart-list-empty.bin</Key><UploadId>0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK</UploadId><Initiator><ID>REDACTED</ID><DisplayName>REDACTED</DisplayName></Initiator><Owner><ID>REDACTED</ID></Owner><StorageClass>STANDARD</StorageClass><PartNumberMarker>0</PartNumberMarker><NextPartNumberMarker>0</NextPartNumberMarker><MaxParts>1000</MaxParts><IsTruncated>false</IsTruncated></ListPartsResult>'
     headers:
       Content-Type:
       - application/xml
@@ -71,7 +71,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploadId=0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/multipart-list-empty.bin?uploadId=0MpSIw6FPs5XQBPyVg1X.tQK4.rWJlkUpb9XRHcjk67OZA5Uz1vAjLmPq_23CeruPPufaj.YgV1Qs_OmfVJhrwLuVvXBVi5CZ9epmMmWtYGEFAYZWZ4ZvQNX8yycW4Dt6zUcaCo3xCB.zQgN7EP1gYj5jCeEzoH88jAjeT8BpfmesJnc71y4bT9fz.WG0WaK
   response:
     body:
       string: ''

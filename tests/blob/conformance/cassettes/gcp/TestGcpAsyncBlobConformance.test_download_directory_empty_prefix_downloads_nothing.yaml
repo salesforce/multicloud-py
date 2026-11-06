@@ -7,7 +7,7 @@ interactions:
       Connection:
       - keep-alive
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?projection=noAcl&prefix=conformance-test-async%2Fdownload-nothing-here%2F&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?projection=noAcl&prefix=conformance-test-async%2Fdownload-nothing-here%2F&prettyPrint=false
   response:
     body:
       string: '{"kind":"storage#objects"}'

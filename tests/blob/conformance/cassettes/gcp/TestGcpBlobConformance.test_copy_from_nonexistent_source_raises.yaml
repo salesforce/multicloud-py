@@ -11,11 +11,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: POST
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdoes-not-exist-abc123.txt/copyTo/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-missing-src.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdoes-not-exist-abc123.txt/copyTo/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-missing-src.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/copyfrom/does-not-exist-abc123.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/copyfrom/does-not-exist-abc123.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/copyfrom/does-not-exist-abc123.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/copyfrom/does-not-exist-abc123.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

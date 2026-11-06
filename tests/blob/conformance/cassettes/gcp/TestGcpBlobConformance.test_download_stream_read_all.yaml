@@ -52,14 +52,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/download-stream/read.bin/1783324053121107\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/download-stream/read.bin/1783324053121107\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media\",\n
         \ \"name\": \"conformance-test/download-stream/read.bin\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1783324053121107\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1783324053121107\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"2560\",\n  \"md5Hash\": \"XYrYO5/btkyknR7w5Vh23w==\",\n
         \ \"crc32c\": \"0VwzCg==\",\n  \"etag\": \"CNPQ0uXHvZUDEAE=\",\n  \"timeCreated\":
@@ -103,10 +103,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/download-stream/read.bin/1783324053121107","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media","name":"conformance-test/download-stream/read.bin","bucket":"testcloud-python-sdk-bucket","generation":"1783324053121107","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"2560","md5Hash":"XYrYO5/btkyknR7w5Vh23w==","crc32c":"0VwzCg==","etag":"CNPQ0uXHvZUDEAE=","timeCreated":"2026-07-06T07:47:33.196Z","updated":"2026-07-06T07:47:33.196Z","timeStorageClassUpdated":"2026-07-06T07:47:33.196Z","timeFinalized":"2026-07-06T07:47:33.196Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/download-stream/read.bin/1783324053121107","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media","name":"conformance-test/download-stream/read.bin","bucket":"example-test-bucket-barry","generation":"1783324053121107","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"2560","md5Hash":"XYrYO5/btkyknR7w5Vh23w==","crc32c":"0VwzCg==","etag":"CNPQ0uXHvZUDEAE=","timeCreated":"2026-07-06T07:47:33.196Z","updated":"2026-07-06T07:47:33.196Z","timeStorageClassUpdated":"2026-07-06T07:47:33.196Z","timeFinalized":"2026-07-06T07:47:33.196Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -148,7 +148,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media
   response:
     body:
       string: 'stream-read payload stream-read payload stream-read payload stream-read
@@ -245,7 +245,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?generation=1783324053121107&alt=media
   response:
     body:
       string: Request range not satisfiable
@@ -286,7 +286,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdownload-stream%2Fread.bin?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdownload-stream%2Fread.bin?prettyPrint=false
   response:
     body:
       string: ''

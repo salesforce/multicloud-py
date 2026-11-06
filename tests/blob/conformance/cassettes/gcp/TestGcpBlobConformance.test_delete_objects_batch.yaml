@@ -20,13 +20,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/batch-0.txt/1783058497595341\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-0.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-0.txt?generation=1783058497595341&alt=media\",\n
-        \ \"name\": \"conformance-test/delete/batch-0.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/batch-0.txt/1783058497595341\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-0.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-0.txt?generation=1783058497595341&alt=media\",\n
+        \ \"name\": \"conformance-test/delete/batch-0.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1783058497595341\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"13\",\n  \"md5Hash\": \"gvb5PbsGzz4oXdY0+NTCSQ==\",\n  \"crc32c\": \"ye33kw==\",\n
@@ -81,13 +81,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/batch-1.txt/1783058498194112\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-1.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-1.txt?generation=1783058498194112&alt=media\",\n
-        \ \"name\": \"conformance-test/delete/batch-1.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/batch-1.txt/1783058498194112\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-1.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-1.txt?generation=1783058498194112&alt=media\",\n
+        \ \"name\": \"conformance-test/delete/batch-1.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1783058498194112\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"13\",\n  \"md5Hash\": \"gvb5PbsGzz4oXdY0+NTCSQ==\",\n  \"crc32c\": \"ye33kw==\",\n
@@ -142,13 +142,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/batch-2.txt/1783058499249954\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-2.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-2.txt?generation=1783058499249954&alt=media\",\n
-        \ \"name\": \"conformance-test/delete/batch-2.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/batch-2.txt/1783058499249954\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-2.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-2.txt?generation=1783058499249954&alt=media\",\n
+        \ \"name\": \"conformance-test/delete/batch-2.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1783058499249954\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"13\",\n  \"md5Hash\": \"gvb5PbsGzz4oXdY0+NTCSQ==\",\n  \"crc32c\": \"ye33kw==\",\n
@@ -194,7 +194,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-0.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-0.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -235,7 +235,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-1.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-1.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -276,7 +276,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-2.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-2.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -319,10 +319,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-0.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-0.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-0.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-0.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -360,10 +360,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-1.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-1.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-1.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-1.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -401,10 +401,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-2.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-2.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-2.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/batch-2.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -440,11 +440,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-0.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-0.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-0.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-0.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-0.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-0.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -482,11 +482,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-1.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-1.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-1.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-1.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-1.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-1.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -524,11 +524,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fbatch-2.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fbatch-2.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-2.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/batch-2.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/batch-2.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/batch-2.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

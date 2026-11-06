@@ -9,12 +9,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test-async/multipart-bad-part-number.bin</Key><UploadId>dKRoLOFZ4ZzjRbq5RR72yoR.QXiB01nZD3y4SFs.mSc31NcCK93U9iVM2I8AnR0FiWvEoaP6XZngQ6HVofQs2ahdDNG2kNinusclnFx58XFxkWgV5SqVzClgFjqhNI7u4WSZ0G0T7tMENr5HGo9rZopa8sLcIqW9H_xKzsxWYcpRJjTOnuEMTYsbQaADY2WT</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test-async/multipart-bad-part-number.bin</Key><UploadId>dKRoLOFZ4ZzjRbq5RR72yoR.QXiB01nZD3y4SFs.mSc31NcCK93U9iVM2I8AnR0FiWvEoaP6XZngQ6HVofQs2ahdDNG2kNinusclnFx58XFxkWgV5SqVzClgFjqhNI7u4WSZ0G0T7tMENr5HGo9rZopa8sLcIqW9H_xKzsxWYcpRJjTOnuEMTYsbQaADY2WT</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 12 Aug 2026 17:56:51 GMT
@@ -41,7 +41,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploadId=dKRoLOFZ4ZzjRbq5RR72yoR.QXiB01nZD3y4SFs.mSc31NcCK93U9iVM2I8AnR0FiWvEoaP6XZngQ6HVofQs2ahdDNG2kNinusclnFx58XFxkWgV5SqVzClgFjqhNI7u4WSZ0G0T7tMENr5HGo9rZopa8sLcIqW9H_xKzsxWYcpRJjTOnuEMTYsbQaADY2WT
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploadId=dKRoLOFZ4ZzjRbq5RR72yoR.QXiB01nZD3y4SFs.mSc31NcCK93U9iVM2I8AnR0FiWvEoaP6XZngQ6HVofQs2ahdDNG2kNinusclnFx58XFxkWgV5SqVzClgFjqhNI7u4WSZ0G0T7tMENr5HGo9rZopa8sLcIqW9H_xKzsxWYcpRJjTOnuEMTYsbQaADY2WT
   response:
     body:
       string: ''

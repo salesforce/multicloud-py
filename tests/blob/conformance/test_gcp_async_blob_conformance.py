@@ -36,7 +36,7 @@ from .base_async_blob_store_conformance import (
 GCP_BUCKET = os.environ.get("CONFORMANCE_GCP_BUCKET", "python-async-test-bucket")
 # Directory cassettes were recorded against a separate bucket.
 GCP_DIRECTORY_BUCKET = os.environ.get(
-    "CONFORMANCE_GCP_DIRECTORY_BUCKET", "testcloud-python-sdk-bucket"
+    "CONFORMANCE_GCP_DIRECTORY_BUCKET", "example-test-bucket-barry"
 )
 # Not env-overridable: the name is part of the matched request URI. If it is
 # ever taken, change it here and re-record.
@@ -44,7 +44,7 @@ GCP_ABSENT_BUCKET = "multicloudj-conformance-absent-bucket-do-not-create"
 # Dedicated versioning-enabled bucket, isolated so its un-reclaimable noncurrent
 # versions don't accumulate in GCP_BUCKET.
 GCP_VERSIONED_BUCKET = os.environ.get(
-    "CONFORMANCE_GCP_VERSIONED_BUCKET", "testcloud-python-sdk-versioned"
+    "CONFORMANCE_GCP_VERSIONED_BUCKET", "chameleon-python-sdk-versioned"
 )
 GCP_OBJECT_LOCK_BUCKET = os.environ.get(
     "CONFORMANCE_GCP_OBJECT_LOCK_BUCKET", "sdk-blob-with-object-lock"

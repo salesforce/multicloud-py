@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/versioned/unknown-version.txt/1783327099049089\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099049089&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/versioned/unknown-version.txt/1783327099049089\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099049089&alt=media\",\n
         \ \"name\": \"conformance-test/versioned/unknown-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1783327099049089\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1783327099049089\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"5\",\n  \"md5Hash\": \"iwTV43ddKY54RV78XKQE1Q==\",\n
         \ \"crc32c\": \"ij6hUA==\",\n  \"etag\": \"CIGph5LTvZUDEAE=\",\n  \"timeCreated\":
@@ -82,14 +82,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/versioned/unknown-version.txt/1783327099561001\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099561001&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/versioned/unknown-version.txt/1783327099561001\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099561001&alt=media\",\n
         \ \"name\": \"conformance-test/versioned/unknown-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1783327099561001\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1783327099561001\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"6\",\n  \"md5Hash\": \"qfDmGhN9hqqdtTRl4IAWEg==\",\n
         \ \"crc32c\": \"ev2UKA==\",\n  \"etag\": \"CKnIppLTvZUDEAE=\",\n  \"timeCreated\":
@@ -135,7 +135,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099049089&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099049089&prettyPrint=false
   response:
     body:
       string: ''
@@ -178,10 +178,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?alt=media&generation=1783327099049089
+    uri: https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?alt=media&generation=1783327099049089
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-versioned/conformance-test/versioned/unknown-version.txt'
+      string: 'No such object: chameleon-python-sdk-versioned/conformance-test/versioned/unknown-version.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -215,10 +215,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned?fields=name&prettyPrint=false
   response:
     body:
-      string: '{"name":"testcloud-python-sdk-versioned"}'
+      string: '{"name":"chameleon-python-sdk-versioned"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -256,7 +256,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099561001&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fversioned%2Funknown-version.txt?generation=1783327099561001&prettyPrint=false
   response:
     body:
       string: ''

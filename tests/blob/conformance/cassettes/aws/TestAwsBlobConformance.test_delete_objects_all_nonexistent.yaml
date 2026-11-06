@@ -17,7 +17,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?delete
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?delete
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +54,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-a.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-a.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -93,7 +93,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-b.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-b.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -132,7 +132,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-c.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/delete/batch-missing-only-c.txt
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

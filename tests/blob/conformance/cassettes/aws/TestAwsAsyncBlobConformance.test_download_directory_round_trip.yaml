@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-two.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-two.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-one.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-one.txt
   response:
     body:
       string: ''
@@ -115,7 +115,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/nested/deep.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/nested/deep.txt
   response:
     body:
       string: ''
@@ -151,12 +151,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&prefix=conformance-test-async%2Fdownload-round-trip%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&prefix=conformance-test-async%2Fdownload-round-trip%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/download-round-trip/</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/download-round-trip/nested/deep.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;257a7376d20e0ee0856fb2c6932e5edd&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>19</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-one.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;057c764ffe4c43ce786d932ce2d9fcf9&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-two.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;99c212a6bbbdf095e58426364f8e5937&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/download-round-trip/</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/download-round-trip/nested/deep.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;257a7376d20e0ee0856fb2c6932e5edd&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>19</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-one.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;057c764ffe4c43ce786d932ce2d9fcf9&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-two.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;99c212a6bbbdf095e58426364f8e5937&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -185,7 +185,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/nested/deep.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/nested/deep.txt
   response:
     body:
       string: nested file content
@@ -233,7 +233,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-one.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-one.txt
   response:
     body:
       string: top level file one
@@ -281,7 +281,7 @@ interactions:
       x-amz-checksum-mode:
       - ENABLED
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-two.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/download-round-trip/top-two.txt
   response:
     body:
       string: top level file two
@@ -327,12 +327,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdownload-round-trip%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test-async%2Fdownload-round-trip%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>conformance-test-async/download-round-trip/</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/download-round-trip/nested/deep.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;257a7376d20e0ee0856fb2c6932e5edd&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>19</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-one.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;057c764ffe4c43ce786d932ce2d9fcf9&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-two.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;99c212a6bbbdf095e58426364f8e5937&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test-async/download-round-trip/</Prefix><KeyCount>3</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test-async/download-round-trip/nested/deep.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;257a7376d20e0ee0856fb2c6932e5edd&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>19</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-one.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;057c764ffe4c43ce786d932ce2d9fcf9&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>conformance-test-async/download-round-trip/top-two.txt</Key><LastModified>2026-08-06T15:16:59.000Z</LastModified><ETag>&quot;99c212a6bbbdf095e58426364f8e5937&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>18</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -365,7 +365,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?delete
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?delete
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>

@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - ''
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1/1786566992034017\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1?generation=1786566992034017&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1/1786566992034017\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1?generation=1786566992034017&alt=media\",\n
         \ \"name\": \"async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786566992034017\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786566992034017\",\n
         \ \"metageneration\": \"1\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"24\",\n  \"md5Hash\": \"eKPF2jvvd80mrTxUDYLeRw==\",\n  \"crc32c\": \"s/YORA==\",\n
         \ \"etag\": \"COHxtdf4m5YDEAE=\",\n  \"timeCreated\": \"2026-08-12T20:36:32.096Z\",\n
@@ -56,15 +56,15 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?prefix=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?prefix=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1/1786566992034017\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1?generation=1786566992034017&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1/1786566992034017\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1?generation=1786566992034017&alt=media\",\n
         \     \"name\": \"async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786566992034017\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786566992034017\",\n
         \     \"metageneration\": \"1\",\n      \"storageClass\": \"STANDARD\",\n
         \     \"size\": \"24\",\n      \"md5Hash\": \"eKPF2jvvd80mrTxUDYLeRw==\",\n
         \     \"crc32c\": \"s/YORA==\",\n      \"etag\": \"COHxtdf4m5YDEAE=\",\n      \"timeCreated\":
@@ -98,7 +98,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/async-conformance-test%2Fmultipart-list-after-abort.bin__multipart__00000000000000000000000000000002__1
   response:
     body:
       string: ''
@@ -131,7 +131,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?prefix=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__&maxResults=1000
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?prefix=async-conformance-test/multipart-list-after-abort.bin__multipart__00000000000000000000000000000002__&maxResults=1000
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"

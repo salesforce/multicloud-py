@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/conditional/if-version.txt/1787846135775699\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846135775699&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/conditional/if-version.txt/1787846135775699\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846135775699&alt=media\",\n
         \ \"name\": \"conformance-test/conditional/if-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787846135775699\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787846135775699\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"2\",\n  \"md5Hash\": \"ZlTHNMyrj0QP8IJetEPcfw==\",\n
         \ \"crc32c\": \"5X841Q==\",\n  \"etag\": \"CNOD2O6VwZYDEAE=\",\n  \"timeCreated\":
@@ -82,14 +82,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart&ifGenerationMatch=1787846135775699
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart&ifGenerationMatch=1787846135775699
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/conditional/if-version.txt/1787846136193547\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/conditional/if-version.txt/1787846136193547\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&alt=media\",\n
         \ \"name\": \"conformance-test/conditional/if-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787846136193547\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787846136193547\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"2\",\n  \"md5Hash\": \"GyZ2GcSBLMRu4oF0eITKUA==\",\n
         \ \"crc32c\": \"9i/LIQ==\",\n  \"etag\": \"CIvE8e6VwZYDEAE=\",\n  \"timeCreated\":
@@ -137,7 +137,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?alt=media
   response:
     body:
       string: v2
@@ -194,10 +194,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/conditional/if-version.txt/1787846136193547","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&alt=media","name":"conformance-test/conditional/if-version.txt","bucket":"testcloud-python-sdk-bucket","generation":"1787846136193547","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"2","md5Hash":"GyZ2GcSBLMRu4oF0eITKUA==","crc32c":"9i/LIQ==","etag":"CIvE8e6VwZYDEAE=","timeCreated":"2026-08-27T15:55:36.310Z","updated":"2026-08-27T15:55:36.310Z","timeStorageClassUpdated":"2026-08-27T15:55:36.310Z","timeFinalized":"2026-08-27T15:55:36.310Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/conditional/if-version.txt/1787846136193547","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?generation=1787846136193547&alt=media","name":"conformance-test/conditional/if-version.txt","bucket":"example-test-bucket-barry","generation":"1787846136193547","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"2","md5Hash":"GyZ2GcSBLMRu4oF0eITKUA==","crc32c":"9i/LIQ==","etag":"CIvE8e6VwZYDEAE=","timeCreated":"2026-08-27T15:55:36.310Z","updated":"2026-08-27T15:55:36.310Z","timeStorageClassUpdated":"2026-08-27T15:55:36.310Z","timeFinalized":"2026-08-27T15:55:36.310Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -244,7 +244,7 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart&ifGenerationMatch=1787846135775699
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart&ifGenerationMatch=1787846135775699
   response:
     body:
       string: "{\n  \"error\": {\n    \"code\": 412,\n    \"message\": \"At least
@@ -290,7 +290,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fconditional%2Fif-version.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fconditional%2Fif-version.txt?prettyPrint=false
   response:
     body:
       string: ''

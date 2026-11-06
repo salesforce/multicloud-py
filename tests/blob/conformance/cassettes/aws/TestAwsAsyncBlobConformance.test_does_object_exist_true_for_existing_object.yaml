@@ -7,7 +7,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
   response:
     body:
       string: ''
@@ -55,7 +55,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
   response:
     body:
       string: ''
@@ -91,7 +91,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
   response:
     body:
       string: ''
@@ -133,7 +133,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present
   response:
     body:
       string: ''
@@ -161,7 +161,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/
   response:
     body:
       string: ''
@@ -191,7 +191,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/exists/present.txt
   response:
     body:
       string: ''

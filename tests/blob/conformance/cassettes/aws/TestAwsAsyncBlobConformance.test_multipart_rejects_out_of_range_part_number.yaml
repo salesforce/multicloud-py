@@ -9,12 +9,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test-async/multipart-bad-part-number.bin</Key><UploadId>dA1V_Ht65Y0OXcxCY1McUQ9P7rtz3d0UXQwkMg9IKTu3.HSJZ7flNfEBcVXeCXdNIg2UTUTLeNiy1ugr4lmvz0Z0u6QzVMEd7bGo9tdOK25rk76b75c8672XYFqcE4mhOy8vs6zSCpXrEq2kfQxjeGEi78DBvTSa9R5bkI1fQ6NNNXcW4xuxz_q_yR3pU7t1</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test-async/multipart-bad-part-number.bin</Key><UploadId>dA1V_Ht65Y0OXcxCY1McUQ9P7rtz3d0UXQwkMg9IKTu3.HSJZ7flNfEBcVXeCXdNIg2UTUTLeNiy1ugr4lmvz0Z0u6QzVMEd7bGo9tdOK25rk76b75c8672XYFqcE4mhOy8vs6zSCpXrEq2kfQxjeGEi78DBvTSa9R5bkI1fQ6NNNXcW4xuxz_q_yR3pU7t1</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 12 Aug 2026 15:09:23 GMT
@@ -41,7 +41,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploadId=dA1V_Ht65Y0OXcxCY1McUQ9P7rtz3d0UXQwkMg9IKTu3.HSJZ7flNfEBcVXeCXdNIg2UTUTLeNiy1ugr4lmvz0Z0u6QzVMEd7bGo9tdOK25rk76b75c8672XYFqcE4mhOy8vs6zSCpXrEq2kfQxjeGEi78DBvTSa9R5bkI1fQ6NNNXcW4xuxz_q_yR3pU7t1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test-async/multipart-bad-part-number.bin?uploadId=dA1V_Ht65Y0OXcxCY1McUQ9P7rtz3d0UXQwkMg9IKTu3.HSJZ7flNfEBcVXeCXdNIg2UTUTLeNiy1ugr4lmvz0Z0u6QzVMEd7bGo9tdOK25rk76b75c8672XYFqcE4mhOy8vs6zSCpXrEq2kfQxjeGEi78DBvTSa9R5bkI1fQ6NNNXcW4xuxz_q_yR3pU7t1
   response:
     body:
       string: ''

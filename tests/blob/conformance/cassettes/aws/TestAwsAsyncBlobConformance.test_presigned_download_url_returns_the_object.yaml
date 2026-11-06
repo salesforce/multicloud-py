@@ -23,7 +23,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt
   response:
     body:
       string: ''
@@ -55,7 +55,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
+    uri: https://example-test-bucket-barry.s3.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt?X-Amz-Algorithm=FILTERED&X-Amz-Credential=FILTERED&X-Amz-Date=FILTERED&X-Amz-Expires=FILTERED&X-Amz-SignedHeaders=FILTERED&X-Amz-Security-Token=FILTERED&X-Amz-Signature=FILTERED
   response:
     body:
       string: fetched through a presigned url
@@ -99,7 +99,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/presign/download-roundtrip.txt
   response:
     body:
       string: ''

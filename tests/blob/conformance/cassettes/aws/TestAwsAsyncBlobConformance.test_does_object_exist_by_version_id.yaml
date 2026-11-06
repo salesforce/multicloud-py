@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
   response:
     body:
       string: ''
@@ -103,7 +103,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L0.QZkJsr3FosdHrrU2tKJAJuI2EslQR
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L0.QZkJsr3FosdHrrU2tKJAJuI2EslQR
   response:
     body:
       string: ''
@@ -141,7 +141,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=lScyrDb8OxQ26ULS7RvtTiZfbW7JcjHX
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=lScyrDb8OxQ26ULS7RvtTiZfbW7JcjHX
   response:
     body:
       string: ''
@@ -179,7 +179,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt
   response:
     body:
       string: ''
@@ -229,7 +229,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned-other.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned-other.txt
   response:
     body:
       string: ''
@@ -265,7 +265,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L3DsgFnhv3LLa4.V443XzRezI7xj5V07
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L3DsgFnhv3LLa4.V443XzRezI7xj5V07
   response:
     body:
       string: ''
@@ -295,7 +295,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L0.QZkJsr3FosdHrrU2tKJAJuI2EslQR
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=L0.QZkJsr3FosdHrrU2tKJAJuI2EslQR
   response:
     body:
       string: ''
@@ -323,7 +323,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=lScyrDb8OxQ26ULS7RvtTiZfbW7JcjHX
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned.txt?versionId=lScyrDb8OxQ26ULS7RvtTiZfbW7JcjHX
   response:
     body:
       string: ''
@@ -351,7 +351,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned-other.txt?versionId=L3DsgFnhv3LLa4.V443XzRezI7xj5V07
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/versioned-other.txt?versionId=L3DsgFnhv3LLa4.V443XzRezI7xj5V07
   response:
     body:
       string: ''

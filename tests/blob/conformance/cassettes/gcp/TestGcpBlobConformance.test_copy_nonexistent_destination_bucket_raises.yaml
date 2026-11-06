@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/copy/src-bad-dest-bucket.txt/1783414452274833\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt?generation=1783414452274833&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/copy/src-bad-dest-bucket.txt/1783414452274833\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt?generation=1783414452274833&alt=media\",\n
         \ \"name\": \"conformance-test/copy/src-bad-dest-bucket.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1783414452274833\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1783414452274833\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"7\",\n  \"md5Hash\": \"Mhw89IbtUJFk7eweGYH+yA==\",\n
         \ \"crc32c\": \"9ONpcA==\",\n  \"etag\": \"CJGNqceYwJUDEAE=\",\n  \"timeCreated\":
@@ -73,7 +73,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: POST
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt/copyTo/b/multicloud-conformance-nonexistent-bucket-xyz-9f8e7d/o/conformance-test%2Fcopy%2Fdest-bad-bucket.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt/copyTo/b/multicloud-conformance-nonexistent-bucket-xyz-9f8e7d/o/conformance-test%2Fcopy%2Fdest-bad-bucket.txt?prettyPrint=false
   response:
     body:
       string: '{"error":{"code":404,"message":"The specified bucket does not exist.","errors":[{"message":"The
@@ -115,7 +115,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopy%2Fsrc-bad-dest-bucket.txt?prettyPrint=false
   response:
     body:
       string: ''

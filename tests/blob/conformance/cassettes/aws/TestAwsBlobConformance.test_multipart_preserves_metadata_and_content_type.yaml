@@ -17,12 +17,12 @@ interactions:
       - !!binary |
         Y29uZm9ybWFuY2U=
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploads
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploads
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/metadata.txt</Key><UploadId>TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp</UploadId></InitiateMultipartUploadResult>'
+        <InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/metadata.txt</Key><UploadId>TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp</UploadId></InitiateMultipartUploadResult>'
     headers:
       Date:
       - Wed, 22 Jul 2026 18:10:26 GMT
@@ -73,7 +73,7 @@ interactions:
       - !!binary |
         Q1JDMzI=
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploadId=TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp&partNumber=1
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploadId=TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp&partNumber=1
   response:
     body:
       string: ''
@@ -109,13 +109,13 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: POST
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploadId=TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt?uploadId=TGV04Ym29huy0WObunWhMermvZR_x4lzNF2tXb3XfzcVqv4NLziQR5Qhu1Jw_EpWlnZIxIUX6rRFq8wMVQ4fFhTjgjFb.K6Mw0gHlTAHSPK8OfZOEL.b58lnoUdSLylUJQaB1pc_eRuFcbLe_5llNbruulFXXH_.HPOJr2kwnpKHyh7O9BqOFsGukjrqR.sp
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
 
-        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fmetadata.txt</Location><Bucket>testcloud-python-sdk-bucket</Bucket><Key>conformance-test/multipart/metadata.txt</Key><ETag>"75deb5bbc2e2891da6a13bbdd5be8807-1"</ETag><ChecksumCRC64NVME>agB0NeCbMGc=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
+        <CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test%2Fmultipart%2Fmetadata.txt</Location><Bucket>example-test-bucket-barry</Bucket><Key>conformance-test/multipart/metadata.txt</Key><ETag>"75deb5bbc2e2891da6a13bbdd5be8807-1"</ETag><ChecksumCRC64NVME>agB0NeCbMGc=</ChecksumCRC64NVME><ChecksumType>FULL_OBJECT</ChecksumType></CompleteMultipartUploadResult>'
     headers:
       Content-Type:
       - application/xml
@@ -149,7 +149,7 @@ interactions:
       - !!binary |
         RU5BQkxFRA==
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt
   response:
     body:
       string: metadata payload
@@ -201,7 +201,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/multipart/metadata.txt
   response:
     body:
       string: ''

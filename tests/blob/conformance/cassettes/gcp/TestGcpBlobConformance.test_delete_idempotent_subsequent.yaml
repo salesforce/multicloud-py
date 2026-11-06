@@ -20,13 +20,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/delete/idempotent.txt/1782997696251256\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fidempotent.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fidempotent.txt?generation=1782997696251256&alt=media\",\n
-        \ \"name\": \"conformance-test/delete/idempotent.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/delete/idempotent.txt/1782997696251256\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fidempotent.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fidempotent.txt?generation=1782997696251256&alt=media\",\n
+        \ \"name\": \"conformance-test/delete/idempotent.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1782997696251256\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"4\",\n  \"md5Hash\": \"4u/2wtr9kJ34UI+JGzhdiA==\",\n  \"crc32c\": \"9C1ieQ==\",\n
@@ -72,7 +72,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fidempotent.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fidempotent.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -113,11 +113,11 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fidempotent.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fidempotent.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/delete/idempotent.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/delete/idempotent.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/delete/idempotent.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/delete/idempotent.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -157,10 +157,10 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fdelete%2Fidempotent.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fdelete%2Fidempotent.txt?alt=media
   response:
     body:
-      string: 'No such object: testcloud-python-sdk-bucket/conformance-test/delete/idempotent.txt'
+      string: 'No such object: example-test-bucket-barry/conformance-test/delete/idempotent.txt'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

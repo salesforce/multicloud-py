@@ -36,7 +36,7 @@ interactions:
       - !!binary |
         c291cmNlPXVwbG9hZCZ0ZWFtPWNvbmZvcm1hbmNl
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt
   response:
     body:
       string: ''
@@ -74,7 +74,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt?tagging
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt?tagging
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
@@ -108,7 +108,7 @@ interactions:
       - !!binary |
         YXR0ZW1wdD0x
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/tags/upload-time.txt
   response:
     body:
       string: ''

@@ -9,7 +9,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&projection=noAcl&prefix=conformance-test%2Flist-page%2Fempty-ns%2F&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&projection=noAcl&prefix=conformance-test%2Flist-page%2Fempty-ns%2F&prettyPrint=false
   response:
     body:
       string: '{"kind":"storage#objects"}'

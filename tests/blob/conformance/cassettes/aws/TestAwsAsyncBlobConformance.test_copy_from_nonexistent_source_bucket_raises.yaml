@@ -11,7 +11,7 @@ interactions:
       x-amz-copy-source:
       - multicloud-conformance-nonexistent-bucket-xyz-9f8e7d/any-key
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/copyfrom/dest-bad-src-bucket.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/copyfrom/dest-bad-src-bucket.txt
   response:
     body:
       string: <Error><Code>NoSuchBucket</Code><Message>The specified bucket does not

@@ -9,11 +9,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -60,13 +60,13 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt/1785992181626786\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?generation=1785992181626786&alt=media\",\n
-        \ \"name\": \"conformance-test/exists/lifecycle.txt\",\n  \"bucket\": \"testcloud-python-sdk-bucket\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/exists/lifecycle.txt/1785992181626786\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?generation=1785992181626786&alt=media\",\n
+        \ \"name\": \"conformance-test/exists/lifecycle.txt\",\n  \"bucket\": \"example-test-bucket-barry\",\n
         \ \"generation\": \"1785992181626786\",\n  \"metageneration\": \"1\",\n  \"contentType\":
         \"application/octet-stream\",\n  \"storageClass\": \"STANDARD\",\n  \"size\":
         \"13\",\n  \"md5Hash\": \"d+abXh8zq1T7swPEN3JwZA==\",\n  \"crc32c\": \"iJdJJQ==\",\n
@@ -110,7 +110,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
   response:
     body:
       string: '{"name":"conformance-test/exists/lifecycle.txt"}'
@@ -151,7 +151,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -190,11 +190,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?fields=name&prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -232,11 +232,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fexists%2Flifecycle.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fexists%2Flifecycle.txt?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/exists/lifecycle.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

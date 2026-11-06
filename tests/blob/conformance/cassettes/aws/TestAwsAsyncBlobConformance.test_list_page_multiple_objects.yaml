@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -115,7 +115,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -163,7 +163,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-3.txt
   response:
     body:
       string: ''
@@ -211,7 +211,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-4.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-4.txt
   response:
     body:
       string: ''
@@ -247,12 +247,12 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: GET
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=async-conformance-test%2Flist-page%2Fmulti-ns%2F&encoding-type=url
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=async-conformance-test%2Flist-page%2Fmulti-ns%2F&encoding-type=url
   response:
     body:
       string: '<?xml version="1.0" encoding="UTF-8"?>
 
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>testcloud-python-sdk-bucket</Name><Prefix>async-conformance-test/list-page/multi-ns/</Prefix><KeyCount>5</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>async-conformance-test/list-page/multi-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-2.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-3.txt</Key><LastModified>2026-08-20T21:04:20.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-4.txt</Key><LastModified>2026-08-20T21:04:20.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>async-conformance-test/list-page/multi-ns/</Prefix><KeyCount>5</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>async-conformance-test/list-page/multi-ns/obj-0.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-1.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-2.txt</Key><LastModified>2026-08-20T21:04:19.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-3.txt</Key><LastModified>2026-08-20T21:04:20.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents><Contents><Key>async-conformance-test/list-page/multi-ns/obj-4.txt</Key><LastModified>2026-08-20T21:04:20.000Z</LastModified><ETag>&quot;f540bc0db85a5b504fe7da62dafd73b7&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>21</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>'
     headers:
       Content-Type:
       - application/xml
@@ -281,7 +281,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-0.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-0.txt
   response:
     body:
       string: ''
@@ -311,7 +311,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-1.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-1.txt
   response:
     body:
       string: ''
@@ -341,7 +341,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-2.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-2.txt
   response:
     body:
       string: ''
@@ -371,7 +371,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-3.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-3.txt
   response:
     body:
       string: ''
@@ -401,7 +401,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-4.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/list-page/multi-ns/obj-4.txt
   response:
     body:
       string: ''

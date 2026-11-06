@@ -23,16 +23,16 @@ from .base_async_blob_store_conformance import (
     BaseAsyncBlobStoreConformance,
 )
 
-AWS_BUCKET = os.environ.get("CONFORMANCE_AWS_BUCKET", "testcloud-python-sdk-bucket")
+AWS_BUCKET = os.environ.get("CONFORMANCE_AWS_BUCKET", "example-test-bucket-barry")
 AWS_REGION = os.environ.get("CONFORMANCE_AWS_REGION", "us-west-2")
 # Not env-overridable: the name is part of the matched request URI. If it is
 # ever taken, change it here and re-record.
 AWS_ABSENT_BUCKET = "multicloudj-conformance-absent-bucket-do-not-create"
 AWS_VERSIONED_BUCKET = os.environ.get(
-    "CONFORMANCE_AWS_VERSIONED_BUCKET", "testcloud-python-sdk-versioned"
+    "CONFORMANCE_AWS_VERSIONED_BUCKET", "chameleon-python-sdk-versioned"
 )
 AWS_OBJECT_LOCK_BUCKET = os.environ.get(
-    "CONFORMANCE_AWS_OBJECT_LOCK_BUCKET", "testcloud-python-sdk-object-lock"
+    "CONFORMANCE_AWS_OBJECT_LOCK_BUCKET", "chameleon-test-bucket-with-object-lock"
 )
 
 

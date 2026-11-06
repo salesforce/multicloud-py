@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart&kmsKeyName=projects%2Fexample-project%2Flocations%2Fus%2FkeyRings%2Fmulticloud-test%2FcryptoKeys%2Fmulticloud-test
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart&kmsKeyName=projects%2Fexample-project%2Flocations%2Fus%2FkeyRings%2Fmulticloud-test%2FcryptoKeys%2Fmulticloud-test
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/encryption/kms-upload-from-path.txt/1787846141255413\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/encryption/kms-upload-from-path.txt/1787846141255413\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&alt=media\",\n
         \ \"name\": \"conformance-test/encryption/kms-upload-from-path.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787846141255413\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787846141255413\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"31\",\n  \"md5Hash\": \"AQYuEKtiCZHDWxTP4YwV0A==\",\n
         \ \"crc32c\": \"Kr+EPw==\",\n  \"etag\": \"CPW9pvGVwZYDEAE=\",\n  \"kmsKeyName\":
@@ -76,7 +76,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?alt=media
   response:
     body:
       string: kms-encrypted from-path payload
@@ -133,10 +133,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/encryption/kms-upload-from-path.txt/1787846141255413","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&alt=media","name":"conformance-test/encryption/kms-upload-from-path.txt","bucket":"testcloud-python-sdk-bucket","generation":"1787846141255413","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"31","md5Hash":"AQYuEKtiCZHDWxTP4YwV0A==","crc32c":"Kr+EPw==","etag":"CPW9pvGVwZYDEAE=","kmsKeyName":"projects/example-project/locations/us/keyRings/multicloud-test/cryptoKeys/multicloud-test/cryptoKeyVersions/1","timeCreated":"2026-08-27T15:55:41.308Z","updated":"2026-08-27T15:55:41.308Z","timeStorageClassUpdated":"2026-08-27T15:55:41.308Z","timeFinalized":"2026-08-27T15:55:41.308Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/encryption/kms-upload-from-path.txt/1787846141255413","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?generation=1787846141255413&alt=media","name":"conformance-test/encryption/kms-upload-from-path.txt","bucket":"example-test-bucket-barry","generation":"1787846141255413","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"31","md5Hash":"AQYuEKtiCZHDWxTP4YwV0A==","crc32c":"Kr+EPw==","etag":"CPW9pvGVwZYDEAE=","kmsKeyName":"projects/example-project/locations/us/keyRings/multicloud-test/cryptoKeys/multicloud-test/cryptoKeyVersions/1","timeCreated":"2026-08-27T15:55:41.308Z","updated":"2026-08-27T15:55:41.308Z","timeStorageClassUpdated":"2026-08-27T15:55:41.308Z","timeFinalized":"2026-08-27T15:55:41.308Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -176,7 +176,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fencryption%2Fkms-upload-from-path.txt?prettyPrint=false
   response:
     body:
       string: ''

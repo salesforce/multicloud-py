@@ -12,14 +12,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/tree/top.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/tree/top.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/tree/top.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204457568738\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1787204457568738\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"9\",\n  \"md5Hash\": \"OQTdem9pMzCa+N957vxoNQ==\",\n
         \ \"crc32c\": \"N2P7zQ==\",\n  \"etag\": \"COKz1ra/rpYDEAE=\",\n  \"timeCreated\":
@@ -66,14 +66,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/tree/nested/deep.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/tree/nested/deep.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/tree/nested/deep.txt\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204457759777\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1787204457759777\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"9\",\n  \"md5Hash\": \"OQTdem9pMzCa+N957vxoNQ==\",\n
         \ \"crc32c\": \"N2P7zQ==\",\n  \"etag\": \"CKGI4ra/rpYDEAE=\",\n  \"timeCreated\":
@@ -120,14 +120,14 @@ interactions:
       Content-Type:
       - application/octet-stream
     method: POST
-    uri: https://www.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?name=conformance-test-async/delete-dir/tree/nested/more/deeper.txt&uploadType=media
+    uri: https://www.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?name=conformance-test-async/delete-dir/tree/nested/more/deeper.txt&uploadType=media
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
-        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
         \ \"name\": \"conformance-test-async/delete-dir/tree/nested/more/deeper.txt\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1787204457993587\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1787204457993587\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"9\",\n  \"md5Hash\": \"OQTdem9pMzCa+N957vxoNQ==\",\n
         \ \"crc32c\": \"N2P7zQ==\",\n  \"etag\": \"CPOq8La/rpYDEAE=\",\n  \"timeCreated\":
@@ -165,37 +165,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/nested/deep.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457759777\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204457759777\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
         \"CKGI4ra/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:40:57.821Z\",\n
         \     \"updated\": \"2026-08-20T05:40:57.821Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:40:57.821Z\",\n      \"timeFinalized\": \"2026-08-20T05:40:57.821Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/nested/more/deeper.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457993587\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204457993587\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
         \"CPOq8La/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:40:58.055Z\",\n
         \     \"updated\": \"2026-08-20T05:40:58.055Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:40:58.055Z\",\n      \"timeFinalized\": \"2026-08-20T05:40:58.055Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/top.txt\",\n      \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457568738\",\n
+        \"example-test-bucket-barry\",\n      \"generation\": \"1787204457568738\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
@@ -230,37 +230,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/deep.txt/1787204457759777\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt?generation=1787204457759777&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/nested/deep.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457759777\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204457759777\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
         \"CKGI4ra/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:40:57.821Z\",\n
         \     \"updated\": \"2026-08-20T05:40:57.821Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:40:57.821Z\",\n      \"timeFinalized\": \"2026-08-20T05:40:57.821Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/nested/more/deeper.txt/1787204457993587\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt?generation=1787204457993587&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/nested/more/deeper.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457993587\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1787204457993587\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
         \"CPOq8La/rpYDEAE=\",\n      \"timeCreated\": \"2026-08-20T05:40:58.055Z\",\n
         \     \"updated\": \"2026-08-20T05:40:58.055Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-20T05:40:58.055Z\",\n      \"timeFinalized\": \"2026-08-20T05:40:58.055Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/delete-dir/tree/top.txt/1787204457568738\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt?generation=1787204457568738&alt=media\",\n
         \     \"name\": \"conformance-test-async/delete-dir/tree/top.txt\",\n      \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1787204457568738\",\n
+        \"example-test-bucket-barry\",\n      \"generation\": \"1787204457568738\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"application/octet-stream\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"9\",\n      \"md5Hash\":
         \"OQTdem9pMzCa+N957vxoNQ==\",\n      \"crc32c\": \"N2P7zQ==\",\n      \"etag\":
@@ -295,7 +295,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fdeep.txt
   response:
     body:
       string: ''
@@ -328,7 +328,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Ftop.txt
   response:
     body:
       string: ''
@@ -361,7 +361,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fdelete-dir%2Ftree%2Fnested%2Fmore%2Fdeeper.txt
   response:
     body:
       string: ''
@@ -394,7 +394,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"
@@ -425,7 +425,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"
@@ -456,7 +456,7 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/delete-dir/tree/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\"\n}\n"

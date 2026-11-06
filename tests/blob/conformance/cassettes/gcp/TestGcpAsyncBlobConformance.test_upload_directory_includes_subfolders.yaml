@@ -18,14 +18,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
         \ \"name\": \"conformance-test-async/upload-recursive/top-two.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786117203918853\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786117203918853\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"18\",\n  \"md5Hash\": \"mcISpru98JXlhCY2T45ZNw==\",\n
         \ \"crc32c\": \"tgZDFg==\",\n  \"etag\": \"CIWA3ovtjpYDEAE=\",\n  \"timeCreated\":
@@ -80,14 +80,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
         \ \"name\": \"conformance-test-async/upload-recursive/top-one.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786117204240064\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1786117204240064\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"18\",\n  \"md5Hash\": \"BXx2T/5MQ854bZMs4tn8+Q==\",\n
         \ \"crc32c\": \"zkpCXA==\",\n  \"etag\": \"CMDN8YvtjpYDEAE=\",\n  \"timeCreated\":
@@ -142,14 +142,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
         \ \"name\": \"conformance-test-async/upload-recursive/nested/deep.txt\",\n
-        \ \"bucket\": \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1786117204552994\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1786117204552994\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"19\",\n  \"md5Hash\": \"JXpzdtIODuCFb7LGky5e3Q==\",\n
         \ \"crc32c\": \"CThq/w==\",\n  \"etag\": \"CKLahIztjpYDEAE=\",\n  \"timeCreated\":
@@ -187,37 +187,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/upload-recursive/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/upload-recursive/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/nested/deep.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117204552994\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117204552994\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"19\",\n      \"md5Hash\":
         \"JXpzdtIODuCFb7LGky5e3Q==\",\n      \"crc32c\": \"CThq/w==\",\n      \"etag\":
         \"CKLahIztjpYDEAE=\",\n      \"timeCreated\": \"2026-08-07T15:40:04.623Z\",\n
         \     \"updated\": \"2026-08-07T15:40:04.623Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-07T15:40:04.623Z\",\n      \"timeFinalized\": \"2026-08-07T15:40:04.623Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/top-one.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117204240064\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117204240064\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"18\",\n      \"md5Hash\":
         \"BXx2T/5MQ854bZMs4tn8+Q==\",\n      \"crc32c\": \"zkpCXA==\",\n      \"etag\":
         \"CMDN8YvtjpYDEAE=\",\n      \"timeCreated\": \"2026-08-07T15:40:04.310Z\",\n
         \     \"updated\": \"2026-08-07T15:40:04.310Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-07T15:40:04.310Z\",\n      \"timeFinalized\": \"2026-08-07T15:40:04.310Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/top-two.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117203918853\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117203918853\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"18\",\n      \"md5Hash\":
         \"mcISpru98JXlhCY2T45ZNw==\",\n      \"crc32c\": \"tgZDFg==\",\n      \"etag\":
@@ -252,37 +252,37 @@ interactions:
     body: null
     headers: {}
     method: GET
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&prefix=conformance-test-async/upload-recursive/
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&prefix=conformance-test-async/upload-recursive/
   response:
     body:
       string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
-        \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
+        \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/nested/deep.txt/1786117204552994\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt?generation=1786117204552994&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/nested/deep.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117204552994\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117204552994\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"19\",\n      \"md5Hash\":
         \"JXpzdtIODuCFb7LGky5e3Q==\",\n      \"crc32c\": \"CThq/w==\",\n      \"etag\":
         \"CKLahIztjpYDEAE=\",\n      \"timeCreated\": \"2026-08-07T15:40:04.623Z\",\n
         \     \"updated\": \"2026-08-07T15:40:04.623Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-07T15:40:04.623Z\",\n      \"timeFinalized\": \"2026-08-07T15:40:04.623Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-one.txt/1786117204240064\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt?generation=1786117204240064&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/top-one.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117204240064\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117204240064\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"18\",\n      \"md5Hash\":
         \"BXx2T/5MQ854bZMs4tn8+Q==\",\n      \"crc32c\": \"zkpCXA==\",\n      \"etag\":
         \"CMDN8YvtjpYDEAE=\",\n      \"timeCreated\": \"2026-08-07T15:40:04.310Z\",\n
         \     \"updated\": \"2026-08-07T15:40:04.310Z\",\n      \"timeStorageClassUpdated\":
         \"2026-08-07T15:40:04.310Z\",\n      \"timeFinalized\": \"2026-08-07T15:40:04.310Z\"\n
-        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"testcloud-python-sdk-bucket/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
-        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
-        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
+        \   },\n    {\n      \"kind\": \"storage#object\",\n      \"id\": \"example-test-bucket-barry/conformance-test-async/upload-recursive/top-two.txt/1786117203918853\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt?generation=1786117203918853&alt=media\",\n
         \     \"name\": \"conformance-test-async/upload-recursive/top-two.txt\",\n
-        \     \"bucket\": \"testcloud-python-sdk-bucket\",\n      \"generation\": \"1786117203918853\",\n
+        \     \"bucket\": \"example-test-bucket-barry\",\n      \"generation\": \"1786117203918853\",\n
         \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
         \     \"storageClass\": \"STANDARD\",\n      \"size\": \"18\",\n      \"md5Hash\":
         \"mcISpru98JXlhCY2T45ZNw==\",\n      \"crc32c\": \"tgZDFg==\",\n      \"etag\":
@@ -317,7 +317,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Fnested%2Fdeep.txt
   response:
     body:
       string: ''
@@ -350,7 +350,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-one.txt
   response:
     body:
       string: ''
@@ -383,7 +383,7 @@ interactions:
     body: null
     headers: {}
     method: DELETE
-    uri: https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt
+    uri: https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test-async%2Fupload-recursive%2Ftop-two.txt
   response:
     body:
       string: ''

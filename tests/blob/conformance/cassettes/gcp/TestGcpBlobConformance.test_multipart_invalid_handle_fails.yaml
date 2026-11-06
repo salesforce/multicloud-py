@@ -14,11 +14,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: POST
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Finvalid-handle.bin/compose?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Finvalid-handle.bin/compose?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -56,11 +56,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fmultipart%2Finvalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fmultipart%2Finvalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1?prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-bucket/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","errors":[{"message":"No
-        such object: testcloud-python-sdk-bucket/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/multipart/invalid-handle.bin__multipart__deadbeefdeadbeefdeadbeefdeadbeef__1","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

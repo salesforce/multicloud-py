@@ -19,7 +19,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
   response:
     body:
       string: ''
@@ -67,7 +67,7 @@ interactions:
       x-amz-sdk-checksum-algorithm:
       - CRC32
     method: PUT
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
   response:
     body:
       string: ''
@@ -105,7 +105,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=I0rQF8N.WMb.xQVaqSPEs.qZxupLXIiT
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=I0rQF8N.WMb.xQVaqSPEs.qZxupLXIiT
   response:
     body:
       string: ''
@@ -131,7 +131,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=I0rQF8N.WMb.xQVaqSPEs.qZxupLXIiT
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=I0rQF8N.WMb.xQVaqSPEs.qZxupLXIiT
   response:
     body:
       string: ''
@@ -159,7 +159,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: HEAD
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt
   response:
     body:
       string: ''
@@ -199,7 +199,7 @@ interactions:
       amz-sdk-request:
       - attempt=1
     method: DELETE
-    uri: https://testcloud-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=uSU8UUUjXnJ7paHbOInLBtWPkVoFLsV9
+    uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/async-conformance-test/exists/deleted-version.txt?versionId=uSU8UUUjXnJ7paHbOInLBtWPkVoFLsV9
   response:
     body:
       string: ''

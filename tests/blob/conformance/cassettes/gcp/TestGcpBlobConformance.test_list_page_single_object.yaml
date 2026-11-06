@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/list-page/single-ns/only.txt/1784539011217153\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?generation=1784539011217153&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/list-page/single-ns/only.txt/1784539011217153\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?generation=1784539011217153&alt=media\",\n
         \ \"name\": \"conformance-test/list-page/single-ns/only.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1784539011217153\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1784539011217153\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"21\",\n  \"md5Hash\": \"HkL9voaNNWNnGoFsIDUaXQ==\",\n
         \ \"crc32c\": \"5ewpQQ==\",\n  \"etag\": \"CIHu5+714JUDEAE=\",\n  \"timeCreated\":
@@ -71,10 +71,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o?maxResults=1000&projection=noAcl&prefix=conformance-test%2Flist-page%2Fsingle-ns%2F&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&projection=noAcl&prefix=conformance-test%2Flist-page%2Fsingle-ns%2F&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/list-page/single-ns/only.txt/1784539011217153","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?generation=1784539011217153&alt=media","name":"conformance-test/list-page/single-ns/only.txt","bucket":"testcloud-python-sdk-bucket","generation":"1784539011217153","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"21","md5Hash":"HkL9voaNNWNnGoFsIDUaXQ==","crc32c":"5ewpQQ==","etag":"CIHu5+714JUDEAE=","timeCreated":"2026-07-20T09:16:51.299Z","updated":"2026-07-20T09:16:51.299Z","timeStorageClassUpdated":"2026-07-20T09:16:51.299Z","timeFinalized":"2026-07-20T09:16:51.299Z"}]}'
+      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/list-page/single-ns/only.txt/1784539011217153","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?generation=1784539011217153&alt=media","name":"conformance-test/list-page/single-ns/only.txt","bucket":"example-test-bucket-barry","generation":"1784539011217153","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"21","md5Hash":"HkL9voaNNWNnGoFsIDUaXQ==","crc32c":"5ewpQQ==","etag":"CIHu5+714JUDEAE=","timeCreated":"2026-07-20T09:16:51.299Z","updated":"2026-07-20T09:16:51.299Z","timeStorageClassUpdated":"2026-07-20T09:16:51.299Z","timeFinalized":"2026-07-20T09:16:51.299Z"}]}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -110,7 +110,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Flist-page%2Fsingle-ns%2Fonly.txt?prettyPrint=false
   response:
     body:
       string: ''

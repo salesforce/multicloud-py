@@ -9,9 +9,9 @@ interactions:
       amz-sdk-request:
       - attempt=1
       x-amz-copy-source:
-      - testcloud-python-sdk-bucket/async-conformance-test/copyfrom/does-not-exist-abc123.txt
+      - example-test-bucket-barry/async-conformance-test/copyfrom/does-not-exist-abc123.txt
     method: PUT
-    uri: https://testcloud-python-sdk-bucket.s3.us-west-2.amazonaws.com/async-conformance-test/copyfrom/dest-missing-src.txt
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/copyfrom/dest-missing-src.txt
   response:
     body:
       string: <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>async-conformance-test/copyfrom/does-not-exist-abc123.txt</Key><RequestId>CXYY7KQR8RE0ZJ7T</RequestId><HostId>dCyisO9Sif7Zwy1ryDeByHgiV7ITT7o99mXTCUcbXV2fAXA579Vg39E6ixKB+zXlRNTjT0/IgUq0dVtUpmQnyGCI+DeMwCJm</HostId></Error>

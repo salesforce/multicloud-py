@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992184859231\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992184859231\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&alt=media\",\n
         \ \"name\": \"conformance-test/exists/deleted-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1785992184859231\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1785992184859231\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"14\",\n  \"md5Hash\": \"AYCyHFKXxYNI+YXXIvRLzw==\",\n
         \ \"crc32c\": \"VDK5gg==\",\n  \"etag\": \"CN+UgK6bi5YDEAE=\",\n  \"timeCreated\":
@@ -82,14 +82,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-versioned/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/chameleon-python-sdk-versioned/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992185138968\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"chameleon-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992185138968\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&alt=media\",\n
         \ \"name\": \"conformance-test/exists/deleted-version.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-versioned\",\n  \"generation\": \"1785992185138968\",\n
+        \"chameleon-python-sdk-versioned\",\n  \"generation\": \"1785992185138968\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"17\",\n  \"md5Hash\": \"alVOU84sZCo29pCArP6vMg==\",\n
         \ \"crc32c\": \"myfMkQ==\",\n  \"etag\": \"CJieka6bi5YDEAE=\",\n  \"timeCreated\":
@@ -135,7 +135,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&prettyPrint=false
   response:
     body:
       string: ''
@@ -174,11 +174,11 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992184859231&fields=name&prettyPrint=false
   response:
     body:
-      string: '{"error":{"code":404,"message":"No such object: testcloud-python-sdk-versioned/conformance-test/exists/deleted-version.txt","errors":[{"message":"No
-        such object: testcloud-python-sdk-versioned/conformance-test/exists/deleted-version.txt","domain":"global","reason":"notFound"}]}}'
+      string: '{"error":{"code":404,"message":"No such object: chameleon-python-sdk-versioned/conformance-test/exists/deleted-version.txt","errors":[{"message":"No
+        such object: chameleon-python-sdk-versioned/conformance-test/exists/deleted-version.txt","domain":"global","reason":"notFound"}]}}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -214,7 +214,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?fields=name&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?fields=name&prettyPrint=false
   response:
     body:
       string: '{"name":"conformance-test/exists/deleted-version.txt"}'
@@ -253,10 +253,10 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fdeleted-version.txt&versions=True&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o?projection=noAcl&prefix=conformance-test%2Fexists%2Fdeleted-version.txt&versions=True&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"testcloud-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992185138968","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&alt=media","name":"conformance-test/exists/deleted-version.txt","bucket":"testcloud-python-sdk-versioned","generation":"1785992185138968","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"17","md5Hash":"alVOU84sZCo29pCArP6vMg==","crc32c":"myfMkQ==","etag":"CJieka6bi5YDEAE=","timeCreated":"2026-08-06T04:56:25.282Z","updated":"2026-08-06T04:56:25.282Z","timeStorageClassUpdated":"2026-08-06T04:56:25.282Z","timeFinalized":"2026-08-06T04:56:25.282Z"}]}'
+      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"chameleon-python-sdk-versioned/conformance-test/exists/deleted-version.txt/1785992185138968","selfLink":"https://www.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&alt=media","name":"conformance-test/exists/deleted-version.txt","bucket":"chameleon-python-sdk-versioned","generation":"1785992185138968","metageneration":"1","contentType":"application/octet-stream","storageClass":"STANDARD","size":"17","md5Hash":"alVOU84sZCo29pCArP6vMg==","crc32c":"myfMkQ==","etag":"CJieka6bi5YDEAE=","timeCreated":"2026-08-06T04:56:25.282Z","updated":"2026-08-06T04:56:25.282Z","timeStorageClassUpdated":"2026-08-06T04:56:25.282Z","timeFinalized":"2026-08-06T04:56:25.282Z"}]}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -292,7 +292,7 @@ interactions:
       x-allowed-locations:
       - '0x7ffffffffffffffe'
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/chameleon-python-sdk-versioned/o/conformance-test%2Fexists%2Fdeleted-version.txt?generation=1785992185138968&prettyPrint=false
   response:
     body:
       string: ''

@@ -73,12 +73,59 @@ assertions cloud-agnostic. Consult existing HTTP and gRPC fixture machinery
 for the service instead of assuming all recordings use one transport.
 
 Replay uses `--record-mode=none`. Recording with `--record-mode=rewrite`
-requires live cloud access and overwrites fixtures: first establish the test
-account, intended resources, credentials, and authorization. Run one provider
-at a time, inspect the full recording diff for secrets, then verify replay.
-Do not fabricate recordings or weaken assertions to make a test pass. If
-recording is blocked by unavailable credentials, report the exact remaining
-work rather than claiming conformance passed.
+requires live cloud access and overwrites fixtures. Do not fabricate
+recordings or weaken assertions to make a test pass.
+
+## Record conformance fixtures
+
+Each provider's harness module, `tests/SERVICE/conformance/test_PROVIDER_*.py`,
+defines its cloud resources as module constants read from `CONFORMANCE_*`
+environment variables with hardcoded defaults. Replay matches recorded hosts
+and paths, so new fixtures must be recorded against those defaults; an
+override is for exploratory runs, not for fixtures you commit. The blob
+defaults are the team's shared test buckets:
+
+| Purpose | AWS (`us-west-2`) | GCP |
+| --- | --- | --- |
+| Main | `example-test-bucket-barry` | `example-test-bucket-barry` (sync), `python-async-test-bucket` (async) |
+| Versioned | `chameleon-python-sdk-versioned` | `chameleon-python-sdk-versioned` |
+| Object lock | `chameleon-test-bucket-with-object-lock` | `sdk-blob-with-object-lock` |
+
+Read the harness module rather than trusting this table if they disagree.
+Before recording, confirm the account behind the credentials can reach every
+resource the impacted tests use, for example with `aws s3api head-bucket` or
+`gcloud storage buckets describe`. If a default names a placeholder or a
+resource the account cannot reach, stop and ask the user which account owns
+it. Do not change defaults, rename hosts inside cassettes, or re-record
+unrelated fixtures to work around it.
+
+Ask the user for credentials when recording is needed, and keep them in the
+provider's standard credential chain:
+
+- AWS: an `AWS_PROFILE` the user has configured, or `AWS_ACCESS_KEY_ID`,
+  `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN`.
+- GCP: application default credentials or `GOOGLE_APPLICATION_CREDENTIALS`
+  pointing at a credentials file, plus any service-account impersonation the
+  user specifies.
+- Ali: not recorded locally; leave its conformance status unchanged.
+
+Prefer a profile or credentials file the user sets up outside the
+conversation, so only its name reaches you. Never echo, write to disk, or
+commit credential values.
+
+Record only the tests impacted by the change, one provider at a time, by
+selecting their node IDs:
+
+```bash
+uv run --frozen python -m pytest -m conformance --record-mode=rewrite \
+  "tests/SERVICE/conformance/test_PROVIDER_SERVICE_conformance.py::CLASS::TEST"
+```
+
+After recording, inspect every new or changed cassette for credentials,
+tokens, and account identifiers the existing fixtures scrub. Then run the
+whole service's conformance suite in replay mode. If recording is blocked by
+unavailable credentials or resources, report the exact tests left to record
+rather than claiming conformance passed.
 
 ## Validate and submit
 

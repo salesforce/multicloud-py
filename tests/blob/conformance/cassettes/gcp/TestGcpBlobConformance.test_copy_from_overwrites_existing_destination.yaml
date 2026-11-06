@@ -20,14 +20,14 @@ interactions:
       x-upload-content-type:
       - text/plain
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/copyfrom/src-overwrite.txt/1783414457288526\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt?generation=1783414457288526&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/copyfrom/src-overwrite.txt/1783414457288526\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt?generation=1783414457288526&alt=media\",\n
         \ \"name\": \"conformance-test/copyfrom/src-overwrite.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1783414457288526\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1783414457288526\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
         \"STANDARD\",\n  \"size\": \"29\",\n  \"md5Hash\": \"eFhj4hvUk2Vys0+M+u58Ww==\",\n
         \ \"crc32c\": \"JSGE8g==\",\n  \"etag\": \"CM6O28mYwJUDEAE=\",\n  \"timeCreated\":
@@ -82,14 +82,14 @@ interactions:
       x-upload-content-type:
       - application/octet-stream
     method: POST
-    uri: https://storage.googleapis.com/upload/storage/v1/b/testcloud-python-sdk-bucket/o?uploadType=multipart
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
   response:
     body:
-      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"testcloud-python-sdk-bucket/conformance-test/copyfrom/dest-overwrite.txt/1783414457822593\",\n
-        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt\",\n
-        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414457822593&alt=media\",\n
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/copyfrom/dest-overwrite.txt/1783414457822593\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414457822593&alt=media\",\n
         \ \"name\": \"conformance-test/copyfrom/dest-overwrite.txt\",\n  \"bucket\":
-        \"testcloud-python-sdk-bucket\",\n  \"generation\": \"1783414457822593\",\n
+        \"example-test-bucket-barry\",\n  \"generation\": \"1783414457822593\",\n
         \ \"metageneration\": \"1\",\n  \"contentType\": \"application/octet-stream\",\n
         \ \"storageClass\": \"STANDARD\",\n  \"size\": \"25\",\n  \"md5Hash\": \"ps92Sj1PU4HqnsRAx5rRSQ==\",\n
         \ \"crc32c\": \"PpqHMA==\",\n  \"etag\": \"CIHb+8mYwJUDEAE=\",\n  \"timeCreated\":
@@ -135,10 +135,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: POST
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt/copyTo/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt/copyTo/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/copyfrom/dest-overwrite.txt/1783414458305518","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&alt=media","name":"conformance-test/copyfrom/dest-overwrite.txt","bucket":"testcloud-python-sdk-bucket","generation":"1783414458305518","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"29","md5Hash":"eFhj4hvUk2Vys0+M+u58Ww==","crc32c":"JSGE8g==","etag":"CO6XmcqYwJUDEAE=","timeCreated":"2026-07-07T08:54:18.447Z","updated":"2026-07-07T08:54:18.447Z","timeStorageClassUpdated":"2026-07-07T08:54:18.447Z","timeFinalized":"2026-07-07T08:54:18.447Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/copyfrom/dest-overwrite.txt/1783414458305518","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&alt=media","name":"conformance-test/copyfrom/dest-overwrite.txt","bucket":"example-test-bucket-barry","generation":"1783414458305518","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"29","md5Hash":"eFhj4hvUk2Vys0+M+u58Ww==","crc32c":"JSGE8g==","etag":"CO6XmcqYwJUDEAE=","timeCreated":"2026-07-07T08:54:18.447Z","updated":"2026-07-07T08:54:18.447Z","timeStorageClassUpdated":"2026-07-07T08:54:18.447Z","timeFinalized":"2026-07-07T08:54:18.447Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -180,7 +180,7 @@ interactions:
       x-upload-content-type:
       - application/json; charset=UTF-8
     method: GET
-    uri: https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?alt=media
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?alt=media
   response:
     body:
       string: copy_from source content wins
@@ -237,10 +237,10 @@ interactions:
       x-goog-user-project:
       - example-project
     method: GET
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&projection=noAcl&prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&projection=noAcl&prettyPrint=false
   response:
     body:
-      string: '{"kind":"storage#object","id":"testcloud-python-sdk-bucket/conformance-test/copyfrom/dest-overwrite.txt/1783414458305518","selfLink":"https://www.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&alt=media","name":"conformance-test/copyfrom/dest-overwrite.txt","bucket":"testcloud-python-sdk-bucket","generation":"1783414458305518","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"29","md5Hash":"eFhj4hvUk2Vys0+M+u58Ww==","crc32c":"JSGE8g==","etag":"CO6XmcqYwJUDEAE=","timeCreated":"2026-07-07T08:54:18.447Z","updated":"2026-07-07T08:54:18.447Z","timeStorageClassUpdated":"2026-07-07T08:54:18.447Z","timeFinalized":"2026-07-07T08:54:18.447Z"}'
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/copyfrom/dest-overwrite.txt/1783414458305518","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?generation=1783414458305518&alt=media","name":"conformance-test/copyfrom/dest-overwrite.txt","bucket":"example-test-bucket-barry","generation":"1783414458305518","metageneration":"1","contentType":"text/plain","storageClass":"STANDARD","size":"29","md5Hash":"eFhj4hvUk2Vys0+M+u58Ww==","crc32c":"JSGE8g==","etag":"CO6XmcqYwJUDEAE=","timeCreated":"2026-07-07T08:54:18.447Z","updated":"2026-07-07T08:54:18.447Z","timeStorageClassUpdated":"2026-07-07T08:54:18.447Z","timeFinalized":"2026-07-07T08:54:18.447Z"}'
     headers:
       Alt-Svc:
       - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
@@ -278,7 +278,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fsrc-overwrite.txt?prettyPrint=false
   response:
     body:
       string: ''
@@ -319,7 +319,7 @@ interactions:
       x-goog-user-project:
       - example-project
     method: DELETE
-    uri: https://storage.googleapis.com/storage/v1/b/testcloud-python-sdk-bucket/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?prettyPrint=false
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fcopyfrom%2Fdest-overwrite.txt?prettyPrint=false
   response:
     body:
       string: ''
