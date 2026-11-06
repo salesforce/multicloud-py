@@ -97,6 +97,10 @@ EMPTY_IF_VERSION_MATCH_MSG = (
     "if_version_match must be a non-empty version id; pass None to skip the "
     "precondition"
 )
+EMPTY_STORAGE_CLASS_MSG = (
+    "storage_class must be a non-empty provider storage class; pass None to use "
+    "the bucket default"
+)
 
 
 def _is_timezone_aware(value: datetime) -> bool:
@@ -248,6 +252,12 @@ class BlobStoreValidator:
             raise InvalidArgumentException(EMPTY_IF_MATCH_MSG)
         if if_version_match is not None and not if_version_match.strip():
             raise InvalidArgumentException(EMPTY_IF_VERSION_MATCH_MSG)
+
+    def validate_storage_class(self, storage_class: Optional[str]) -> None:
+        # The value is provider-native and passed through unchanged, so only a
+        # blank string is rejected here; providers reject unknown classes.
+        if storage_class is not None and not storage_class.strip():
+            raise InvalidArgumentException(EMPTY_STORAGE_CLASS_MSG)
 
     def validate_upload(
         self,

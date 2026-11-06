@@ -243,6 +243,34 @@ async def upload_with_metadata():
     await client.close()
 
 
+async def upload_with_storage_class():
+    """Upload into a non-default storage class, then confirm it via list_page."""
+    provider = get_provider()
+    client = get_async_bucket_client(provider)
+
+    # Storage class names are provider-native and passed through unchanged.
+    storage_class = "STANDARD_IA" if provider == "aws" else "NEARLINE"
+    key = "examples/async/storage-class/infrequent.txt"
+
+    await client.upload(
+        key=key,
+        payload=b"Rarely read content",
+        content_type="text/plain",
+        storage_class=storage_class,
+    )
+
+    print(f"\n=== Async Upload (with storage class) ===")
+    print(f"Uploaded '{key}' with storage_class={storage_class}")
+
+    page = await client.list_page(prefix=key)
+    reported = page.blobs[0].storage_class
+    print(f"Storage class reported by list_page: {reported}")
+    assert reported == storage_class, f"expected {storage_class}, got {reported}"
+
+    await client.delete(key)
+    await client.close()
+
+
 async def upload_error_handling():
     """Demonstrate error handling."""
     client = get_async_bucket_client(get_provider())
@@ -2593,6 +2621,7 @@ async def async_main():
         ("upload_with_context_manager", upload_with_context_manager),
         ("upload_multiple_concurrent", upload_multiple_concurrent),
         ("upload_with_metadata", upload_with_metadata),
+        ("upload_with_storage_class", upload_with_storage_class),
         ("tags_round_trip", tags_round_trip),
         ("upload_error_handling", upload_error_handling),
         ("upload_large_payload", upload_large_payload),

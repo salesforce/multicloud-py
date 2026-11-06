@@ -662,6 +662,72 @@ class TestGcpBlobStoreKmsEncryption:
         assert isinstance(result, FailedPreconditionException)
 
 
+class TestGcpBlobStoreStorageClass:
+    """Storage class selection on upload."""
+
+    def _blob(self, mock_storage_client):
+        blob_mock = MagicMock()
+        blob_mock.etag = "e"
+        blob_mock.generation = None
+        # Record the storage class at the moment the insert request is made:
+        # it must be on the blob before upload, not patched on afterwards.
+        blob_mock.sent_storage_class = []
+
+        def _capture(*_args, **_kwargs):
+            blob_mock.sent_storage_class.append(blob_mock.storage_class)
+
+        blob_mock.upload_from_string.side_effect = _capture
+        blob_mock.upload_from_filename.side_effect = _capture
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+        return blob_mock
+
+    def test_upload_sets_storage_class_before_insert(self, store, mock_storage_client):
+        blob_mock = self._blob(mock_storage_client)
+        store.upload("k", b"x", storage_class="NEARLINE")
+        assert blob_mock.sent_storage_class == ["NEARLINE"]
+        blob_mock.patch.assert_not_called()
+
+    def test_upload_without_storage_class_leaves_blob_default(
+        self, store, mock_storage_client
+    ):
+        blob_mock = self._blob(mock_storage_client)
+        sentinel = blob_mock.storage_class  # the unassigned MagicMock attribute
+        store.upload("k", b"x")
+        assert blob_mock.storage_class is sentinel
+
+    def test_upload_from_path_sets_storage_class_before_insert(
+        self, store, mock_storage_client, tmp_path
+    ):
+        blob_mock = self._blob(mock_storage_client)
+        src = tmp_path / "f.txt"
+        src.write_bytes(b"x")
+        store.upload_from_path("k", src, storage_class="COLDLINE")
+        assert blob_mock.sent_storage_class == ["COLDLINE"]
+        blob_mock.patch.assert_not_called()
+
+    def test_upload_from_path_without_storage_class_leaves_blob_default(
+        self, store, mock_storage_client, tmp_path
+    ):
+        blob_mock = self._blob(mock_storage_client)
+        sentinel = blob_mock.storage_class
+        src = tmp_path / "f.txt"
+        src.write_bytes(b"x")
+        store.upload_from_path("k", src)
+        assert blob_mock.storage_class is sentinel
+
+    def test_blank_storage_class_rejected_before_request(
+        self, store, mock_storage_client
+    ):
+        blob_mock = self._blob(mock_storage_client)
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            store.upload("k", b"x", storage_class="")
+        blob_mock.upload_from_string.assert_not_called()
+
+    def test_unknown_storage_class_translates_to_invalid_argument(self, store):
+        exc = gcs_exceptions.BadRequest("Invalid argument: storageClass")
+        assert isinstance(store.translate_error(exc), InvalidArgumentException)
+
+
 class TestGcpBlobStoreDownloadPreconditions:
     """if_match conditional-read behavior on download."""
 

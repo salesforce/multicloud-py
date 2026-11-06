@@ -1,0 +1,107 @@
+interactions:
+- request:
+    body: '<streaming body omitted: AioAwsChunkedWrapper>'
+    headers:
+      Content-Encoding:
+      - aws-chunked
+      Content-Type:
+      - application/octet-stream
+      Expect:
+      - 100-continue
+      X-Amz-Decoded-Content-Length:
+      - '4'
+      X-Amz-Trailer:
+      - x-amz-checksum-crc32
+      amz-sdk-invocation-id:
+      - 53fd6ad8-4e07-48a0-a66a-bf2014000d13
+      amz-sdk-request:
+      - attempt=1
+      x-amz-sdk-checksum-algorithm:
+      - CRC32
+      x-amz-storage-class:
+      - NOT_A_STORAGE_CLASS
+    method: PUT
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="UTF-8"?>
+
+        <Error><Code>InvalidStorageClass</Code><Message>The storage class you specified
+        is not valid</Message><StorageClassRequested>NOT_A_STORAGE_CLASS</StorageClassRequested><RequestId>5CBQHHT3R540HEJH</RequestId><HostId>20YKnJw65D+qZjjyoJkM4k0gsy5Qe3CM6Zdrh/XGWkXU9r1bYvtnOec3xIeDwOKG0igGAs6N4RM=</HostId></Error>'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Date:
+      - Fri, 06 Nov 2026 05:28:32 GMT
+      Server:
+      - AmazonS3
+      Transfer-Encoding:
+      - chunked
+      x-amz-id-2:
+      - 20YKnJw65D+qZjjyoJkM4k0gsy5Qe3CM6Zdrh/XGWkXU9r1bYvtnOec3xIeDwOKG0igGAs6N4RM=
+      x-amz-request-id:
+      - 5CBQHHT3R540HEJH
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      amz-sdk-invocation-id:
+      - 7b8bc82e-9fad-406a-9665-a76eab38ba91
+      amz-sdk-request:
+      - attempt=1
+    method: HEAD
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Date:
+      - Fri, 06 Nov 2026 05:28:33 GMT
+      Server:
+      - AmazonS3
+      Transfer-Encoding:
+      - chunked
+      x-amz-id-2:
+      - WTTN61p03cc5b1Pc/4XwNPGwKcziII+wdaAt9mKJ0WhCQX59ZF/HIv7q2CszEn0ruFnx5PodDLc=
+      x-amz-request-id:
+      - 9CRPEZCCV8WJAE40
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Content-Length:
+      - '0'
+      amz-sdk-invocation-id:
+      - 860a8578-dd0d-42e4-b0c9-96a629d6a765
+      amz-sdk-request:
+      - attempt=1
+    method: DELETE
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/async-conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Date:
+      - Fri, 06 Nov 2026 05:28:35 GMT
+      Server:
+      - AmazonS3
+      x-amz-delete-marker:
+      - 'true'
+      x-amz-id-2:
+      - rURs5OMTSUCgselsG36F1VVOB4JyHraZEuWIZeDO7bqT7DeYUDcXBvkeWJqZw65BlFtwpYyYAro=
+      x-amz-request-id:
+      - 9CRTYKPXXQPKM11Q
+      x-amz-version-id:
+      - qpbjiBZaz8ax2BOMXZJ6nunuHLOSTkrJ
+    status:
+      code: 204
+      message: No Content
+version: 1

@@ -33,6 +33,7 @@ from multicloud.blob.blob_client.driver import (
     _coerce_to_bytes,
     load_from_path,
 )
+from multicloud.blob.blob_client.validators import EMPTY_STORAGE_CLASS_MSG
 from multicloud.common.exceptions import (
     InvalidArgumentException,
     SubstrateSdkException,
@@ -77,6 +78,7 @@ class _FakeBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         self.upload_calls.append(
             {
@@ -90,6 +92,7 @@ class _FakeBlobStore(BaseBlobStore):
                 "create_if_absent": create_if_absent,
                 "if_match": if_match,
                 "if_version_match": if_version_match,
+                "storage_class": storage_class,
             }
         )
         return UploadResponse(key=key, e_tag="fake-etag", version_id="v1")
@@ -108,6 +111,7 @@ class _FakeBlobStore(BaseBlobStore):
         if_version_match=None,
         kms_key_id=None,
         use_kms_managed_key=False,
+        storage_class=None,
     ):
         payload = path.read_bytes()
         return self.do_upload(
@@ -123,6 +127,7 @@ class _FakeBlobStore(BaseBlobStore):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     def do_download(
@@ -502,6 +507,23 @@ class TestBaseBlobStore:
         store = _FakeBlobStore(bucket="b")
         with pytest.raises(InvalidArgumentException):
             store.upload("", b"data")
+
+    def test_upload_forwards_storage_class(self):
+        store = _FakeBlobStore(bucket="b")
+        store.upload("k", b"data", storage_class="NEARLINE")
+        assert store.upload_calls[0]["storage_class"] == "NEARLINE"
+
+    def test_upload_storage_class_defaults_to_none(self):
+        store = _FakeBlobStore(bucket="b")
+        store.upload("k", b"data")
+        assert store.upload_calls[0]["storage_class"] is None
+
+    @pytest.mark.parametrize("blank", ["", "   "])
+    def test_upload_blank_storage_class_raises_before_delegating(self, blank):
+        store = _FakeBlobStore(bucket="b")
+        with pytest.raises(InvalidArgumentException, match=EMPTY_STORAGE_CLASS_MSG):
+            store.upload("k", b"data", storage_class=blank)
+        assert store.upload_calls == []
 
     def test_upload_coerces_file_like_to_bytes(self):
         store = _FakeBlobStore(bucket="b")
@@ -1032,6 +1054,7 @@ class _NoMultipartStore(BaseBlobStore):
         if_version_match=None,
         kms_key_id=None,
         use_kms_managed_key=False,
+        storage_class=None,
     ):
         return UploadResponse(key=key)
 
@@ -1049,6 +1072,7 @@ class _NoMultipartStore(BaseBlobStore):
         if_version_match=None,
         kms_key_id=None,
         use_kms_managed_key=False,
+        storage_class=None,
     ):
         return UploadResponse(key=key)
 

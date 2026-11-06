@@ -13,6 +13,7 @@ from multicloud.blob.blob_client.validators import (
     CREATE_IF_ABSENT_WITH_IF_VERSION_MATCH_MSG,
     EMPTY_IF_MATCH_MSG,
     EMPTY_IF_VERSION_MATCH_MSG,
+    EMPTY_STORAGE_CLASS_MSG,
     INVALID_BUCKET_NAME_MSG,
     INVALID_OBJECT_NAME_MSG,
     INVALID_RANGED_READ_BOUNDARIES_MSG,
@@ -228,6 +229,22 @@ class TestValidateWritePreconditions:
             match=CREATE_IF_ABSENT_WITH_IF_VERSION_MATCH_MSG,
         ):
             v.validate_upload("k", create_if_absent=True, if_version_match="42")
+
+
+class TestValidateStorageClass:
+    """storage_class is provider-native: only blank values are rejected here."""
+
+    def test_accepts_none(self, v):
+        v.validate_storage_class(None)  # no raise
+
+    @pytest.mark.parametrize("value", ["STANDARD", "NEARLINE", "STANDARD_IA"])
+    def test_accepts_provider_values(self, v, value):
+        v.validate_storage_class(value)  # no raise
+
+    @pytest.mark.parametrize("value", ["", "   "])
+    def test_rejects_blank(self, v, value):
+        with pytest.raises(InvalidArgumentException, match=EMPTY_STORAGE_CLASS_MSG):
+            v.validate_storage_class(value)
 
 
 class TestValidateDownloadPreconditions:

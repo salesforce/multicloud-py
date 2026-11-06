@@ -62,6 +62,7 @@ class RecordingUploadStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         if self.raise_native is not None:
             raise self.raise_native
@@ -77,6 +78,7 @@ class RecordingUploadStore(BaseAsyncBlobStore):
                 "if_version_match": if_version_match,
                 "kms_key_id": kms_key_id,
                 "use_kms_managed_key": use_kms_managed_key,
+                "storage_class": storage_class,
             }
         )
         return AsyncUploadResponse(key=key, e_tag="etag-1", version_id="v-1")
@@ -441,6 +443,27 @@ class TestClientUploadFromPath:
         assert sent["if_version_match"] == "v-77"
         assert sent["kms_key_id"] == "arn:aws:kms:key"
         assert sent["use_kms_managed_key"] is True
+
+    async def test_storage_class_reaches_the_store(self, tmp_path):
+        store = RecordingUploadStore(bucket="b")
+        client = await self._client(store)
+        source = tmp_path / "tiered.txt"
+        source.write_bytes(b"tiered")
+
+        await client.upload_from_path("k.txt", source, storage_class="COLDLINE")
+
+        assert store.uploads[0]["storage_class"] == "COLDLINE"
+
+    async def test_blank_storage_class_rejected_before_reading(self, tmp_path):
+        store = RecordingUploadStore(bucket="b")
+        client = await self._client(store)
+        source = tmp_path / "tiered.txt"
+        source.write_bytes(b"tiered")
+
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            await client.upload_from_path("k.txt", source, storage_class="")
+
+        assert store.uploads == []
 
     async def test_create_if_absent_reaches_the_store(self, tmp_path):
         """Asserted separately: it cannot be combined with if_match."""

@@ -116,6 +116,7 @@ class BucketClient:
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Upload ``payload`` to the object identified by ``key``.
 
@@ -153,6 +154,11 @@ class BucketClient:
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            storage_class: Provider-native storage class for the object (for
+                example ``"STANDARD_IA"`` or ``"NEARLINE"``), passed through
+                unchanged. None uses the bucket default. A blank value, or a
+                class the provider does not recognise, raises
+                InvalidArgumentException.
 
         Returns:
             UploadResponse containing the key, ETag, and version ID.
@@ -171,6 +177,7 @@ class BucketClient:
                 if_version_match=if_version_match,
                 kms_key_id=kms_key_id,
                 use_kms_managed_key=use_kms_managed_key,
+                storage_class=storage_class,
             )
         except Exception as exc:
             raise self._store.translate_error(exc) from exc
@@ -189,6 +196,7 @@ class BucketClient:
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Upload a local file to the object identified by ``key``.
 
@@ -229,6 +237,11 @@ class BucketClient:
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            storage_class: Provider-native storage class for the object (for
+                example ``"STANDARD_IA"`` or ``"NEARLINE"``), passed through
+                unchanged. None uses the bucket default. A blank value, or a
+                class the provider does not recognise, raises
+                InvalidArgumentException.
 
         Returns:
             UploadResponse containing the key, ETag, and version ID.
@@ -250,6 +263,7 @@ class BucketClient:
                 if_version_match=if_version_match,
                 kms_key_id=kms_key_id,
                 use_kms_managed_key=use_kms_managed_key,
+                storage_class=storage_class,
             )
         except Exception as exc:
             raise self._store.translate_error(exc) from exc

@@ -62,6 +62,7 @@ class TestBucketClientUploadForwarding:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
         assert resp.key == "k"
         assert resp.e_tag == "etag"

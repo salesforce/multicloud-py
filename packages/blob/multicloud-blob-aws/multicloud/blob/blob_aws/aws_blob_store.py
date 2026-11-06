@@ -206,6 +206,7 @@ class AwsBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         put_kwargs: dict[str, Any] = {
             "Bucket": self.bucket,
@@ -216,6 +217,8 @@ class AwsBlobStore(BaseBlobStore):
             put_kwargs["ContentType"] = content_type
         if metadata:
             put_kwargs["Metadata"] = dict(metadata)
+        if storage_class is not None:
+            put_kwargs["StorageClass"] = storage_class
         # Falsy check intentional: skip when caller passes None or {} so an
         # empty Tagging header is never sent. The driver normalizes None to {}
         # via ``tags or {}``; ``{}`` is falsy here, matching the metadata handling.
@@ -287,6 +290,7 @@ class AwsBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Upload a local file to S3 using a single atomic put_object call.
 
@@ -306,6 +310,8 @@ class AwsBlobStore(BaseBlobStore):
             put_kwargs["ContentLength"] = content_length
         if metadata:
             put_kwargs["Metadata"] = dict(metadata)
+        if storage_class is not None:
+            put_kwargs["StorageClass"] = storage_class
         self._apply_object_lock(put_kwargs, object_lock)
         apply_write_preconditions(
             put_kwargs,

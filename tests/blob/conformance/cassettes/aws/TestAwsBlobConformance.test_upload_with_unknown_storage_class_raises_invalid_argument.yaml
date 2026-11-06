@@ -1,0 +1,125 @@
+interactions:
+- request:
+    body: !!python/object/new:_io.BytesIO
+      state: !!python/tuple
+      - !!binary |
+        NA0KZGF0YQ0KMA0KeC1hbXotY2hlY2tzdW0tY3JjMzI6cmZQell3PT0NCg0K
+      - 0
+      - null
+    headers:
+      Content-Encoding:
+      - !!binary |
+        YXdzLWNodW5rZWQ=
+      Expect:
+      - !!binary |
+        MTAwLWNvbnRpbnVl
+      Transfer-Encoding:
+      - !!binary |
+        Y2h1bmtlZA==
+      X-Amz-Decoded-Content-Length:
+      - !!binary |
+        NA==
+      X-Amz-Trailer:
+      - !!binary |
+        eC1hbXotY2hlY2tzdW0tY3JjMzI=
+      amz-sdk-invocation-id:
+      - !!binary |
+        NTViMzNlNTctYzNmMi00YTdlLWEzNmUtMzM3OGNmNmQ5ZWNh
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+      x-amz-sdk-checksum-algorithm:
+      - !!binary |
+        Q1JDMzI=
+      x-amz-storage-class:
+      - !!binary |
+        Tk9UX0FfU1RPUkFHRV9DTEFTUw==
+    method: PUT
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="UTF-8"?>
+
+        <Error><Code>InvalidStorageClass</Code><Message>The storage class you specified
+        is not valid</Message><StorageClassRequested>NOT_A_STORAGE_CLASS</StorageClassRequested><RequestId>CYAXME0C1RVVPHRY</RequestId><HostId>I9CxWRf4cYK/715xNJgObFgx0H5pTI2mgwZpucpIAVNRLNHZEpSjEwnI1Suc5Wvpus5N2NXyT9s=</HostId></Error>'
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/xml
+      Date:
+      - Fri, 06 Nov 2026 05:28:29 GMT
+      Server:
+      - AmazonS3
+      Transfer-Encoding:
+      - chunked
+      x-amz-id-2:
+      - I9CxWRf4cYK/715xNJgObFgx0H5pTI2mgwZpucpIAVNRLNHZEpSjEwnI1Suc5Wvpus5N2NXyT9s=
+      x-amz-request-id:
+      - CYAXME0C1RVVPHRY
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      amz-sdk-invocation-id:
+      - !!binary |
+        YWQ3NGQwN2EtZmM0NC00N2Q4LWI3YjgtZjdmZDAxNzM4YzQ4
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: HEAD
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Type:
+      - application/xml
+      Date:
+      - Fri, 06 Nov 2026 05:28:29 GMT
+      Server:
+      - AmazonS3
+      Transfer-Encoding:
+      - chunked
+      x-amz-id-2:
+      - byKQ5kVI3Wbdb/xpFjiTVeAkssSI8D2QyrtJYzpRnc7ELFghlr0BkaC2jRfosjXWGzoh5+F8dWc=
+      x-amz-request-id:
+      - CYATFF2GQNAWV6KX
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Content-Length:
+      - '0'
+      amz-sdk-invocation-id:
+      - !!binary |
+        NTRmODk3ZjMtODdmNS00MDYxLTgyZTktNTA4ZjVmOGYyOGFm
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: DELETE
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/unknown.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Date:
+      - Fri, 06 Nov 2026 05:28:31 GMT
+      Server:
+      - AmazonS3
+      x-amz-delete-marker:
+      - 'true'
+      x-amz-id-2:
+      - 5QdBsskKG+8BPvB/PcdvLy2G1cYAkZI5F0ssYuMTwes1j4YHr0swl6ByWTR0rr2B4lfNlRlqlwA=
+      x-amz-request-id:
+      - CYAHSKBFRRMMPWC9
+      x-amz-version-id:
+      - 2J93jP.oSUjOlD3J4i.aO9G0lrofa3bq
+    status:
+      code: 204
+      message: No Content
+version: 1

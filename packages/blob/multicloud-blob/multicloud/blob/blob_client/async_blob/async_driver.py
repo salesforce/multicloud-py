@@ -694,6 +694,7 @@ class BaseAsyncBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         """Upload data to the object identified by ``key``.
 
@@ -723,6 +724,11 @@ class BaseAsyncBlobStore(Provider, ABC):
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            storage_class: Provider-native storage class for the object (for
+                example ``"STANDARD_IA"`` or ``"NEARLINE"``), passed through
+                unchanged. None uses the bucket default. A blank value, or a
+                class the provider does not recognise, raises
+                InvalidArgumentException.
 
         Returns:
             AsyncUploadResponse with key, version_id, e_tag.
@@ -738,6 +744,7 @@ class BaseAsyncBlobStore(Provider, ABC):
             if_match=if_match,
             if_version_match=if_version_match,
         )
+        self._validator.validate_storage_class(storage_class)
 
         payload_bytes, resolved_content_type = await self._prepare_payload(
             payload, content_type
@@ -757,6 +764,7 @@ class BaseAsyncBlobStore(Provider, ABC):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     async def upload_from_path(
@@ -772,6 +780,7 @@ class BaseAsyncBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         """Upload a local file to the object identified by ``key``.
 
@@ -790,6 +799,8 @@ class BaseAsyncBlobStore(Provider, ABC):
             if_version_match: Only write if the current version matches.
             kms_key_id: Customer-managed encryption key.
             use_kms_managed_key: Encrypt with a provider-managed key.
+            storage_class: Provider-native storage class, or None for the
+                bucket default. See :meth:`upload`.
 
         Returns:
             AsyncUploadResponse with key, version_id, e_tag.
@@ -802,6 +813,7 @@ class BaseAsyncBlobStore(Provider, ABC):
         # path validator, which takes no length. Without it this method would
         # accept a negative length that upload() rejects.
         self._validator.validate_content_length(content_length)
+        self._validator.validate_storage_class(storage_class)
 
         resolved = path if isinstance(path, Path) else Path(os.fspath(path))
 
@@ -836,6 +848,7 @@ class BaseAsyncBlobStore(Provider, ABC):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     # Download
@@ -1502,8 +1515,13 @@ class BaseAsyncBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
-        """Provider-specific upload implementation."""
+        """Provider-specific upload implementation.
+
+        ``storage_class`` is provider-native, already validated as non-blank,
+        or None for the bucket default.
+        """
 
     @abstractmethod
     async def do_download(self, request: AsyncDownloadRequest) -> AsyncDownloadResponse:
