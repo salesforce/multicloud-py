@@ -10,6 +10,30 @@ Read `AGENTS.md`, the target service's implementation and tests, and
 package names, and checks. Bug fixes without an API change can use a focused
 debugging workflow; documentation-only changes use `multi-cloudpy-docs-guides`.
 
+## Process Flow
+
+This summarizes the workflow below. When porting a Java SDK feature, use the
+MultiCloudJ API as a reference and adapt it to the current Python contracts.
+
+```mermaid
+flowchart TD
+    A[Read repository context and scope the feature] --> B[Research supported providers and design the API]
+    B --> C{Contract decisions unresolved?}
+    C -->|yes| D[Resolve material differences with the user]
+    D --> B
+    C -->|no| E[Implement driver, client and independent providers]
+    E --> F[Add behavioral unit and shared conformance tests]
+    F --> G{New recordings needed?}
+    G -->|no| H[Verify conformance replay]
+    G -->|yes| I{Live access and authorization established?}
+    I -->|yes| J[Record affected cases and inspect for secrets]
+    J --> H
+    I -->|no| K[Report remaining recording and replay work]
+    H --> L[Run appropriate CI checks and update docs and examples]
+    K --> L
+    L --> M[Open upstream PR with results and unresolved limits]
+```
+
 ## Establish the contract
 
 Identify the service, operation, intended observable behavior, and supported
