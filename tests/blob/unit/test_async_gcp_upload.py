@@ -171,6 +171,56 @@ class TestGcpAsyncUploadKmsEncryption:
         assert "parameters" not in call_kwargs
 
 
+class TestGcpAsyncUploadStorageClass:
+    """Storage class selection on upload."""
+
+    @staticmethod
+    def _wire_resource(call_kwargs: dict[str, Any]) -> dict[str, Any]:
+        # gcloud-aio-storage rewrites resource keys before sending them, so
+        # assert on the JSON field name GCS actually receives.
+        from gcloud.aio.storage import Storage
+
+        return {
+            Storage._format_metadata_key(k): v
+            for k, v in call_kwargs["metadata"].items()
+        }
+
+    @pytest.mark.asyncio
+    async def test_storage_class_sent_as_storage_class_field(self, mock_storage):
+        store = GcpAsyncBlobStore(bucket="b", _storage=mock_storage)
+        await store.upload("key", b"data", storage_class="NEARLINE")
+
+        call_kwargs = mock_storage.upload.call_args[1]
+        assert self._wire_resource(call_kwargs) == {"storageClass": "NEARLINE"}
+
+    @pytest.mark.asyncio
+    async def test_storage_class_combined_with_user_metadata(self, mock_storage):
+        store = GcpAsyncBlobStore(bucket="b", _storage=mock_storage)
+        await store.upload(
+            "key", b"data", metadata={"env": "staging"}, storage_class="COLDLINE"
+        )
+
+        call_kwargs = mock_storage.upload.call_args[1]
+        assert self._wire_resource(call_kwargs) == {
+            "metadata": {"env": "staging"},
+            "storageClass": "COLDLINE",
+        }
+
+    @pytest.mark.asyncio
+    async def test_no_storage_class_sends_no_resource(self, mock_storage):
+        store = GcpAsyncBlobStore(bucket="b", _storage=mock_storage)
+        await store.upload("key", b"data")
+
+        assert "metadata" not in mock_storage.upload.call_args[1]
+
+    @pytest.mark.asyncio
+    async def test_blank_storage_class_rejected_before_request(self, mock_storage):
+        store = GcpAsyncBlobStore(bucket="b", _storage=mock_storage)
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            await store.upload("key", b"data", storage_class=" ")
+        mock_storage.upload.assert_not_called()
+
+
 class TestGcpAsyncUploadWritePreconditions:
     """Conditional writes: create_if_absent supported, if_match unsupported."""
 

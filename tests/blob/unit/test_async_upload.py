@@ -66,6 +66,7 @@ class InMemoryAsyncBlobStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> "AsyncUploadResponse":
         if self._should_fail:
             exc = self._should_fail
@@ -87,6 +88,7 @@ class InMemoryAsyncBlobStore(BaseAsyncBlobStore):
                 "create_if_absent": create_if_absent,
                 "if_match": if_match,
                 "if_version_match": if_version_match,
+                "storage_class": storage_class,
             }
         )
         return AsyncUploadResponse(
@@ -361,6 +363,23 @@ class TestUploadValidation:
             InvalidArgumentException, match="Unsupported upload payload"
         ):
             await store.upload("key", None)  # type: ignore
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("blank", ["", "   "])
+    async def test_blank_storage_class_raises_before_delegating(self, store, blank):
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            await store.upload("key", b"data", storage_class=blank)
+        assert store.upload_calls == []
+
+    @pytest.mark.asyncio
+    async def test_storage_class_forwarded(self, store):
+        await store.upload("key", b"data", storage_class="NEARLINE")
+        assert store.upload_calls[0]["storage_class"] == "NEARLINE"
+
+    @pytest.mark.asyncio
+    async def test_storage_class_defaults_to_none(self, store):
+        await store.upload("key", b"data")
+        assert store.upload_calls[0]["storage_class"] is None
 
     def test_empty_bucket_raises_invalid_argument(self):
         """Empty bucket string raises InvalidArgumentException."""

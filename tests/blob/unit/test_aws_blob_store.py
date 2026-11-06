@@ -605,6 +605,54 @@ class TestAwsBlobStoreKmsEncryption:
         assert not isinstance(result, ResourceConflictException)
 
 
+class TestAwsBlobStoreStorageClass:
+    """Storage class selection on upload."""
+
+    def test_upload_sets_storage_class(self, store, mock_s3):
+        mock_s3.put_object.return_value = {"ETag": '"e"'}
+        store.upload("k", b"x", storage_class="STANDARD_IA")
+        assert mock_s3.put_object.call_args[1]["StorageClass"] == "STANDARD_IA"
+
+    def test_upload_without_storage_class_omits_it(self, store, mock_s3):
+        mock_s3.put_object.return_value = {"ETag": '"e"'}
+        store.upload("k", b"x")
+        assert "StorageClass" not in mock_s3.put_object.call_args[1]
+
+    def test_upload_from_path_sets_storage_class(self, store, mock_s3, tmp_path):
+        mock_s3.put_object.return_value = {"ETag": '"e"'}
+        src = tmp_path / "f.txt"
+        src.write_bytes(b"x")
+        store.upload_from_path("k", src, storage_class="GLACIER_IR")
+        assert mock_s3.put_object.call_args[1]["StorageClass"] == "GLACIER_IR"
+
+    def test_upload_from_path_without_storage_class_omits_it(
+        self, store, mock_s3, tmp_path
+    ):
+        mock_s3.put_object.return_value = {"ETag": '"e"'}
+        src = tmp_path / "f.txt"
+        src.write_bytes(b"x")
+        store.upload_from_path("k", src)
+        assert "StorageClass" not in mock_s3.put_object.call_args[1]
+
+    def test_blank_storage_class_rejected_before_request(self, store, mock_s3):
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            store.upload("k", b"x", storage_class="  ")
+        mock_s3.put_object.assert_not_called()
+
+    def test_unknown_storage_class_translates_to_invalid_argument(self, store):
+        exc = ClientError(
+            {
+                "Error": {
+                    "Code": "InvalidStorageClass",
+                    "Message": "The storage class you specified is not valid",
+                },
+                "ResponseMetadata": {"HTTPStatusCode": 400},
+            },
+            "PutObject",
+        )
+        assert isinstance(store.translate_error(exc), InvalidArgumentException)
+
+
 class TestAwsBlobStoreReplicationStatus:
     """replication_status is populated on download and get_metadata."""
 

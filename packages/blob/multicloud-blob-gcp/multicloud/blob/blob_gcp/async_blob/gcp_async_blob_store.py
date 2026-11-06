@@ -301,6 +301,7 @@ class GcpAsyncBlobStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> "AsyncUploadResponse":
         """Upload bytes to GCS using gcloud-aio-storage.
 
@@ -317,8 +318,18 @@ class GcpAsyncBlobStore(BaseAsyncBlobStore):
         }
         if content_type:
             upload_kwargs["content_type"] = content_type
+        # ``metadata`` here is the object resource sent with the upload; user
+        # metadata and the storage class are both fields of it.
+        resource: dict[str, Any] = {}
         if metadata:
-            upload_kwargs["metadata"] = {"metadata": dict(metadata)}
+            resource["metadata"] = dict(metadata)
+        if storage_class is not None:
+            # gcloud-aio-storage lower-cases resource keys up to the first
+            # hyphen, so "storageClass" would be sent as "storageclass" and
+            # ignored. The hyphenated form is rewritten to "storageClass".
+            resource["Storage-Class"] = storage_class
+        if resource:
+            upload_kwargs["metadata"] = resource
         # An explicit kms_key_id selects a customer-managed key. use_kms_managed_key
         # with no explicit key is a no-op on GCS: objects are always encrypted at
         # rest with Google-managed keys by default.

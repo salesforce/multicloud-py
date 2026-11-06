@@ -161,6 +161,33 @@ def upload_with_tags():
     client.close()
 
 
+def upload_with_storage_class():
+    """Upload into a non-default storage class, then confirm it via list_page."""
+    provider = get_provider()
+    client = get_bucket_client(provider)
+
+    # Storage class names are provider-native and passed through unchanged.
+    storage_class = "STANDARD_IA" if provider == "aws" else "NEARLINE"
+    key = "examples/storage-class/multicloud-infrequent.txt"
+
+    print(f"\n=== Upload with Storage Class ===")
+    client.upload(
+        key=key,
+        payload=b"Rarely read content",
+        content_type="text/plain",
+        storage_class=storage_class,
+    )
+    print(f"Uploaded '{key}' with storage_class={storage_class}")
+
+    page = client.list_page(prefix=key)
+    reported = page.blobs[0].storage_class
+    print(f"Storage class reported by list_page: {reported}")
+    assert reported == storage_class, f"expected {storage_class}, got {reported}"
+
+    client.delete(key)
+    client.close()
+
+
 def upload_with_object_lock():
     """Upload with first-time retention + a legal hold, then read it back."""
     client = get_bucket_client(get_provider())
@@ -1223,6 +1250,7 @@ def main():
         ("upload", upload),
         ("upload_from_path", upload_from_path),
         ("upload_with_tags", upload_with_tags),
+        ("upload_with_storage_class", upload_with_storage_class),
         ("upload_with_object_lock", upload_with_object_lock),
         ("multipart_upload", multipart_upload),
         ("multipart_upload_with_tags", multipart_upload_with_tags),

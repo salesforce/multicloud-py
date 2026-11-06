@@ -116,6 +116,7 @@ class InMemoryAsyncBlobStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         """Store object in-memory."""
         self.objects[key] = (

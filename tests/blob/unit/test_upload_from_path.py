@@ -74,6 +74,7 @@ class _FakeBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> DriverUploadResponse:
         self.upload_calls.append(
             {
@@ -88,6 +89,7 @@ class _FakeBlobStore(BaseBlobStore):
                 "if_version_match": if_version_match,
                 "kms_key_id": kms_key_id,
                 "use_kms_managed_key": use_kms_managed_key,
+                "storage_class": storage_class,
             }
         )
         return DriverUploadResponse(key=key, e_tag="fake-etag", version_id="v1")
@@ -106,6 +108,7 @@ class _FakeBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> DriverUploadResponse:
         # Read file and delegate to do_upload for test tracking
         payload = path.read_bytes()
@@ -121,6 +124,7 @@ class _FakeBlobStore(BaseBlobStore):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     def do_download(self, key, *, version_id, start, end, if_match=None):
@@ -380,6 +384,25 @@ class TestBaseBlobStoreUploadFromPath:
         assert store.upload_calls[0]["kms_key_id"] == "key-arn-123"
         assert store.upload_calls[0]["use_kms_managed_key"] is True
 
+    def test_storage_class_forwarded(self, tmp_path):
+        f = tmp_path / "file.txt"
+        f.write_bytes(b"data")
+        store = _FakeBlobStore(bucket="test-bucket")
+
+        store.upload_from_path("key", f, storage_class="COLDLINE")
+
+        assert store.upload_calls[0]["storage_class"] == "COLDLINE"
+
+    def test_blank_storage_class_rejected_before_delegating(self, tmp_path):
+        f = tmp_path / "file.txt"
+        f.write_bytes(b"data")
+        store = _FakeBlobStore(bucket="test-bucket")
+
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            store.upload_from_path("key", f, storage_class="")
+
+        assert store.upload_calls == []
+
     def test_conditional_write_params_forwarded(self, tmp_path):
         f = tmp_path / "file.txt"
         f.write_bytes(b"data")
@@ -510,6 +533,7 @@ class TestBucketClientUploadFromPath:
             if_version_match="42",
             kms_key_id="key-arn-123",
             use_kms_managed_key=True,
+            storage_class=None,
         )
         assert resp.key == "k"
         assert resp.e_tag == "etag"
@@ -536,6 +560,7 @@ class TestBucketClientUploadFromPath:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_accepts_string_path(self, client_with_mock_store, tmp_path):

@@ -107,6 +107,11 @@ class GcpAsyncHarness(AsyncHarness):
             "/keyRings/multicloud-test/cryptoKeys/multicloud-test"
         )
 
+    def get_storage_class(self) -> str:
+        # A non-default GCS class; objects in every class stay immediately
+        # readable, so the round trip can download it.
+        return "NEARLINE"
+
     def detects_unknown_upload_id(self) -> bool:
         """Multipart is emulated with scratch objects, so there is no session
         to check a forged upload id against."""

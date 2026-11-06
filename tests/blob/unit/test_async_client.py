@@ -79,6 +79,7 @@ class FakeAsyncBlobStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> "AsyncUploadResponse":
         self.uploads.append(
             {
@@ -92,6 +93,7 @@ class FakeAsyncBlobStore(BaseAsyncBlobStore):
                 "if_version_match": if_version_match,
                 "kms_key_id": kms_key_id,
                 "use_kms_managed_key": use_kms_managed_key,
+                "storage_class": storage_class,
             }
         )
         return AsyncUploadResponse(
@@ -314,6 +316,12 @@ class TestAsyncBucketClientUpload:
 
         store = client._store
         assert store.uploads[0]["content_length"] == 5
+
+    @pytest.mark.asyncio
+    async def test_upload_forwards_storage_class(self, client):
+        await client.upload("k", b"data", storage_class="STANDARD_IA")
+        store = client._store
+        assert store.uploads[0]["storage_class"] == "STANDARD_IA"
 
     @pytest.mark.asyncio
     async def test_upload_forwards_preconditions_and_kms(self, client):

@@ -241,6 +241,14 @@ class AsyncHarness(ABC):
             "Harness must supply a server-side-encryption key id."
         )
 
+    def get_storage_class(self) -> str:
+        """Return a provider-native, non-default storage class for uploads.
+
+        Raises by default so a provider must supply one rather than silently
+        disable the storage-class upload tests.
+        """
+        raise NotImplementedError("Harness must supply a non-default storage class.")
+
     def create_invalid_credentials_client(self) -> AsyncBucketClient:
         """Return a client for the test bucket holding unusable credentials."""
         raise NotImplementedError
@@ -338,6 +346,11 @@ class BaseAsyncBlobStoreConformance(ABC):
         tests.
         """
         return harness.get_kms_key_id()
+
+    @pytest.fixture
+    def storage_class(self, harness):
+        """Provide a provider-native, non-default storage class."""
+        return harness.get_storage_class()
 
     # Helpers
 
@@ -3042,6 +3055,67 @@ class BaseAsyncBlobStoreConformance(ABC):
             await async_client.upload(key, payload, kms_key_id=kms_key_id)
             resp = await async_client.download(key)
             assert resp.content == payload
+        finally:
+            await self._safe_delete(async_client, key)
+
+    # Storage-class conformance tests
+    #
+    # Storage classes are provider-native, so the harness supplies a non-default
+    # class the provider accepts. Listing reports the class an object was written
+    # with, which makes the round trip observable without a provider SDK.
+
+    @pytest.mark.asyncio
+    async def test_upload_with_storage_class_is_reported_by_listing(
+        self, async_client, storage_class
+    ):
+        """upload with storage_class writes the object in that class."""
+        prefix = f"{self.TEST_PREFIX}storage-class/upload-ns/"
+        key = f"{prefix}tiered.txt"
+        payload = b"storage-class async conformance payload"
+        try:
+            await async_client.upload(key, payload, storage_class=storage_class)
+            assert (await async_client.download(key)).content == payload
+            resp = await async_client.list_page(prefix=prefix)
+            assert [(b.key, b.storage_class) for b in resp.blobs] == [
+                (key, storage_class)
+            ]
+        finally:
+            await self._safe_delete(async_client, key)
+
+    @pytest.mark.asyncio
+    async def test_upload_from_path_with_storage_class_is_reported_by_listing(
+        self, async_client, storage_class, tmp_path
+    ):
+        """upload_from_path with storage_class writes the object in that class."""
+        prefix = f"{self.TEST_PREFIX}storage-class/upload-from-path-ns/"
+        key = f"{prefix}tiered.txt"
+        payload = b"storage-class async from-path payload"
+        source = tmp_path / "storage-class-source.txt"
+        source.write_bytes(payload)
+        try:
+            await async_client.upload_from_path(
+                key, source, storage_class=storage_class
+            )
+            assert (await async_client.download(key)).content == payload
+            resp = await async_client.list_page(prefix=prefix)
+            assert [(b.key, b.storage_class) for b in resp.blobs] == [
+                (key, storage_class)
+            ]
+        finally:
+            await self._safe_delete(async_client, key)
+
+    @pytest.mark.asyncio
+    async def test_upload_with_unknown_storage_class_raises_invalid_argument(
+        self, async_client
+    ):
+        """A storage class the provider does not recognise fails the write."""
+        key = f"{self.TEST_PREFIX}storage-class/unknown.txt"
+        try:
+            with pytest.raises(InvalidArgumentException):
+                await async_client.upload(
+                    key, b"data", storage_class="NOT_A_STORAGE_CLASS"
+                )
+            assert await async_client.does_object_exist(key) is False
         finally:
             await self._safe_delete(async_client, key)
 

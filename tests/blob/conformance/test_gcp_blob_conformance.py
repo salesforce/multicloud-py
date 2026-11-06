@@ -141,6 +141,11 @@ class GcpHarness(Harness):
             "/keyRings/multicloud-test/cryptoKeys/multicloud-test"
         )
 
+    def get_storage_class(self) -> str:
+        # A non-default GCS class; objects in every class stay immediately
+        # readable, so the round trip can download it.
+        return "NEARLINE"
+
     def delete_retained_object(self, client: BucketClient, key: str) -> None:
         # GCS Unlocked retention cannot be shortened to a past instant (the API
         # rejects it) and blocks a plain delete — it must be removed entirely

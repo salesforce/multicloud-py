@@ -220,6 +220,7 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_upload_forwards_tags(self):
@@ -241,6 +242,7 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_upload_forwards_object_lock(self):
@@ -273,6 +275,7 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_upload_forwards_preconditions_and_kms(self):
@@ -300,7 +303,41 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id="arn:key/abc",
             use_kms_managed_key=True,
+            storage_class=None,
         )
+
+    def test_upload_forwards_storage_class(self):
+        client, mock_store = self._make_client_with_mock_store()
+        from multicloud.blob.blob_client.driver import UploadResponse
+
+        mock_store.upload.return_value = UploadResponse(key="k")
+        client.upload("k", b"data", storage_class="NEARLINE")
+        assert mock_store.upload.call_args.kwargs["storage_class"] == "NEARLINE"
+
+    def test_upload_from_path_forwards_storage_class(self, tmp_path):
+        client, mock_store = self._make_client_with_mock_store()
+        from multicloud.blob.blob_client.driver import UploadResponse
+
+        mock_store.upload_from_path.return_value = UploadResponse(key="k")
+        src = tmp_path / "f.txt"
+        src.write_bytes(b"data")
+        client.upload_from_path("k", src, storage_class="STANDARD_IA")
+        assert (
+            mock_store.upload_from_path.call_args.kwargs["storage_class"]
+            == "STANDARD_IA"
+        )
+
+    def test_upload_rejected_storage_class_is_translated(self):
+        # A provider rejecting an unknown storage class surfaces through the
+        # client's translate_error, chained to the native failure.
+        client, mock_store = self._make_client_with_mock_store()
+        native = RuntimeError("invalid storage class")
+        mock_store.upload.side_effect = native
+        mock_store.translate_error.return_value = InvalidArgumentException("bad")
+        with pytest.raises(InvalidArgumentException) as excinfo:
+            client.upload("k", b"data", storage_class="NOT_A_CLASS")
+        mock_store.translate_error.assert_called_once_with(native)
+        assert excinfo.value.__cause__ is native
 
     def test_upload_forwards_if_match(self):
         client, mock_store = self._make_client_with_mock_store()
@@ -321,6 +358,7 @@ class TestBucketClientForwardingMethods:
             if_version_match=None,
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_upload_forwards_if_version_match(self):
@@ -342,6 +380,7 @@ class TestBucketClientForwardingMethods:
             if_version_match="42",
             kms_key_id=None,
             use_kms_managed_key=False,
+            storage_class=None,
         )
 
     def test_download_forwards(self):

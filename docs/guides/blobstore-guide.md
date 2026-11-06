@@ -68,6 +68,32 @@ with BucketClient(provider="aws", bucket="my-bucket", region="us-west-2") as cli
 | `content_type` | `str` | | MIME type (e.g., `"text/plain"`) |
 | `content_length` | `int` | | Size in bytes (auto-detected if omitted) |
 | `metadata` | `Mapping[str, str]` | | User-defined metadata |
+| `storage_class` | `str` | | Provider storage class for the new object; omit to use the bucket default |
+
+### Storage Class
+
+Pass `storage_class` to `upload` or `upload_from_path` to choose the object's
+storage tier. The value is the provider's native storage class name and is sent
+unchanged; a blank string raises `InvalidArgumentException`, and a class the
+provider does not recognize raises `InvalidArgumentException` from the
+provider call.
+
+| Provider | Example values |
+|----------|----------------|
+| AWS S3 | `STANDARD`, `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER_IR`, `GLACIER`, `DEEP_ARCHIVE` |
+| Google Cloud Storage | `STANDARD`, `NEARLINE`, `COLDLINE`, `ARCHIVE` |
+
+```python
+with BucketClient(provider="gcp", bucket="my-bucket") as client:
+    client.upload("archive/2025.tar", payload, storage_class="NEARLINE")
+
+    page = client.list_page(prefix="archive/")
+    print(page.blobs[0].storage_class)  # "NEARLINE"
+```
+
+The async `AsyncBucketClient.upload` and `upload_from_path` accept the same
+keyword. Multipart uploads and presigned upload URLs do not take a storage
+class.
 
 ### UploadResponse
 

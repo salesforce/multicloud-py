@@ -1,0 +1,134 @@
+interactions:
+- request:
+    body: !!python/object/new:_io.BytesIO
+      state: !!python/tuple
+      - !!binary |
+        LS0zYmM2MTk0NjQ5ZmE1ZDdkMjI2YjRkMjU4OWYzYmI0Zg0KQ29udGVudC1UeXBlOiBhcHBsaWNh
+        dGlvbi9qc29uOyBjaGFyc2V0PVVURi04DQoNCnsic3RvcmFnZUNsYXNzIjogIk5PVF9BX1NUT1JB
+        R0VfQ0xBU1MiLCAibmFtZSI6ICJhc3luYy1jb25mb3JtYW5jZS10ZXN0L3N0b3JhZ2UtY2xhc3Mv
+        dW5rbm93bi50eHQifQ0KLS0zYmM2MTk0NjQ5ZmE1ZDdkMjI2YjRkMjU4OWYzYmI0Zg0KQ29udGVu
+        dC1UeXBlOiBhcHBsaWNhdGlvbi9vY3RldC1zdHJlYW0NCg0KZGF0YQ0KLS0zYmM2MTk0NjQ5ZmE1
+        ZDdkMjI2YjRkMjU4OWYzYmI0Zi0tDQo=
+      - 0
+      - null
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '308'
+      Content-Type:
+      - multipart/related; boundary=3bc6194649fa5d7d226b4d2589f3bb4f
+    method: POST
+    uri: https://www.googleapis.com/upload/storage/v1/b/python-async-test-bucket/o?uploadType=multipart
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid argument.\",\n
+        \   \"errors\": [\n      {\n        \"message\": \"Invalid argument.\",\n
+        \       \"domain\": \"global\",\n        \"reason\": \"invalid\"\n      }\n
+        \   ]\n  }\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '208'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:47 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg1rA2kfuVRy8i8e-ro2voxh7RhIIojyA6YwOh99GKY1JCaaPSL0Z-4tOGXbYl-hr6RP
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b8a8
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Funknown.txt?alt=json
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"No such object:
+        python-async-test-bucket/async-conformance-test/storage-class/unknown.txt\",\n
+        \   \"errors\": [\n      {\n        \"message\": \"No such object: python-async-test-bucket/async-conformance-test/storage-class/unknown.txt\",\n
+        \       \"domain\": \"global\",\n        \"reason\": \"notFound\"\n      }\n
+        \   ]\n  }\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '353'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:47 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg2Y2vVOmwAg7JdInaQnlDWlKBshrDDQlyStKfsSnfcsx5s3X38eKZifqu8ML1ViCLZnl_xu8wA
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b903
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers: {}
+    method: DELETE
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Funknown.txt
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"No such object:
+        python-async-test-bucket/async-conformance-test/storage-class/unknown.txt\",\n
+        \   \"errors\": [\n      {\n        \"message\": \"No such object: python-async-test-bucket/async-conformance-test/storage-class/unknown.txt\",\n
+        \       \"domain\": \"global\",\n        \"reason\": \"notFound\"\n      }\n
+        \   ]\n  }\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '353'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:47 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg0nucZ_7mMxkvfiUg4wtHgeB-eOQooCND5XdN223TRWcA-w847oM7om7YZ3JLnJXBDd
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b944
+    status:
+      code: 404
+      message: Not Found
+version: 1

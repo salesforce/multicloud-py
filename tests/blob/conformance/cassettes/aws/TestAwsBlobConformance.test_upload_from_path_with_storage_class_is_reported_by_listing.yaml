@@ -1,0 +1,191 @@
+interactions:
+- request:
+    body: !!python/object/new:_io.BytesIO
+      state: !!python/tuple
+      - !!binary |
+        MWYNCnN0b3JhZ2UtY2xhc3MgZnJvbS1wYXRoIHBheWxvYWQNCjANCngtYW16LWNoZWNrc3VtLWNy
+        YzMyOk96RW9Ydz09DQoNCg==
+      - 0
+      - null
+    headers:
+      Content-Encoding:
+      - !!binary |
+        YXdzLWNodW5rZWQ=
+      Content-Type:
+      - !!binary |
+        dGV4dC9wbGFpbg==
+      Expect:
+      - !!binary |
+        MTAwLWNvbnRpbnVl
+      Transfer-Encoding:
+      - !!binary |
+        Y2h1bmtlZA==
+      X-Amz-Decoded-Content-Length:
+      - !!binary |
+        MzE=
+      X-Amz-Trailer:
+      - !!binary |
+        eC1hbXotY2hlY2tzdW0tY3JjMzI=
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZmZhNDc0ODktMjhlZC00NWFhLWI4MTgtYjE5NDM5ZmQ0NTFi
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+      x-amz-sdk-checksum-algorithm:
+      - !!binary |
+        Q1JDMzI=
+      x-amz-storage-class:
+      - !!binary |
+        U1RBTkRBUkRfSUE=
+    method: PUT
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/upload-from-path-ns/tiered.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+      Date:
+      - Fri, 06 Nov 2026 05:28:29 GMT
+      ETag:
+      - '"6baadbb6736273b04d10b0feb5b43488"'
+      Server:
+      - AmazonS3
+      x-amz-checksum-crc32:
+      - OzEoXw==
+      x-amz-checksum-type:
+      - FULL_OBJECT
+      x-amz-id-2:
+      - LfWI/KwZaRb7fcy1pTdIaoIEn3JCJgrwKqxKukC2lahabJsNT6oo24JrMssaCwMowyTpRaNfA4Q=
+      x-amz-request-id:
+      - 64D96S6A9WAS4GXP
+      x-amz-server-side-encryption:
+      - AES256
+      x-amz-storage-class:
+      - STANDARD_IA
+      x-amz-version-id:
+      - pb6U81Y9mpJkwt9Ro.APO4t2xJUYanTX
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      amz-sdk-invocation-id:
+      - !!binary |
+        ZjcwNTllNzQtNDQzMC00OTJhLTgxN2YtZWMwZmNmODk5ZGI1
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+      x-amz-checksum-mode:
+      - !!binary |
+        RU5BQkxFRA==
+    method: GET
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/upload-from-path-ns/tiered.txt
+  response:
+    body:
+      string: storage-class from-path payload
+    headers:
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '31'
+      Content-Type:
+      - text/plain
+      Date:
+      - Fri, 06 Nov 2026 05:28:28 GMT
+      ETag:
+      - '"6baadbb6736273b04d10b0feb5b43488"'
+      Last-Modified:
+      - Fri, 06 Nov 2026 05:28:29 GMT
+      Server:
+      - AmazonS3
+      x-amz-checksum-crc32:
+      - OzEoXw==
+      x-amz-checksum-type:
+      - FULL_OBJECT
+      x-amz-id-2:
+      - +MDMu4bY8JzvkKyuaEMxxGwge/NGzhFuq1bjPxsXtZ6w29/4+LsWHlV3qmeNHsnNwUCDMSR//x8=
+      x-amz-object-lock-mode:
+      - COMPLIANCE
+      x-amz-object-lock-retain-until-date:
+      - '2027-02-04T05:28:28.199Z'
+      x-amz-request-id:
+      - 64DAYHNTTA5HKT8F
+      x-amz-server-side-encryption:
+      - AES256
+      x-amz-storage-class:
+      - STANDARD_IA
+      x-amz-version-id:
+      - pb6U81Y9mpJkwt9Ro.APO4t2xJUYanTX
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      amz-sdk-invocation-id:
+      - !!binary |
+        OTAxMjRlMDItYjMyNy00ZjQzLWIzZWUtZjFiZjkwNTE5ODE1
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: GET
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=conformance-test%2Fstorage-class%2Fupload-from-path-ns%2F&encoding-type=url
+  response:
+    body:
+      string: '<?xml version="1.0" encoding="UTF-8"?>
+
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>example-test-bucket-barry</Name><Prefix>conformance-test/storage-class/upload-from-path-ns/</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>conformance-test/storage-class/upload-from-path-ns/tiered.txt</Key><LastModified>2026-11-06T05:28:29.000Z</LastModified><ETag>&quot;6baadbb6736273b04d10b0feb5b43488&quot;</ETag><ChecksumAlgorithm>CRC32</ChecksumAlgorithm><ChecksumType>FULL_OBJECT</ChecksumType><Size>31</Size><StorageClass>STANDARD_IA</StorageClass></Contents></ListBucketResult>'
+    headers:
+      Content-Type:
+      - application/xml
+      Date:
+      - Fri, 06 Nov 2026 05:28:30 GMT
+      Server:
+      - AmazonS3
+      Transfer-Encoding:
+      - chunked
+      x-amz-bucket-region:
+      - us-west-2
+      x-amz-id-2:
+      - m8hYURkRMx73CDajR8mUlmXPoFK0BT4yTfCc36daeVwwoLjQ6pQE03YcLH+NW16W8+uaph338A4=
+      x-amz-request-id:
+      - 9N0STFTV1X8JPBX8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Content-Length:
+      - '0'
+      amz-sdk-invocation-id:
+      - !!binary |
+        MjcyMmI2YzAtZTljMy00YTg4LTkxZTgtNDVmZjA3OWRmNjZi
+      amz-sdk-request:
+      - !!binary |
+        YXR0ZW1wdD0x
+    method: DELETE
+    uri: https://example-test-bucket-barry.s3.us-west-2.amazonaws.com/conformance-test/storage-class/upload-from-path-ns/tiered.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Date:
+      - Fri, 06 Nov 2026 05:28:30 GMT
+      Server:
+      - AmazonS3
+      x-amz-delete-marker:
+      - 'true'
+      x-amz-id-2:
+      - 6qFGc08q1YNl5txWgz0r4M2dcU/060xvAcJN7DkQBIFskdcW4xxMp+sbW0+OFJeHCYdfDJZt+z0=
+      x-amz-request-id:
+      - 9N0T1JEWJKZF9WA0
+      x-amz-version-id:
+      - JAcYNaQ.k85evmejNhh53.aoZ5lo6t6p
+    status:
+      code: 204
+      message: No Content
+version: 1
