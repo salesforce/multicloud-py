@@ -75,6 +75,7 @@ dev = [
     "pytest>=7.0.0",
     "pytest-asyncio>=0.21.0",
     "pytest-cov>=4.0.0",
+    "pytest-benchmark>=5.0.0",
     "pytest-recording>=0.13.0,<1",
     "vcrpy>=8.0.0,<9",
     "black>=26.5.1",

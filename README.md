@@ -83,6 +83,8 @@ tests/                                     # Unit + conformance tests, mirrored 
 ├── conftest.py                            #   auto-tags tests under any conformance/ directory
 └── test_multicloud_init.py
 
+benchmarks/                                # pytest-benchmark suites (blob, pubsub); not in testpaths
+
 examples/
 ├── blob/
 ├── sts/
