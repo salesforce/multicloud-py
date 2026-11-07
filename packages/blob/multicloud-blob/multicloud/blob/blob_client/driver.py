@@ -24,6 +24,7 @@ from typing import Any, BinaryIO, Callable, Iterator, List, Mapping, Optional, U
 
 # Re-exported for backward-compat with existing imports.
 from multicloud.blob.blob_client.validators import BlobStoreValidator  # noqa: E402
+from multicloud.blob.blob_client.validators import UNSUPPORTED_CHECKSUM_ALGORITHM_MSG
 from multicloud.common.credentials import CredentialsOverrider
 from multicloud.common.exceptions import (
     InvalidArgumentException,
@@ -42,13 +43,30 @@ BLOB_REGISTRY = ProviderRegistry(
 )
 
 
+class ChecksumAlgorithm(Enum):
+    """Checksum algorithms for validating upload integrity server-side.
+
+    Limited to the algorithms every supported provider validates natively.
+    """
+
+    CRC32C = "CRC32C"
+    MD5 = "MD5"
+
+
 @dataclass(frozen=True)
 class UploadResponse:
-    """Wrapper for upload result data."""
+    """Wrapper for upload result data.
+
+    ``checksum_algorithm`` and ``checksum_value`` are set only when the upload
+    requested checksum validation; ``checksum_value`` is the base64-encoded
+    digest the provider computed over the stored bytes.
+    """
 
     key: str
     e_tag: Optional[str] = None
     version_id: Optional[str] = None
+    checksum_algorithm: Optional[ChecksumAlgorithm] = None
+    checksum_value: Optional[str] = None
 
 
 class ReplicationStatus(Enum):
@@ -544,6 +562,8 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[Union[ChecksumAlgorithm, str]] = None,
     ) -> UploadResponse:
         """Validate, then delegate to :meth:`do_upload`."""
         self._validator.validate_upload(
@@ -554,6 +574,8 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
         )
         self._validator.validate_object_lock(object_lock)
+        algorithm = _coerce_checksum_algorithm(checksum_algorithm)
+        self._validator.validate_checksum(checksum_value, algorithm)
         payload_bytes = _coerce_to_bytes(payload)
         return self.do_upload(
             key,
@@ -568,6 +590,8 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            checksum_value=checksum_value,
+            checksum_algorithm=algorithm,
         )
 
     def upload_from_path(
@@ -1169,6 +1193,8 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[ChecksumAlgorithm] = None,
     ) -> UploadResponse:
         """Provider-specific upload implementation.
 
@@ -1189,6 +1215,12 @@ class BaseBlobStore(Provider, ABC):
             kms_key_id: Provider-managed key id for server-side encryption.
             use_kms_managed_key: Request a provider-managed key when no
                 kms_key_id is given; a no-op where encryption is always on.
+            checksum_value: Base64-encoded digest of *payload* for the server
+                to validate (already checked for shape; set together with
+                checksum_algorithm). A server-side mismatch raises
+                InvalidArgumentException with CHECKSUM_MISMATCH_MSG. The
+                response reports the provider-computed digest.
+            checksum_algorithm: Algorithm of checksum_value.
         """
 
     @abstractmethod
@@ -1466,6 +1498,21 @@ class BaseBlobStore(Provider, ABC):
 
     def __exit__(self, exc_type, exc, tb) -> None:  # noqa: D401
         self.close()
+
+
+def _coerce_checksum_algorithm(
+    value: Optional[Union[ChecksumAlgorithm, str]],
+) -> Optional[ChecksumAlgorithm]:
+    """Normalize a checksum algorithm given as an enum or a case-insensitive name."""
+    if value is None or isinstance(value, ChecksumAlgorithm):
+        return value
+    try:
+        return ChecksumAlgorithm(str(value).upper())
+    except ValueError:
+        supported = ", ".join(a.value for a in ChecksumAlgorithm)
+        raise InvalidArgumentException(
+            UNSUPPORTED_CHECKSUM_ALGORITHM_MSG.format(supported, value)
+        ) from None
 
 
 def _coerce_to_bytes(payload: UploadPayload) -> bytes:

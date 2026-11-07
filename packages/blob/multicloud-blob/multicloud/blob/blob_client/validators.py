@@ -11,6 +11,8 @@ operation-specific validators on this class and by future services.
 
 from __future__ import annotations
 
+import binascii
+from base64 import b64decode
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Collection, Mapping, Optional
@@ -97,6 +99,27 @@ EMPTY_IF_VERSION_MATCH_MSG = (
     "if_version_match must be a non-empty version id; pass None to skip the "
     "precondition"
 )
+
+CHECKSUM_VALUE_WITHOUT_ALGORITHM_MSG = (
+    "checksum_value requires checksum_algorithm; pass both or neither"
+)
+CHECKSUM_ALGORITHM_WITHOUT_VALUE_MSG = (
+    "checksum_algorithm requires checksum_value; pass both or neither"
+)
+UNSUPPORTED_CHECKSUM_ALGORITHM_MSG = (
+    "checksum_algorithm must be one of {0}. value={1!r}"
+)
+INVALID_CHECKSUM_VALUE_MSG = (
+    "checksum_value must be the base64-encoded {0}-byte {1} digest. value={2!r}"
+)
+CHECKSUM_MISMATCH_MSG = (
+    "upload: {0} checksum mismatch for key {1!r}; the object was not written. "
+    "detail={2}"
+)
+
+# Raw digest size in bytes for each supported checksum algorithm, keyed by
+# ``ChecksumAlgorithm.value``.
+CHECKSUM_DIGEST_SIZES = {"CRC32C": 4, "MD5": 16}
 
 
 def _is_timezone_aware(value: datetime) -> bool:
@@ -261,6 +284,30 @@ class BlobStoreValidator:
         self.validate_key(key)
         self.validate_content_length(content_length)
         self.validate_write_preconditions(create_if_absent, if_match, if_version_match)
+
+    def validate_checksum(
+        self, checksum_value: Optional[str], checksum_algorithm: Optional[Any]
+    ) -> None:
+        # Duck-typed to avoid importing ChecksumAlgorithm (cycle with driver.py).
+        # The pair must travel together: a value is meaningless without its
+        # algorithm, and an algorithm alone would leave providers to compute
+        # the digest with dependencies they may not have.
+        if checksum_value is not None and checksum_algorithm is None:
+            raise InvalidArgumentException(CHECKSUM_VALUE_WITHOUT_ALGORITHM_MSG)
+        if checksum_algorithm is None:
+            return
+        if checksum_value is None:
+            raise InvalidArgumentException(CHECKSUM_ALGORITHM_WITHOUT_VALUE_MSG)
+        name = checksum_algorithm.value
+        size = CHECKSUM_DIGEST_SIZES[name]
+        try:
+            digest = b64decode(checksum_value, validate=True)
+        except (binascii.Error, ValueError):
+            digest = b""
+        if len(digest) != size:
+            raise InvalidArgumentException(
+                INVALID_CHECKSUM_VALUE_MSG.format(size, name, checksum_value)
+            )
 
     def validate_upload_from_path(
         self,

@@ -24,9 +24,11 @@ from multicloud.aws_common.aws_client_config import s3_client_config
 from multicloud.aws_common.aws_credentials import get_session
 from multicloud.aws_common.error_mapping import AWS_THROTTLING_CODES
 from multicloud.blob.blob_aws._aws_common import (
+    CHECKSUM_FIELDS,
     apply_kms,
     apply_write_preconditions,
     ensure_etag_quoted,
+    is_bad_digest,
     is_conditional_conflict,
     is_missing_object,
     is_precondition_failed,
@@ -38,6 +40,7 @@ from multicloud.blob.blob_client.driver import (
     BlobIdentifier,
     BlobInfo,
     BlobMetadata,
+    ChecksumAlgorithm,
     CopyResponse,
     DeleteError,
     DeleteObjectsResponse,
@@ -57,6 +60,7 @@ from multicloud.blob.blob_client.driver import (
     UploadResponse,
 )
 from multicloud.blob.blob_client.retention_rules import resolve_and_validate
+from multicloud.blob.blob_client.validators import CHECKSUM_MISMATCH_MSG
 from multicloud.common.credentials import CredentialsOverrider
 from multicloud.common.exceptions import (
     FailedPreconditionException,
@@ -206,6 +210,8 @@ class AwsBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        checksum_value: Optional[str] = None,
+        checksum_algorithm: Optional[ChecksumAlgorithm] = None,
     ) -> UploadResponse:
         put_kwargs: dict[str, Any] = {
             "Bucket": self.bucket,
@@ -238,11 +244,27 @@ class AwsBlobStore(BaseBlobStore):
             use_kms_managed_key=use_kms_managed_key,
         )
 
-        resp = self._put_object_conditional(put_kwargs, create_if_absent, if_match)
+        # Supplying the digest makes botocore send it as-is instead of
+        # computing its own, so S3 validates the caller's value.
+        checksum_field = None
+        if checksum_algorithm is not None:
+            checksum_field = CHECKSUM_FIELDS[checksum_algorithm]
+            put_kwargs[checksum_field] = checksum_value
+
+        try:
+            resp = self._put_object_conditional(put_kwargs, create_if_absent, if_match)
+        except ClientError as exc:
+            if checksum_algorithm is not None and is_bad_digest(exc):
+                raise InvalidArgumentException(
+                    CHECKSUM_MISMATCH_MSG.format(checksum_algorithm.value, key, exc)
+                ) from exc
+            raise
         return UploadResponse(
             key=key,
             e_tag=_strip_quotes(resp.get("ETag")),
             version_id=resp.get("VersionId"),
+            checksum_algorithm=checksum_algorithm,
+            checksum_value=resp.get(checksum_field) if checksum_field else None,
         )
 
     def _put_object_conditional(

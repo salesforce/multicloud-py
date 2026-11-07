@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import base64
+import hashlib
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import ANY, MagicMock, PropertyMock, call, patch
@@ -10,6 +12,7 @@ import google.auth.exceptions
 import pytest
 from google.api_core import exceptions as gcs_exceptions
 from multicloud.blob.blob_client.driver import (
+    ChecksumAlgorithm,
     ObjectLockConfiguration,
     ObjectLockInfo,
     ObjectRetentionConfig,
@@ -239,6 +242,100 @@ class TestGcpBlobStoreUpload:
             "author": "alice",
             "gcp-tag-env": "dev",
         }
+
+    def test_upload_with_crc32c_checksum(self, store, mock_storage_client):
+        blob_mock = MagicMock()
+        blob_mock.etag = "e"
+        blob_mock.generation = None
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+
+        def _server_response(*_args, **_kwargs):
+            # The upload response replaces the blob's properties with the
+            # server's view, including its computed checksum.
+            assert blob_mock.crc32c == "AAECAw=="
+            blob_mock.crc32c = "server-crc=="
+
+        blob_mock.upload_from_string.side_effect = _server_response
+        resp = store.upload(
+            "key",
+            b"x",
+            checksum_value="AAECAw==",
+            checksum_algorithm=ChecksumAlgorithm.CRC32C,
+        )
+        # checksum=None stops the library from replacing the caller's value
+        # with one it computes itself.
+        blob_mock.upload_from_string.assert_called_once_with(
+            b"x", content_type="application/octet-stream", checksum=None
+        )
+        assert resp.checksum_algorithm is ChecksumAlgorithm.CRC32C
+        assert resp.checksum_value == "server-crc=="
+
+    def test_upload_with_md5_checksum(self, store, mock_storage_client):
+        md5 = base64.b64encode(hashlib.md5(b"x").digest()).decode()
+        blob_mock = MagicMock()
+        blob_mock.etag = "e"
+        blob_mock.generation = None
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+
+        resp = store.upload(
+            "key", b"x", checksum_value=md5, checksum_algorithm=ChecksumAlgorithm.MD5
+        )
+        assert blob_mock.md5_hash == md5
+        blob_mock.upload_from_string.assert_called_once_with(
+            b"x", content_type="application/octet-stream", checksum=None
+        )
+        assert resp.checksum_algorithm is ChecksumAlgorithm.MD5
+        assert resp.checksum_value == md5
+
+    def test_upload_without_checksum_reports_none(self, store, mock_storage_client):
+        blob_mock = MagicMock()
+        blob_mock.etag = "e"
+        blob_mock.generation = None
+        blob_mock.crc32c = "server-crc=="
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+
+        resp = store.upload("key", b"x")
+        assert resp.checksum_algorithm is None
+        assert resp.checksum_value is None
+
+    def test_upload_checksum_mismatch_raises_invalid_argument(
+        self, store, mock_storage_client
+    ):
+        blob_mock = MagicMock()
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+        blob_mock.upload_from_string.side_effect = gcs_exceptions.BadRequest(
+            'Provided CRC32C "AAAAAA==" doesn\'t match calculated CRC32C "yZRlqg==".'
+        )
+        with pytest.raises(
+            InvalidArgumentException,
+            match="upload: CRC32C checksum mismatch for key 'key'; the object was "
+            "not written",
+        ) as exc_info:
+            store.upload(
+                "key",
+                b"x",
+                checksum_value="AAAAAA==",
+                checksum_algorithm=ChecksumAlgorithm.CRC32C,
+            )
+        assert isinstance(exc_info.value.__cause__, gcs_exceptions.BadRequest)
+
+    def test_upload_checksum_other_bad_request_propagates(
+        self, store, mock_storage_client
+    ):
+        # Only the checksum-mismatch 400 is relabelled; other bad requests
+        # reach the client layer untouched.
+        blob_mock = MagicMock()
+        mock_storage_client.bucket.return_value.blob.return_value = blob_mock
+        blob_mock.upload_from_string.side_effect = gcs_exceptions.BadRequest(
+            "Invalid storage class"
+        )
+        with pytest.raises(gcs_exceptions.BadRequest):
+            store.upload(
+                "key",
+                b"x",
+                checksum_value="AAAAAA==",
+                checksum_algorithm=ChecksumAlgorithm.CRC32C,
+            )
 
     def test_upload_with_compliance_retention(self, store, mock_storage_client):
         blob_mock = MagicMock()

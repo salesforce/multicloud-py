@@ -12,7 +12,7 @@ from __future__ import annotations
 from typing import Any, Optional
 
 from botocore.exceptions import ClientError  # type: ignore[import-not-found]
-from multicloud.blob.blob_client.driver import ReplicationStatus
+from multicloud.blob.blob_client.driver import ChecksumAlgorithm, ReplicationStatus
 from multicloud.common.exceptions import UnsupportedOperationException
 
 
@@ -72,6 +72,24 @@ def is_conditional_conflict(exc: ClientError) -> bool:
     error_info = exc.response.get("Error", {})
     code = error_info.get("Code", "")
     return bool(code == "ConditionalRequestConflict")
+
+
+#: PutObject member that carries each algorithm's base64 digest, on both the
+#: request (caller-supplied value) and the response (S3-computed value).
+CHECKSUM_FIELDS = {
+    ChecksumAlgorithm.CRC32C: "ChecksumCRC32C",
+    ChecksumAlgorithm.MD5: "ChecksumMD5",
+}
+
+
+def is_bad_digest(exc: ClientError) -> bool:
+    """Return True if *exc* is S3 rejecting a body whose checksum did not match.
+
+    S3 returns HTTP 400 ``BadDigest`` when a supplied ``x-amz-checksum-*``
+    value differs from the digest it computes over the received body.
+    """
+    error_info = exc.response.get("Error", {})
+    return bool(error_info.get("Code", "") == "BadDigest")
 
 
 def ensure_etag_quoted(etag: str) -> str:
