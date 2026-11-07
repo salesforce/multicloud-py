@@ -314,8 +314,21 @@ def _multipart_part_digest(request: Any) -> Optional[str]:
     return None
 
 
+def _is_streaming_body_placeholder(request: Any) -> bool:
+    # The conftest's streaming body patch records such a body as this text.
+    raw = _request_body_bytes(request)
+    return raw is not None and raw.startswith(b"<streaming body omitted: ")
+
+
 def multipart_part_payload(request1: Any, request2: Any) -> None:
-    """Match multipart part bytes when either request uploads a part."""
+    """Match multipart part bytes when either request uploads a part.
+
+    A part recorded as a streaming body placeholder has no bytes to compare.
+    Cassettes recorded before vcrpy 8.5.0 hold one for aiobotocore's chunked
+    upload body, which vcrpy now reads and records (kevin1024/vcrpy#974).
+    """
+    if any(_is_streaming_body_placeholder(r) for r in (request1, request2)):
+        return
     first = _multipart_part_digest(request1)
     second = _multipart_part_digest(request2)
     assert first == second, f"multipart part payloads differ: {first!r} != {second!r}"

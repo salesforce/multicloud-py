@@ -133,79 +133,18 @@ def _install_aiohttp_streaming_body_patch() -> None:
 _install_aiohttp_streaming_body_patch()
 
 
-def _install_aiohttp_drained_response_patch() -> None:
-    """Refill the aiohttp response stream VCR drains while recording.
-
-    ``record_response`` reads the body to record it, then hands the same real
-    response back, so a streaming consumer like aiobotocore reads zero bytes and
-    raises ``IncompleteReadError``. Recording only; replay builds a fresh mock.
-    Idempotent.
-    """
-    stubs = vcr.stubs.aiohttp_stubs
-    if getattr(stubs, "_drained_response_patched", False):
-        return
-
-    stock_record_response = stubs.record_response
-
-    async def record_response(cassette, vcr_request, response):  # type: ignore[no-untyped-def]
-        await stock_record_response(cassette, vcr_request, response)
-        body = getattr(response, "_body", None)
-        if not body:
-            return
-        refilled = stubs.MockStream()
-        refilled.feed_data(body)
-        refilled.feed_eof()
-        try:
-            response.content = refilled
-        except AttributeError:
-            # Should aiohttp ever make `content` read-only, leave the response
-            # alone rather than masking it: the cassette is already written
-            # correctly, and the caller's own failure is the clearer signal.
-            pass
-
-    stubs.record_response = record_response
-    stubs._drained_response_patched = True
-
-
-_install_aiohttp_drained_response_patch()
-
-
-def _install_aiohttp_replay_stream_patch() -> None:
-    """Keep one consumable content stream per replayed aiohttp response."""
-    stubs = vcr.stubs.aiohttp_stubs
-    response_cls = stubs.MockClientResponse
-    if getattr(response_cls, "_cached_content_patched", False):
-        return
-
-    stock_content = response_cls.content
-    stock_build_response = stubs.build_response
-
-    def content(self):  # type: ignore[no-untyped-def]
-        if not hasattr(self, "_cached_content"):
-            self._cached_content = stock_content.fget(self)
-        return self._cached_content
-
-    response_cls.content = property(content)
-
-    def build_response(vcr_request, vcr_response, history):  # type: ignore[no-untyped-def]
-        response = stock_build_response(vcr_request, vcr_response, history)
-        response._cached_content = stock_content.fget(response)
-        return response
-
-    stubs.build_response = build_response
-    response_cls._cached_content_patched = True
-
-
-_install_aiohttp_replay_stream_patch()
-
-
 def _install_aiohttp_raw_headers_patch() -> None:
     """Populate ``raw_headers`` on VCR's replayed aiohttp responses.
 
     aiobotocore reads it directly and it is left at ``None``, so every replayed
     request raises ``TypeError``. Writes the backing ``_raw_headers``, since the
     property itself is a read-only cached property. Idempotent.
+
+    vcrpy 9.1.0 and later set it themselves. Only Python 3.10 still uses an
+    older vcrpy (vcrpy 9 needs Python 3.11), so remove this with Python 3.10.
     """
+    if tuple(int(part) for part in vcr.__version__.split(".")[:2]) >= (9, 1):
+        return
     stubs = vcr.stubs.aiohttp_stubs
     if getattr(stubs, "_raw_headers_patched", False):
         return
