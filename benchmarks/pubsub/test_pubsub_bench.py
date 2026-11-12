@@ -86,7 +86,9 @@ def _run_pipeline(
 
     A shared counter reserves each receive slot, so sends and receives stay
     balanced (exactly ``total`` each) and no pre-seed is needed — a consumer that
-    reserves the last slot blocks until its matching publish lands.
+    reserves the last slot blocks until its matching publish lands. The count is
+    only meaningful because ``pipeline_clients`` gives this body a queue nothing
+    else writes to.
     """
     consumed = 0
     lock = Lock()
@@ -293,8 +295,9 @@ def test_receive_concurrent(benchmark, sub_bench_client, seed, workers: int) -> 
 @pytest.mark.parametrize("workers", _WORKERS, ids=[f"w{w}" for w in _WORKERS])
 def test_pipeline(benchmark, pipeline_clients, workers: int) -> None:
     """End-to-end throughput (``workers`` producers + consumers): msgs/sec =
-    ``_TOTAL`` / time. ``pipeline_clients`` shares one backend, so publishes are
-    genuinely received; producers publish exactly what consumers drain."""
+    ``_TOTAL`` / time. ``pipeline_clients`` gives this body its own queue (a fresh
+    SQS queue on live), so every receive is one of its publishes; on live the
+    fixture also fails the test if any message is left behind."""
     topic_client, sub_client = pipeline_clients
     body = b"x" * _KB
 

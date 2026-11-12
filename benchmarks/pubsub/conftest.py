@@ -7,6 +7,8 @@
 * **live** — real providers, selected per side. An SQS queue is both a send and
   receive endpoint, so pointing the topic and subscription at one queue
   (``PUBSUB_BENCH_QUEUE``) gives the receive-side bodies a self-contained backlog.
+  The pipeline body is the exception: it gets a fresh queue of its own, because
+  that shared backlog would satisfy its receive count.
 
 The ``seed`` fixture fills that backlog on live (a no-op on benchfake). Each live
 round is billable, so keep the ``PUBSUB_BENCH_*_ROUNDS`` counts low. Credentials
@@ -16,10 +18,11 @@ come from ambient discovery, never these fixtures.
 from __future__ import annotations
 
 import os
+import time
 import uuid
 import warnings
-from contextlib import ExitStack
-from typing import Callable, Dict, List, Tuple
+from contextlib import ExitStack, contextmanager
+from typing import Any, Callable, Dict, Iterator, List, Tuple
 
 import pytest
 from multicloud.pubsub.pubsub_client.client import SubscriptionClient, TopicClient
@@ -36,6 +39,10 @@ _BENCHFAKE = "benchfake"
 # Shared in-memory queue provider used by the end-to-end pipeline body.
 _BENCHQUEUE = "benchqueue"
 _ENV_PREFIX = "PUBSUB_BENCH"
+# The one live topology the pipeline can isolate: an SQS queue as both endpoints.
+_SQS_PIPELINE_PROVIDERS = ("awssqs", "aws")
+# How long the post-pipeline drain check waits for SQS's approximate counts.
+_DRAIN_CHECK_SECONDS = 60
 
 
 def _topic_provider() -> str:
@@ -172,20 +179,95 @@ def sub_client_factory() -> _SubClientFactory:
             client.close()
 
 
+@contextmanager
+def _ephemeral_sqs_queue() -> Iterator[str]:
+    """Create a uniquely named SQS queue, yield its name, then verify and delete it.
+
+    Nothing else writes to the queue, so every message received came from this
+    body. After the body, the queue must be empty: a leftover means a counted
+    receive was not one of this body's publishes (e.g. a duplicate delivery).
+    """
+    import boto3  # Lazy: only the live SQS pipeline needs the native SDK.
+
+    region = os.environ.get("PUBSUB_BENCH_REGION")
+    sqs = boto3.client("sqs", **({"region_name": region} if region else {}))
+    # 60s (the minimum) retention bounds what a leaked queue keeps.
+    queue_name = f"mcpy-bench-pipeline-{uuid.uuid4().hex}"
+    queue_url = sqs.create_queue(
+        QueueName=queue_name, Attributes={"MessageRetentionPeriod": "60"}
+    )["QueueUrl"]
+    try:
+        # SQS asks callers to wait about a second before using a new queue.
+        time.sleep(1)
+        yield queue_name
+        _assert_sqs_queue_drained(sqs, queue_url)
+    finally:
+        try:
+            sqs.delete_queue(QueueUrl=queue_url)
+        except Exception as exc:  # noqa: BLE001 — never mask the body's outcome
+            warnings.warn(
+                f"Could not delete benchmark queue {queue_url}: {exc}", stacklevel=2
+            )
+
+
+def _assert_sqs_queue_drained(sqs: Any, queue_url: str) -> None:
+    """Fail unless the queue's approximate counts all settle at zero."""
+    names = [
+        "ApproximateNumberOfMessages",
+        "ApproximateNumberOfMessagesNotVisible",
+        "ApproximateNumberOfMessagesDelayed",
+    ]
+    # Counts are approximate and lag deletes, so poll before declaring a leftover.
+    deadline = time.monotonic() + _DRAIN_CHECK_SECONDS
+    while True:
+        attrs = sqs.get_queue_attributes(QueueUrl=queue_url, AttributeNames=names)
+        counts = {name: int(attrs["Attributes"][name]) for name in names}
+        if not any(counts.values()):
+            return
+        if time.monotonic() >= deadline:
+            raise AssertionError(
+                f"pipeline left messages in its queue after the run: {counts}"
+            )
+        time.sleep(2)
+
+
 @pytest.fixture
 def pipeline_clients() -> Tuple[TopicClient, SubscriptionClient]:
-    """A ``(topic, subscription)`` pair sharing one backend, for the pipeline body.
+    """A ``(topic, subscription)`` pair on a queue only the pipeline body uses.
 
-    Live: the normal per-side providers on the shared queue. Benchfake: both on
-    the ``benchqueue`` shared-queue provider keyed to one unique name, so a publish
-    is genuinely drained by a receive (the fabricating fake could not be).
+    Live (SQS topic + SQS subscription): a fresh queue per test, created and
+    deleted here, so leftovers from other bodies or runs cannot be counted.
+    Benchfake: both on the ``benchqueue`` shared-queue provider keyed to one
+    unique name, so a publish is genuinely drained by a receive (the fabricating
+    fake could not be). Other live topologies skip.
     """
     _warn_if_live_without_warmup()
-    # ExitStack closes the topic even if the subscription's construction raises.
+    # ExitStack closes the clients (flushing acks) before the queue is checked
+    # and deleted, and closes the topic even if the subscription's construction
+    # raises.
     with ExitStack() as stack:
         if _is_live():
-            topic = stack.enter_context(_make_topic_client())
-            subscription = stack.enter_context(_make_sub_client())
+            if (_topic_provider(), _sub_provider()) != _SQS_PIPELINE_PROVIDERS:
+                pytest.skip(
+                    "live pipeline needs an isolated queue; supported only for "
+                    "PUBSUB_BENCH_TOPIC_PROVIDER=awssqs with "
+                    "PUBSUB_BENCH_SUB_PROVIDER=aws"
+                )
+            queue_name = stack.enter_context(_ephemeral_sqs_queue())
+            topic = stack.enter_context(
+                TopicClient(
+                    provider=_topic_provider(),
+                    topic_name=queue_name,
+                    **_region_kwargs(),
+                )
+            )
+            subscription = stack.enter_context(
+                SubscriptionClient(
+                    provider=_sub_provider(),
+                    subscription_name=queue_name,
+                    **_region_kwargs(),
+                )
+            )
         else:
             name = f"bench-pipeline-{uuid.uuid4().hex}"
             topic = stack.enter_context(

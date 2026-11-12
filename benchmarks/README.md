@@ -149,7 +149,9 @@ backend by changing only environment variables.
   consumers drain, so no pre-seed is needed. On `benchfake` this body uses the
   shared-queue driver (`benchqueue`: topic enqueues, subscription drains the
   same queue) so a publish is genuinely received — the fabricating fake would
-  let a consumer "receive" a message no producer sent.
+  let a consumer "receive" a message no producer sent. On live it creates a
+  fresh SQS queue per test instead of using the shared one, because leftovers
+  from the other bodies would satisfy its receive count (see the live tier).
 - **Nack** — a full receive → nack → `close()` cycle on a fresh per-round client,
   so the nack actually reaches the broker (like ack, `send_nack` alone only
   enqueues). The redelivery round-trip itself is only realized on live.
@@ -167,6 +169,18 @@ pointing the topic and the subscription at one queue gives those bodies a real,
 self-contained backlog to drain. The `seed` fixture publishes exactly the number
 of messages a body will consume into that queue before the timed region (a no-op
 on `benchfake`, which fabricates messages).
+
+The pipeline body does **not** use that shared queue. The send bodies never
+drain what they publish and nacked messages return to the queue, so the shared
+queue usually holds a backlog that the pipeline would count as its own receives.
+Instead, with `PUBSUB_BENCH_TOPIC_PROVIDER=awssqs` and
+`PUBSUB_BENCH_SUB_PROVIDER=aws`, the pipeline fixture creates a uniquely named
+queue (`mcpy-bench-pipeline-<uuid>`, 60s retention) per test and deletes it
+afterwards. After the run it also fails the test if the queue is not empty,
+which catches a counted receive that was not one of the body's own publishes.
+This needs `sqs:CreateQueue`, `sqs:GetQueueAttributes` and `sqs:DeleteQueue`
+on top of the send/receive permissions. Other live topologies (for example the
+SNS fan-out below) skip the pipeline.
 
 > **Keep `PUBSUB_BENCH_BATCH_ROUNDS` low on live for `test_ack_batch`.** That
 > body re-receives a distinct id batch each round and pre-receives them all up
