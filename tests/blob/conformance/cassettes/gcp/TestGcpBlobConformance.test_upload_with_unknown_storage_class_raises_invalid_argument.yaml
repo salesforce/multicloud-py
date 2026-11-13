@@ -1,0 +1,143 @@
+interactions:
+- request:
+    body: "--===============9025229308890798061==\r\ncontent-type: application/json;
+      charset=UTF-8\r\n\r\n{\"name\": \"conformance-test/storage-class/unknown.txt\",
+      \"storageClass\": \"NOT_A_STORAGE_CLASS\", \"crc32c\": \"rth90Q==\"}\r\n--===============9025229308890798061==\r\ncontent-type:
+      application/octet-stream\r\n\r\ndata\r\n--===============9025229308890798061==--"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '334'
+      content-type:
+      - !!binary |
+        bXVsdGlwYXJ0L3JlbGF0ZWQ7IGJvdW5kYXJ5PSI9PT09PT09PT09PT09PT05MDI1MjI5MzA4ODkw
+        Nzk4MDYxPT0i
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+      x-upload-content-type:
+      - application/octet-stream
+    method: POST
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
+  response:
+    body:
+      string: "{\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"Invalid argument.\",\n
+        \   \"errors\": [\n      {\n        \"message\": \"Invalid argument.\",\n
+        \       \"domain\": \"global\",\n        \"reason\": \"invalid\"\n      }\n
+        \   ]\n  }\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '208'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:44 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg0yQRfaXMzv7sNpGwvpJ1-V9atr-aVZQTxTTJzx86ilVeCWjbCva5l5_i13oXI3j6bnOpNrBZ_HeQKR0Q
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54ad59
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Connection:
+      - keep-alive
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+    method: GET
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Funknown.txt?fields=name&prettyPrint=false
+  response:
+    body:
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/storage-class/unknown.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/storage-class/unknown.txt","domain":"global","reason":"notFound"}]}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '267'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:44 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg3EDgonlrada4_uDjIaeccLOGgMgLJxmZbsN89WcaBY2Ck3M6yIuMYe9zKYnkQ_z3kODh2greyFyupvQw
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54ae36
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+    method: DELETE
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Funknown.txt?prettyPrint=false
+  response:
+    body:
+      string: '{"error":{"code":404,"message":"No such object: example-test-bucket-barry/conformance-test/storage-class/unknown.txt","errors":[{"message":"No
+        such object: example-test-bucket-barry/conformance-test/storage-class/unknown.txt","domain":"global","reason":"notFound"}]}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '267'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:45 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg2yW5xwb9YjV-3uYkBnm_9cfGKhAMMy-jseWdl75K1qxNSWU9TzIBlo8SPM6id4NRTTxzNihQ2xoDi25Q
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54af13
+    status:
+      code: 404
+      message: Not Found
+version: 1

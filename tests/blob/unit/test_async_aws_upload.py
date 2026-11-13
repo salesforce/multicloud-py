@@ -154,6 +154,44 @@ class TestAwsAsyncUploadSuccess:
         assert result.version_id is None
 
 
+class TestAwsAsyncUploadStorageClass:
+    """Storage class selection on upload."""
+
+    @pytest.mark.asyncio
+    async def test_storage_class_sets_storage_class_param(self, mock_session_success):
+        session, mock_client = mock_session_success
+        store = AwsAsyncBlobStore(bucket="b", _session=session)
+
+        await store.upload("key", b"data", storage_class="STANDARD_IA")
+
+        assert mock_client.put_object.call_args[1]["StorageClass"] == "STANDARD_IA"
+
+    @pytest.mark.asyncio
+    async def test_no_storage_class_omits_param(self, mock_session_success):
+        session, mock_client = mock_session_success
+        store = AwsAsyncBlobStore(bucket="b", _session=session)
+
+        await store.upload("key", b"data")
+
+        assert "StorageClass" not in mock_client.put_object.call_args[1]
+
+    @pytest.mark.asyncio
+    async def test_blank_storage_class_rejected_before_request(
+        self, mock_session_success
+    ):
+        session, mock_client = mock_session_success
+        store = AwsAsyncBlobStore(bucket="b", _session=session)
+
+        with pytest.raises(InvalidArgumentException, match="storage_class"):
+            await store.upload("key", b"data", storage_class="")
+        mock_client.put_object.assert_not_called()
+
+    def test_unknown_storage_class_translates_to_invalid_argument(self):
+        store = AwsAsyncBlobStore(bucket="b")
+        exc = _make_client_error("InvalidStorageClass", 400)
+        assert isinstance(store.translate_error(exc), InvalidArgumentException)
+
+
 class TestAwsAsyncUploadKmsEncryption:
     """Server-side KMS encryption on upload."""
 

@@ -244,6 +244,16 @@ class GcpBlobStore(BaseBlobStore):
         return UnknownException(str(exc))
 
     @staticmethod
+    def _apply_storage_class(blob: Any, storage_class: Optional[str]) -> None:
+        """Set *storage_class* on a GCS blob before upload.
+
+        ``storageClass`` is a writable object field, so it travels with the
+        upload (objects.insert) request. None leaves the bucket default.
+        """
+        if storage_class is not None:
+            blob.storage_class = storage_class
+
+    @staticmethod
     def _apply_object_lock(
         blob: Any, object_lock: Optional[ObjectLockConfiguration]
     ) -> None:
@@ -355,6 +365,7 @@ class GcpBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         blob = self._bucket_handle.blob(key)
         # GCS has no native object tagging API; encode tags as
@@ -368,6 +379,7 @@ class GcpBlobStore(BaseBlobStore):
             for tag_key, tag_value in tags.items():
                 merged[f"{_GCP_TAG_PREFIX}{tag_key}"] = tag_value
             blob.metadata = merged
+        self._apply_storage_class(blob, storage_class)
         self._apply_object_lock(blob, object_lock)
         # use_kms_managed_key with no explicit key is a no-op on GCS: objects
         # are always encrypted at rest with Google-managed keys by default.
@@ -412,6 +424,7 @@ class GcpBlobStore(BaseBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Upload a local file to GCS using the native upload_from_filename API.
 
@@ -423,6 +436,7 @@ class GcpBlobStore(BaseBlobStore):
         blob = self._bucket_handle.blob(key)
         if metadata:
             blob.metadata = dict(metadata)
+        self._apply_storage_class(blob, storage_class)
         self._apply_object_lock(blob, object_lock)
         upload_kwargs = self._resolve_upload_conditions(
             blob,

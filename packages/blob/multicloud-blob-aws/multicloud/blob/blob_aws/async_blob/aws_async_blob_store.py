@@ -231,6 +231,7 @@ class AwsAsyncBlobStore(BaseAsyncBlobStore):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> "AsyncUploadResponse":
         """Upload bytes to S3 using put_object.
 
@@ -249,6 +250,8 @@ class AwsAsyncBlobStore(BaseAsyncBlobStore):
             put_kwargs["ContentLength"] = content_length
         if metadata:
             put_kwargs["Metadata"] = dict(metadata)
+        if storage_class is not None:
+            put_kwargs["StorageClass"] = storage_class
         apply_write_preconditions(
             put_kwargs,
             create_if_absent=create_if_absent,

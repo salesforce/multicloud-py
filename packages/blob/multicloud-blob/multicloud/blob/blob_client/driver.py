@@ -544,6 +544,7 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Validate, then delegate to :meth:`do_upload`."""
         self._validator.validate_upload(
@@ -554,6 +555,7 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
         )
         self._validator.validate_object_lock(object_lock)
+        self._validator.validate_storage_class(storage_class)
         payload_bytes = _coerce_to_bytes(payload)
         return self.do_upload(
             key,
@@ -568,6 +570,7 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     def upload_from_path(
@@ -584,6 +587,7 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Upload a local file to blob storage.
 
@@ -628,13 +632,18 @@ class BaseBlobStore(Provider, ABC):
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            storage_class: Provider-native storage class for the object (for
+                example ``"STANDARD_IA"`` or ``"NEARLINE"``), passed through
+                unchanged. None uses the bucket default.
 
         Returns:
             UploadResponse containing the key, ETag, and version ID.
 
         Raises:
             InvalidArgumentException: If key is empty, path does not exist,
-                or path is not a regular file.
+                path is not a regular file, or storage_class is blank. A
+                storage class the provider does not recognise is rejected by
+                the provider and also surfaces as InvalidArgumentException.
         """
         resolved = Path(path) if not isinstance(path, Path) else path
         self._validator.validate_upload_from_path(
@@ -645,6 +654,7 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
         )
         self._validator.validate_object_lock(object_lock)
+        self._validator.validate_storage_class(storage_class)
 
         # Auto-detect content_type from file extension if not provided
         if content_type is None:
@@ -667,6 +677,7 @@ class BaseBlobStore(Provider, ABC):
             if_version_match=if_version_match,
             kms_key_id=kms_key_id,
             use_kms_managed_key=use_kms_managed_key,
+            storage_class=storage_class,
         )
 
     def download(
@@ -1169,6 +1180,7 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Provider-specific upload implementation.
 
@@ -1189,6 +1201,8 @@ class BaseBlobStore(Provider, ABC):
             kms_key_id: Provider-managed key id for server-side encryption.
             use_kms_managed_key: Request a provider-managed key when no
                 kms_key_id is given; a no-op where encryption is always on.
+            storage_class: Provider-native storage class, or None for the
+                bucket default. Already validated as non-blank.
         """
 
     @abstractmethod
@@ -1206,6 +1220,7 @@ class BaseBlobStore(Provider, ABC):
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> UploadResponse:
         """Provider-specific file-path upload implementation.
 
@@ -1236,6 +1251,8 @@ class BaseBlobStore(Provider, ABC):
             kms_key_id: Provider-managed key id for server-side encryption.
             use_kms_managed_key: Request a provider-managed key when no
                 kms_key_id is given; a no-op where encryption is always on.
+            storage_class: Provider-native storage class, or None for the
+                bucket default. Already validated as non-blank.
         """
 
     @abstractmethod

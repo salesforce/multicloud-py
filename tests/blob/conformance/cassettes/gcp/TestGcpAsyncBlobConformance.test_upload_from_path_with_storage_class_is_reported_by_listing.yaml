@@ -1,0 +1,243 @@
+interactions:
+- request:
+    body: !!python/object/new:_io.BytesIO
+      state: !!python/tuple
+      - !!binary |
+        LS1kM2VlMDNkMmM5ZGI5YmUxY2YwNTIyODkzZTE4MzM4Mg0KQ29udGVudC1UeXBlOiBhcHBsaWNh
+        dGlvbi9qc29uOyBjaGFyc2V0PVVURi04DQoNCnsic3RvcmFnZUNsYXNzIjogIk5FQVJMSU5FIiwg
+        Im5hbWUiOiAiYXN5bmMtY29uZm9ybWFuY2UtdGVzdC9zdG9yYWdlLWNsYXNzL3VwbG9hZC1mcm9t
+        LXBhdGgtbnMvdGllcmVkLnR4dCJ9DQotLWQzZWUwM2QyYzlkYjliZTFjZjA1MjI4OTNlMTgzMzgy
+        DQpDb250ZW50LVR5cGU6IHRleHQvcGxhaW4NCg0Kc3RvcmFnZS1jbGFzcyBhc3luYyBmcm9tLXBh
+        dGggcGF5bG9hZA0KLS1kM2VlMDNkMmM5ZGI5YmUxY2YwNTIyODkzZTE4MzM4Mi0tDQo=
+      - 0
+      - null
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '335'
+      Content-Type:
+      - multipart/related; boundary=d3ee03d2c9db9be1cf0522893e183382
+    method: POST
+    uri: https://www.googleapis.com/upload/storage/v1/b/python-async-test-bucket/o?uploadType=multipart
+  response:
+    body:
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"python-async-test-bucket/async-conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942926597969\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942926597969&alt=media\",\n
+        \ \"name\": \"async-conformance-test/storage-class/upload-from-path-ns/tiered.txt\",\n
+        \ \"bucket\": \"python-async-test-bucket\",\n  \"generation\": \"1793942926597969\",\n
+        \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
+        \"NEARLINE\",\n  \"size\": \"37\",\n  \"md5Hash\": \"ULtD/nhrxQDYJDXTxgQhxA==\",\n
+        \ \"crc32c\": \"x/9JPA==\",\n  \"etag\": \"CNG+jJfO8pcDEAE=\",\n  \"timeCreated\":
+        \"2026-11-06T05:28:46.655Z\",\n  \"updated\": \"2026-11-06T05:28:46.655Z\",\n
+        \ \"timeStorageClassUpdated\": \"2026-11-06T05:28:46.655Z\",\n  \"timeFinalized\":
+        \"2026-11-06T05:28:46.655Z\"\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '1060'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Etag:
+      - CNG+jJfO8pcDEAE=
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg2LaSVQoWc7KzI4muAsHQbpswCoCtgL3kEurV7aCxNaOigbhMvXSJQ1clJXZPXmUVwV
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b555
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?alt=media
+  response:
+    body:
+      string: storage-class async from-path payload
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Disposition:
+      - attachment
+      Content-Length:
+      - '37'
+      Content-Type:
+      - text/plain
+      Date:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Etag:
+      - CNG+jJfO8pcDEAE=
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Last-Modified:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg3xvVy07_TKWG2-mDPX77cOlMxKUAsCzyUMXNtfcOzsUKlnl5P0kh6BbIPGmcApIkvk
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b59b
+      X-Goog-Generation:
+      - '1793942926597969'
+      X-Goog-Hash:
+      - crc32c=x/9JPA==,md5=ULtD/nhrxQDYJDXTxgQhxA==
+      X-Goog-Metageneration:
+      - '1'
+      X-Goog-Storage-Class:
+      - NEARLINE
+      X-Goog-Stored-Content-Encoding:
+      - identity
+      X-Goog-Stored-Content-Length:
+      - '37'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?alt=json
+  response:
+    body:
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"python-async-test-bucket/async-conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942926597969\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt\",\n
+        \ \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942926597969&alt=media\",\n
+        \ \"name\": \"async-conformance-test/storage-class/upload-from-path-ns/tiered.txt\",\n
+        \ \"bucket\": \"python-async-test-bucket\",\n  \"generation\": \"1793942926597969\",\n
+        \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
+        \"NEARLINE\",\n  \"size\": \"37\",\n  \"md5Hash\": \"ULtD/nhrxQDYJDXTxgQhxA==\",\n
+        \ \"crc32c\": \"x/9JPA==\",\n  \"etag\": \"CNG+jJfO8pcDEAE=\",\n  \"timeCreated\":
+        \"2026-11-06T05:28:46.655Z\",\n  \"updated\": \"2026-11-06T05:28:46.655Z\",\n
+        \ \"timeStorageClassUpdated\": \"2026-11-06T05:28:46.655Z\",\n  \"timeFinalized\":
+        \"2026-11-06T05:28:46.655Z\"\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Content-Length:
+      - '1060'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Etag:
+      - CNG+jJfO8pcDEAE=
+      Expires:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg2eLbRW916EgReaFmxUZksmRNrsPodpGOmeSludRuHD7GzqEp1XfuZU_D4Djis8LjEG
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b5ef
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers: {}
+    method: GET
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o?maxResults=1000&prefix=async-conformance-test/storage-class/upload-from-path-ns/
+  response:
+    body:
+      string: "{\n  \"kind\": \"storage#objects\",\n  \"items\": [\n    {\n      \"kind\":
+        \"storage#object\",\n      \"id\": \"python-async-test-bucket/async-conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942926597969\",\n
+        \     \"selfLink\": \"https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt\",\n
+        \     \"mediaLink\": \"https://www.googleapis.com/download/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942926597969&alt=media\",\n
+        \     \"name\": \"async-conformance-test/storage-class/upload-from-path-ns/tiered.txt\",\n
+        \     \"bucket\": \"python-async-test-bucket\",\n      \"generation\": \"1793942926597969\",\n
+        \     \"metageneration\": \"1\",\n      \"contentType\": \"text/plain\",\n
+        \     \"storageClass\": \"NEARLINE\",\n      \"size\": \"37\",\n      \"md5Hash\":
+        \"ULtD/nhrxQDYJDXTxgQhxA==\",\n      \"crc32c\": \"x/9JPA==\",\n      \"etag\":
+        \"CNG+jJfO8pcDEAE=\",\n      \"timeCreated\": \"2026-11-06T05:28:46.655Z\",\n
+        \     \"updated\": \"2026-11-06T05:28:46.655Z\",\n      \"timeStorageClassUpdated\":
+        \"2026-11-06T05:28:46.655Z\",\n      \"timeFinalized\": \"2026-11-06T05:28:46.655Z\"\n
+        \   }\n  ]\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Content-Length:
+      - '1190'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Expires:
+      - Fri, 06 Nov 2026 05:28:46 GMT
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg3hU9aeMzjdseI_2zfc6mEXFfrF2yENhEw5oQA-69Zc_gDZoFE-NSSGNJCwglBHypTt
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b63c
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers: {}
+    method: DELETE
+    uri: https://www.googleapis.com/storage/v1/b/python-async-test-bucket/o/async-conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt
+  response:
+    body:
+      string: ''
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 06 Nov 2026 05:28:47 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg3LlgOMktamn89hr_UaS8yASty9YZw2vI_2twKwSv2cj6FOE1Ehb4EYwOQ_3bgfaPYB
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54b713
+    status:
+      code: 204
+      message: No Content
+version: 1

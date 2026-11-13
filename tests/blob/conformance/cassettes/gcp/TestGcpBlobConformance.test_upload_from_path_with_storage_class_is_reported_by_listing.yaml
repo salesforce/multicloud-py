@@ -1,0 +1,252 @@
+interactions:
+- request:
+    body: "--===============7180724235240437662==\r\ncontent-type: application/json;
+      charset=UTF-8\r\n\r\n{\"name\": \"conformance-test/storage-class/upload-from-path-ns/tiered.txt\",
+      \"storageClass\": \"NEARLINE\", \"crc32c\": \"hVV1xw==\"}\r\n--===============7180724235240437662==\r\ncontent-type:
+      text/plain\r\n\r\nstorage-class from-path payload\r\n--===============7180724235240437662==--"
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '355'
+      content-type:
+      - !!binary |
+        bXVsdGlwYXJ0L3JlbGF0ZWQ7IGJvdW5kYXJ5PSI9PT09PT09PT09PT09PT03MTgwNzI0MjM1MjQw
+        NDM3NjYyPT0i
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+      x-upload-content-type:
+      - text/plain
+    method: POST
+    uri: https://storage.googleapis.com/upload/storage/v1/b/example-test-bucket-barry/o?uploadType=multipart
+  response:
+    body:
+      string: "{\n  \"kind\": \"storage#object\",\n  \"id\": \"example-test-bucket-barry/conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942923407971\",\n
+        \ \"selfLink\": \"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt\",\n
+        \ \"mediaLink\": \"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942923407971&alt=media\",\n
+        \ \"name\": \"conformance-test/storage-class/upload-from-path-ns/tiered.txt\",\n
+        \ \"bucket\": \"example-test-bucket-barry\",\n  \"generation\": \"1793942923407971\",\n
+        \ \"metageneration\": \"1\",\n  \"contentType\": \"text/plain\",\n  \"storageClass\":
+        \"NEARLINE\",\n  \"size\": \"31\",\n  \"md5Hash\": \"a6rbtnNic7BNELD+tbQ0iA==\",\n
+        \ \"crc32c\": \"hVV1xw==\",\n  \"etag\": \"COPkyZXO8pcDEAE=\",\n  \"timeCreated\":
+        \"2026-11-06T05:28:43.467Z\",\n  \"updated\": \"2026-11-06T05:28:43.467Z\",\n
+        \ \"timeStorageClassUpdated\": \"2026-11-06T05:28:43.467Z\",\n  \"timeFinalized\":
+        \"2026-11-06T05:28:43.467Z\"\n}\n"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '1044'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:43 GMT
+      ETag:
+      - COPkyZXO8pcDEAE=
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg1VO0HvRnlbA27e7tBbDiNlrRG23tKpiR5_EHMBwVJHxHG1Yjouc2NqfbuB6eDLitLtMXJn9mTQ4LGdGQ
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54a8e4
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - keep-alive
+      content-type:
+      - application/json; charset=UTF-8
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+      x-upload-content-type:
+      - application/json; charset=UTF-8
+    method: GET
+    uri: https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?alt=media
+  response:
+    body:
+      string: storage-class from-path payload
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Disposition:
+      - attachment
+      Content-Length:
+      - '31'
+      Content-Type:
+      - text/plain
+      Date:
+      - Fri, 06 Nov 2026 05:28:43 GMT
+      ETag:
+      - COPkyZXO8pcDEAE=
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Last-Modified:
+      - Fri, 06 Nov 2026 05:28:43 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg0WrOAzDMeBiF6ZRFPqSRIseHlIxZsA-JDG_V1PGRNrZsYRssaILY-C2i4lPajpKf4LFBBi4Gil7I9juQ
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54a9ad
+      X-Goog-Generation:
+      - '1793942923407971'
+      X-Goog-Hash:
+      - crc32c=hVV1xw==,md5=a6rbtnNic7BNELD+tbQ0iA==
+      X-Goog-Metageneration:
+      - '1'
+      X-Goog-Storage-Class:
+      - NEARLINE
+      X-Goog-Stored-Content-Encoding:
+      - identity
+      X-Goog-Stored-Content-Length:
+      - '31'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Connection:
+      - keep-alive
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+    method: GET
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942923407971&projection=noAcl&prettyPrint=false
+  response:
+    body:
+      string: '{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942923407971","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942923407971&alt=media","name":"conformance-test/storage-class/upload-from-path-ns/tiered.txt","bucket":"example-test-bucket-barry","generation":"1793942923407971","metageneration":"1","contentType":"text/plain","storageClass":"NEARLINE","size":"31","md5Hash":"a6rbtnNic7BNELD+tbQ0iA==","crc32c":"hVV1xw==","etag":"COPkyZXO8pcDEAE=","timeCreated":"2026-11-06T05:28:43.467Z","updated":"2026-11-06T05:28:43.467Z","timeStorageClassUpdated":"2026-11-06T05:28:43.467Z","timeFinalized":"2026-11-06T05:28:43.467Z"}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Content-Length:
+      - '970'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:43 GMT
+      ETag:
+      - COPkyZXO8pcDEAE=
+      Expires:
+      - Fri, 06 Nov 2026 05:28:43 GMT
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg3VoWSh5mHuv-onFUFoGeGoua7ni970IKd1lQaPl5ciuvDy3c8jhlUEKl8AFoNUGes0DrwAmJeqezZn5A
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54aa80
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Connection:
+      - keep-alive
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+    method: GET
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o?maxResults=1000&projection=noAcl&prefix=conformance-test%2Fstorage-class%2Fupload-from-path-ns%2F&prettyPrint=false
+  response:
+    body:
+      string: '{"kind":"storage#objects","items":[{"kind":"storage#object","id":"example-test-bucket-barry/conformance-test/storage-class/upload-from-path-ns/tiered.txt/1793942923407971","selfLink":"https://www.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt","mediaLink":"https://storage.googleapis.com/download/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?generation=1793942923407971&alt=media","name":"conformance-test/storage-class/upload-from-path-ns/tiered.txt","bucket":"example-test-bucket-barry","generation":"1793942923407971","metageneration":"1","contentType":"text/plain","storageClass":"NEARLINE","size":"31","md5Hash":"a6rbtnNic7BNELD+tbQ0iA==","crc32c":"hVV1xw==","etag":"COPkyZXO8pcDEAE=","timeCreated":"2026-11-06T05:28:43.467Z","updated":"2026-11-06T05:28:43.467Z","timeStorageClassUpdated":"2026-11-06T05:28:43.467Z","timeFinalized":"2026-11-06T05:28:43.467Z"}]}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Content-Length:
+      - '1007'
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 06 Nov 2026 05:28:44 GMT
+      Expires:
+      - Fri, 06 Nov 2026 05:28:44 GMT
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg08WKbu-8QZgxW1l9wKj870AQo3g2zcBadcIlkujj9HmkLUlM21PBnYtDGKnA_hvMvJGoJ0qVyolNCcSg
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54ab65
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      x-goog-user-project:
+      - substrate-sdk-gcp-poc1
+    method: DELETE
+    uri: https://storage.googleapis.com/storage/v1/b/example-test-bucket-barry/o/conformance-test%2Fstorage-class%2Fupload-from-path-ns%2Ftiered.txt?prettyPrint=false
+  response:
+    body:
+      string: ''
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Length:
+      - '0'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 06 Nov 2026 05:28:44 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - UploadServer
+      Vary:
+      - Origin
+      - X-Origin
+      X-GUploader-UploadID:
+      - AFy3sg0-dIpMOsA--FewxdwLOp4AxA6tuB360GPzLZovf7UxI_RDfFHBokNhlFhF-NElh_uv-qa7HTnB3vNqog
+      X-Goog-Gcs-Base-Ts:
+      - 1a1af54acb4
+    status:
+      code: 204
+      message: No Content
+version: 1

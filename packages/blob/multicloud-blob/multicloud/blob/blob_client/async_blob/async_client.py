@@ -308,6 +308,7 @@ class AsyncBucketClient:
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         """Upload data to the object identified by ``key``.
 
@@ -337,6 +338,11 @@ class AsyncBucketClient:
             use_kms_managed_key: Request a provider-managed encryption key when
                 no kms_key_id is given. A no-op on providers that always
                 encrypt at rest.
+            storage_class: Provider-native storage class for the object (for
+                example ``"STANDARD_IA"`` or ``"NEARLINE"``), passed through
+                unchanged. None uses the bucket default. A blank value, or a
+                class the provider does not recognise, raises
+                InvalidArgumentException.
 
         Returns:
             AsyncUploadResponse with key, version_id, e_tag.
@@ -356,6 +362,7 @@ class AsyncBucketClient:
                 if_version_match=if_version_match,
                 kms_key_id=kms_key_id,
                 use_kms_managed_key=use_kms_managed_key,
+                storage_class=storage_class,
             )
         except SubstrateSdkException:
             raise
@@ -375,6 +382,7 @@ class AsyncBucketClient:
         if_version_match: Optional[str] = None,
         kms_key_id: Optional[str] = None,
         use_kms_managed_key: bool = False,
+        storage_class: Optional[str] = None,
     ) -> AsyncUploadResponse:
         """Upload a local file to the object identified by ``key``.
 
@@ -400,6 +408,8 @@ class AsyncBucketClient:
             if_version_match: Only write if the current version matches.
             kms_key_id: Customer-managed encryption key.
             use_kms_managed_key: Encrypt with a provider-managed key.
+            storage_class: Provider-native storage class, or None for the
+                bucket default. See :meth:`upload`.
 
         Returns:
             AsyncUploadResponse with key, version_id, e_tag.
@@ -420,6 +430,7 @@ class AsyncBucketClient:
                 if_version_match=if_version_match,
                 kms_key_id=kms_key_id,
                 use_kms_managed_key=use_kms_managed_key,
+                storage_class=storage_class,
             )
         except SubstrateSdkException:
             raise

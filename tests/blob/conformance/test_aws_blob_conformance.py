@@ -135,6 +135,11 @@ class AwsHarness(Harness):
         # the cassette. So the encryption tests always run rather than skip.
         return "arn:aws:kms:us-west-2:123456789012:key/00000000-0000-4000-8000-000000000000"
 
+    def get_storage_class(self) -> str:
+        # A non-default S3 class that stays immediately readable, so the round
+        # trip can download the object without a restore.
+        return "STANDARD_IA"
+
     def delete_retained_object(self, client: BucketClient, key: str) -> None:
         # Object-lock buckets are versioning-enabled, so a keyed delete only
         # inserts a delete marker — the locked version survives (masked) until

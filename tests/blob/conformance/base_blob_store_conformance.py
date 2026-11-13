@@ -162,6 +162,14 @@ class Harness(ABC):
             "Harness must supply a server-side-encryption key id."
         )
 
+    def get_storage_class(self) -> str:
+        """Return a provider-native, non-default storage class for uploads.
+
+        Raises by default so a provider must supply one rather than silently
+        disable the storage-class upload tests.
+        """
+        raise NotImplementedError("Harness must supply a non-default storage class.")
+
     @abstractmethod
     def create_nonexistent_bucket_client(self) -> BucketClient:
         """Return a BucketClient bound to a bucket that does not exist.
@@ -278,6 +286,11 @@ class BaseBlobStoreConformance:
         tests.
         """
         return harness.get_kms_key_id()
+
+    @pytest.fixture(scope="module")
+    def storage_class(self, harness):
+        """Provide a provider-native, non-default storage class."""
+        return harness.get_storage_class()
 
     def _safe_delete(self, client: BucketClient, *keys: str) -> None:
         """Delete blobs ignoring errors.
@@ -527,6 +540,58 @@ class BaseBlobStoreConformance:
         try:
             client.upload_from_path(key, str(source), kms_key_id=kms_key_id)
             assert client.download(key).content == payload
+        finally:
+            self._safe_delete(client, key)
+
+    # Storage-class conformance tests
+    #
+    # Storage classes are provider-native, so the harness supplies a non-default
+    # class the provider accepts. Listing reports the class an object was written
+    # with, which makes the round trip observable without a provider SDK.
+
+    def test_upload_with_storage_class_is_reported_by_listing(
+        self, client, storage_class
+    ):
+        """upload with storage_class writes the object in that class."""
+        prefix = f"{self.TEST_PREFIX}storage-class/upload-ns/"
+        key = f"{prefix}tiered.txt"
+        payload = b"storage-class conformance payload"
+        try:
+            client.upload(key, payload, storage_class=storage_class)
+            assert client.download(key).content == payload
+            resp = client.list_page(prefix=prefix)
+            assert [(b.key, b.storage_class) for b in resp.blobs] == [
+                (key, storage_class)
+            ]
+        finally:
+            self._safe_delete(client, key)
+
+    def test_upload_from_path_with_storage_class_is_reported_by_listing(
+        self, client, storage_class, tmp_path
+    ):
+        """upload_from_path with storage_class writes the object in that class."""
+        prefix = f"{self.TEST_PREFIX}storage-class/upload-from-path-ns/"
+        key = f"{prefix}tiered.txt"
+        payload = b"storage-class from-path payload"
+        source = tmp_path / "storage-class-source.txt"
+        source.write_bytes(payload)
+        try:
+            client.upload_from_path(key, str(source), storage_class=storage_class)
+            assert client.download(key).content == payload
+            resp = client.list_page(prefix=prefix)
+            assert [(b.key, b.storage_class) for b in resp.blobs] == [
+                (key, storage_class)
+            ]
+        finally:
+            self._safe_delete(client, key)
+
+    def test_upload_with_unknown_storage_class_raises_invalid_argument(self, client):
+        """A storage class the provider does not recognise fails the write."""
+        key = f"{self.TEST_PREFIX}storage-class/unknown.txt"
+        try:
+            with pytest.raises(InvalidArgumentException):
+                client.upload(key, b"data", storage_class="NOT_A_STORAGE_CLASS")
+            assert client.does_object_exist(key) is False
         finally:
             self._safe_delete(client, key)
 
