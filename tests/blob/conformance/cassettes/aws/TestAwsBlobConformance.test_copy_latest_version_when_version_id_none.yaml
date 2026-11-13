@@ -142,7 +142,7 @@ interactions:
         YXR0ZW1wdD0x
       x-amz-copy-source:
       - !!binary |
-        bXVsdGljbG91ZA==LXB5dGhvbi1zZGstdmVyc2lvbmVkL2NvbmZvcm1hbmNlLXRlc3QvY29weS12ZXJz
+        Y2hhbWVsZW9uLXB5dGhvbi1zZGstdmVyc2lvbmVkL2NvbmZvcm1hbmNlLXRlc3QvY29weS12ZXJz
         aW9uZWQvc3JjLWxhdGVzdC50eHQ=
     method: PUT
     uri: https://chameleon-python-sdk-versioned.s3.us-west-2.amazonaws.com/conformance-test/copy-versioned/dest-latest.txt

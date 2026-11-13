@@ -142,7 +142,7 @@ interactions:
         YXR0ZW1wdD0x
       x-amz-copy-source:
       - !!binary |
-        bXVsdGljbG91ZA==LXB5dGhvbi1zZGstdmVyc2lvbmVkL2NvbmZvcm1hbmNlLXRlc3QvY29weS12ZXJz
+        Y2hhbWVsZW9uLXB5dGhvbi1zZGstdmVyc2lvbmVkL2NvbmZvcm1hbmNlLXRlc3QvY29weS12ZXJz
         aW9uZWQvc3JjLXNwZWNpZmljLnR4dD92ZXJzaW9uSWQ9ZkR2Qk10X0NaOG8uOTMybTVHRV9lblZX
         czNFcVlLcFM=
     method: PUT
