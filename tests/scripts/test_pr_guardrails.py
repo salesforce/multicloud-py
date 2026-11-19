@@ -70,7 +70,7 @@ def test_privileged_title_trigger_executes_only_trusted_base_script() -> None:
     assert checkout["with"]["sparse-checkout"] == "scripts/check_pr_title.py"
     assert validate["env"]["TITLE"] == "${{ github.event.pull_request.title }}"
     assert "${{" not in validate["run"]
-    assert validate["run"] == 'python3 scripts/check_pr_title.py "$TITLE"'
+    assert validate["run"] == 'python3 scripts/check_pr_title.py -- "$TITLE"'
 
 
 def test_bootstrap_title_check_remains_available_on_pull_requests() -> None:
@@ -108,3 +108,17 @@ def test_generated_release_refs_are_environment_data_not_shell_source() -> None:
     for job_id in ["sync-release-pr", "validate-release"]:
         for step in jobs[job_id]["steps"]:
             assert "${{" not in step.get("run", "")
+
+
+@pytest.mark.parametrize("name", ["pr-title.yml", "pr-title-trusted.yml"])
+@pytest.mark.parametrize("title", ["--help", "-h", "--version", "--"])
+def test_title_workflows_reject_command_line_options(name: str, title: str) -> None:
+    job = next(iter(workflow(name)["jobs"].values()))
+    result = subprocess.run(
+        ["bash", "-e", "-c", job["steps"][-1]["run"]],
+        cwd=ROOT,
+        env={**os.environ, "TITLE": title},
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode != 0

@@ -23,4 +23,4 @@ jobs:
       - name: Validate the trusted squash commit subject
         env:
           TITLE: ${{ github.event.pull_request.title }}
-        run: python3 scripts/check_pr_title.py "$TITLE"
+        run: python3 scripts/check_pr_title.py -- "$TITLE"

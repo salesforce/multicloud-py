@@ -98,9 +98,15 @@ GitHub Actions check to the required statuses. Retain `conventional-title`
 during this transition; never require a context that cannot run yet.
 
 Release PRs follow the same review and check requirements. GitHub may require a
-maintainer to approve workflow runs created by automation. Validate the final
-generated-version commit before approving and squash-merging; never bypass the
-ruleset to work around missing checks. Publishing remains in the existing
+maintainer to approve workflow runs created by automation. That approval covers
+selected `pull_request` events, not `pull_request_target`. After the final
+automated version-sync push, a maintainer must edit the PR title or body using
+their own account to trigger the trusted title workflow. Verify both title
+checks and the remaining required checks on the final release head before
+approving and squash-merging. Confirm this flow on a real release PR before
+making `trusted-conventional-title` required; never bypass the ruleset to work
+around missing checks. See [GitHub's token-trigger behavior](https://docs.github.com/en/actions/concepts/security/github_token#when-github_token-triggers-workflow-runs).
+Publishing remains in the existing
 release workflow; this change does not add extra PyPI approval prompts or alter
 the package Trusted Publishers.
 
