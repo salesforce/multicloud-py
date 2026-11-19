@@ -29,7 +29,11 @@ uv run black --check packages tests
 uv run isort --check-only packages tests
 ```
 
-CI tests Python 3.10 through 3.14. The required `test` check succeeds only when
+CI tests Python 3.10 through 3.13. Python 3.14 is temporarily excluded while the
+two AWS Blob version-copy recordings' malformed base64 headers are repaired;
+restore its CI job after validating those recordings on all tested versions.
+This temporary CI exception does not change package Python-version metadata.
+The required `test` check succeeds only when
 every runtime, formatting/version checks, benchmark smoke tests and package
 validation pass. On Python 3.12, CI also
 enforces **90% total SDK line coverage** across unit and replay tests:
