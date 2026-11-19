@@ -48,6 +48,8 @@ jobs:
           persist-credentials: true
       - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
       - name: Synchronize generated files
+        env:
+          RELEASE_BRANCH: ${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}
         run: |
           uv run python scripts/sync_version.py --write
           uv lock
@@ -58,7 +60,7 @@ jobs:
             git config user.name github-actions[bot]
             git config user.email 41898282+github-actions[bot]@users.noreply.github.com
             git commit -m "chore(release): synchronize generated versions"
-            git push origin "HEAD:${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}"
+            git push origin "HEAD:$RELEASE_BRANCH"
           fi
 
   validate-release:
@@ -76,7 +78,10 @@ jobs:
       - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
         with:
           enable-cache: true
-      - run: test "${{ needs.release-please.outputs.tag_name }}" = "multicloud-py-v$(python scripts/sync_version.py --print)"
+      - name: Verify release tag matches package version
+        env:
+          RELEASE_TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: test "$RELEASE_TAG" = "multicloud-py-v$(python scripts/sync_version.py --print)"
       - run: uv lock --check
       - run: uv sync --frozen --all-groups --all-packages
       - run: uv run --frozen python -m black --check packages tests scripts
