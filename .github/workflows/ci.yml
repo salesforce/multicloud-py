@@ -39,7 +39,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14']
+        # Restore 3.14 after repairing the AWS Blob copy-source recordings.
+        python-version: ['3.10', '3.11', '3.12', '3.13']
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -67,10 +68,47 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+  benchmark-smoke:
+    name: Benchmark smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      BLOB_BENCH_PROVIDER: benchfake
+      PUBSUB_BENCH_TOPIC_PROVIDER: benchfake
+      PUBSUB_BENCH_SUB_PROVIDER: benchfake
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          enable-cache: true
+          python-version: '3.12'
+      - run: uv sync --frozen --all-packages
+      # Execute the in-memory cases once; do not enforce noisy timing targets.
+      - run: uv run --frozen python -m pytest benchmarks/ --benchmark-disable
+
+  package-validation:
+    name: Package validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+        with:
+          enable-cache: true
+          python-version: '3.12'
+      - run: uv sync --frozen --all-packages
+      - run: uv build --all-packages --no-sources --out-dir "$RUNNER_TEMP/pr-dist"
+      - run: uv run --frozen python -m twine check "$RUNNER_TEMP/pr-dist/"*
+      - run: uv run --frozen python -m scripts.validate_release_artifacts "$RUNNER_TEMP/pr-dist"
+
   test:
     name: test
     if: always()
-    needs: [quality, python-tests]
+    needs: [quality, python-tests, benchmark-smoke, package-validation]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -78,7 +116,13 @@ jobs:
         env:
           QUALITY_RESULT: ${{ needs.quality.result }}
           TEST_RESULT: ${{ needs.python-tests.result }}
-        run: test "$QUALITY_RESULT" = success && test "$TEST_RESULT" = success
+          BENCHMARK_RESULT: ${{ needs.benchmark-smoke.result }}
+          PACKAGE_RESULT: ${{ needs.package-validation.result }}
+        run: |
+          test "$QUALITY_RESULT" = success
+          test "$TEST_RESULT" = success
+          test "$BENCHMARK_RESULT" = success
+          test "$PACKAGE_RESULT" = success
 
   coverage-upload:
     name: Upload coverage to Codecov

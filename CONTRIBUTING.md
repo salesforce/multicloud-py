@@ -29,8 +29,13 @@ uv run black --check packages tests
 uv run isort --check-only packages tests
 ```
 
-CI tests Python 3.10 through 3.14. The required `test` check succeeds only when
-every runtime and the formatting/version checks pass. On Python 3.12, CI also
+CI tests Python 3.10 through 3.13. Python 3.14 is temporarily excluded while the
+two AWS Blob version-copy recordings' malformed base64 headers are repaired;
+restore its CI job after validating those recordings on all tested versions.
+This temporary CI exception does not change package Python-version metadata.
+The required `test` check succeeds only when
+every runtime, formatting/version checks, benchmark smoke tests and package
+validation pass. On Python 3.12, CI also
 enforces **90% total SDK line coverage** across unit and replay tests:
 
 ```bash
@@ -45,6 +50,13 @@ best-effort and does not replace the local CI coverage gate. Maintainers must
 confirm Codecov repository access and reporting before requiring its statuses.
 
 Conformance tests validate consistent behavior across supported providers. Recording new cassettes requires credentials for the relevant cloud provider; never commit credentials or unsanitized recordings.
+
+CI also runs the in-memory Blob/Pub/Sub benchmarks with `--benchmark-disable`.
+This is a functional smoke test, not a live-cloud test or a performance budget.
+The package job builds all 21 wheels and source distributions and checks their
+metadata, versions and Apache-2.0 licenses using the release artifact validator.
+It does not publish anything. The separate required `zizmor` check scans GitHub
+Actions and Dependabot configuration for workflow-security issues.
 
 ## Issues and Feature Requests
 
@@ -72,19 +84,33 @@ add `!` for a breaking change. The title becomes the squash commit subject used
 by Release Please. Existing dependency-update PRs may need a maintainer to
 retitle them before merging.
 
-The `main` ruleset requires one eligible review, resolved review threads, and
-successful CI, documentation, security, and CLA checks. New changes dismiss old
-approvals. Maintainers add `conventional-title` to the required checks after
-the new workflow has produced a successful check on its implementing PR; do not
-require a check that cannot run yet. Code-owner review is a separate policy and is not
-enabled merely by adding a CODEOWNERS file. The title workflow uses the same
-read-only `pull_request` execution model as CI; it has no publishing credentials
-or write permissions.
+The `main` ruleset requires one eligible review, resolved review threads, an
+up-to-date branch and successful CI, documentation, title, security and CLA
+checks, without an admin bypass. New changes dismiss old approvals. Code-owner
+review is separate and is not enabled merely by adding a CODEOWNERS file.
+
+The existing `conventional-title` PR check validates proposed validator changes.
+The additional `trusted-conventional-title` check uses `pull_request_target`
+with a read-only token and checks out only the base revision's validator. It
+never checks out or runs PR code and has no publishing credentials. This keeps
+a PR from weakening its own authoritative title validator.
+
+Bootstrap: a new `pull_request_target` workflow cannot validate its own first
+PR from the trusted base. After this workflow merges, a maintainer must confirm
+`trusted-conventional-title` runs on a new or updated PR and then add that exact
+GitHub Actions check to the required statuses. Retain `conventional-title`
+during this transition; never require a context that cannot run yet.
 
 Release PRs follow the same review and check requirements. GitHub may require a
-maintainer to approve workflow runs created by automation. Validate the final
-generated-version commit before approving and squash-merging; never bypass the
-ruleset to work around missing checks. Publishing remains in the existing
+maintainer to approve workflow runs created by automation. That approval covers
+selected `pull_request` events, not `pull_request_target`. After the final
+automated version-sync push, a maintainer must edit the PR title or body using
+their own account to trigger the trusted title workflow. Verify both title
+checks and the remaining required checks on the final release head before
+approving and squash-merging. Confirm this flow on a real release PR before
+making `trusted-conventional-title` required; never bypass the ruleset to work
+around missing checks. See [GitHub's token-trigger behavior](https://docs.github.com/en/actions/concepts/security/github_token#when-github_token-triggers-workflow-runs).
+Publishing remains in the existing
 release workflow; this change does not add extra PyPI approval prompts or alter
 the package Trusted Publishers.
 
